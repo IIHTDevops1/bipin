@@ -1,0 +1,2542 @@
+/**********************************
+* 公共样式 Start
+* mini - small - middle - big - vbig - large - vlarge - huge - vhuge - normal
+**********************************/
+
+html{padding:0px;margin:0px;overflow-y:scroll; background-color:#fff;_background-image:url(blank.txt);_background-attachment:fixed;_zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache", false, true);}(this)); }
+body{padding: 0px;margin: 0px; text-align:center; font:12px/1.5 宋体 Arial;color:#333;}
+form{padding: 0px;margin: 0px;}
+img{border:0px;vertical-align:middle;}
+a{text-decoration: none;color: #07679c;}
+a:hover{text-decoration:none; color:#f60;}
+table {border-collapse: collapse;border-spacing: 0;}
+.css_hack{clear: both;font-size:1px;height: 1px;line-height: 1px;overflow: hidden;}
+.key_num{color: #ff6500;}
+.red_key{color:#f00;}
+.right_link{float:right; font-family:"\5b8b\4f53";}
+.right_link a {font-weight:normal;}
+
+.sep_link{}
+.bulletin{width:228px;height:96px;}
+ /*claar*/
+.clear{clear:both;height:0;overflow:hidden;width:0;}
+.clear_both { clear:both; font-size:1px; height:1px; line-height:1px; overflow:hidden; }
+.clearR:after { content:'\20'; height:0; clear:both; display:block; }
+.clearR {*zoom:1; overflow:hidden; }
+.clear_both { clear:both; font-size:1px; height:1px; line-height:1px; overflow:hidden; }
+.clear2:after { content:'\20'; display:block; height:0; clear:both; display:block; }
+.clear2 {*zoom:1; }
+.clearfix{_zoom:1;}
+.clearfix:after{clear:both;line-height:0;height:0;overflow:hidden;}
+
+/**********************************
+* 公共样式 End
+**********************************/
+
+/**********************************
+* 布局样式 Start
+**********************************/
+.page_bg{position: absolute;top: 0px;z-index: -1;left: 0px;width: 100%;min-width: 960px;height: 160px;background-image: url(../../img/shengpay/CommonNew_img/page_bg.png);background-position:center top;background-repeat: repeat-x;}
+.page_bg_simples{position: absolute;top: 0px;z-index: -1;left: 0px;width: 100%;min-width: 960px;height: 335px;background-image: url(../../img/shengpay/CommonNew_img/page_bg_simple.png);background-position:center top;background-repeat: repeat-x;}
+.page_bg_register{position: absolute;top: 0px;z-index: -1;left: 0px;width: 100%;min-width: 960px;height: 84px;background-image: url(../../img/shengpay/CommonNew_img/background_regsiter.png);background-position:center top;background-repeat: repeat-x;}
+.page	{width:960px;margin:auto;text-align:left;font-size:12px;font-family:宋体 Arial; color:#333;}
+
+.pag_bg_simple{	text-align: center;font-family:Arial;font-size:12px;color:#333; }
+.page_bg01 {background-image:url(../../img/shengpay/CommonNew_img/page_bg01.png);background-repeat:repeat-x;background-position:center top; }
+.page_bg02 {background-image:url(../../img/shengpay/CommonNew_img/page_bg02.png);background-repeat:no-repeat;background-position:center top;}
+.page_bg03 {background-image:url(../../img/shengpay/CommonNew_img/page_bg03.png);background-repeat:repeat-x;background-position:center top; }
+.page_bg04 {background-image:url(../../img/shengpay/CommonNew_img/page_bg04.png);background-repeat:repeat-x;background-position:center 70px; }
+.page_bg05 {background-image:url(../../img/shengpay/CommonNew_img/page_bg05.png);background-repeat:repeat-x;background-position:center 70px; }
+.page_main {background-image:url(../../img/shengpay/CommonNew_img/page_main.png);background-repeat:repeat-x;background-position:center top; }
+.page_simple_container{width:960px;margin:auto;text-align:left;}
+.page_head_content { height:84px;}
+.page_head_content_bar {float:right; padding-top:5px;}
+.page_head_content_bar_bg_left  { height:29px; _width:100px; padding-left:20px;background-image:url(../../img/shengpay/CommonNew_img/page_head_content_bar_bg.png);background-repeat:no-repeat;background-position:left top;}
+.page_head_content_bar_bg_right { height:23px; _width:100px;  padding-top:6px; padding-right:20px;white-space:nowrap;word-break:normal; font-family:"宋体"; background-image:url(../../img/shengpay/CommonNew_img/page_head_content_bar_bg.png);background-repeat:no-repeat;background-position:right top;}
+.page_head_content_bar_bg_right i{ padding:0px 10px;font-style:normal;color:#abdbf1;}
+.page_head_content_mainlink {float:right;clear:right;margin-top:30px; padding-right:13px; padding-bottom:15px; white-space:nowrap;word-break:normal;}
+.page_head_content_mainlink .sep_link {font-size:14px;}
+.page_head_content_mainlink .sep_link .selected {font-size:16px; color:#ff6600; font-weight:bold;}
+.page_head_content_lasttime {float:right;clear:right;margin-top:30px; white-space:nowrap;word-break:normal; color:#444;}
+.page_head_content_logo {float:left; padding-left:25px;padding-top:25px;}
+
+.page_head_slideshow {}
+.page_head_annouce {height:22px; padding:8px 10px 0px 10px; background-image:url(../../img/shengpay/CommonNew_img/page_head_annouce_bg.png);}
+.page_head_annouce a {color:#666;}
+.head_break_link { height:20px;padding-top:5px;padding-right:13px;font-size:12px; }
+.head_break_link .selected {font-size:14px;font-weight:bold;color:#333;}
+
+.page_head{margin-bottom:10px;}
+.page_head_sub{height:84px;overflow:hidden;margin-bottom:15px;}
+.head_links{font-size:12px;}
+.head_links{ float:right;font-size:12px;line-height:28px;}
+.head_links i {color:#d1d1d1; padding:0px 5px;font-style:normal;}
+.head_links a {color:#666;text-decoration:none;}
+.head_links a:hover {color:#f60;text-decoration:none;}
+
+.head_links { word-break:normal;white-space:nowrap;}
+.head_links td{ line-height:26px;}
+.head_link_item         { display:block; height:26px;line-height:26px;border-left:0px #abdbf1 solid;padding:0px 20px 0px 10px;margin-left: 0px; color:#07679c; background-image:url(../../img/shengpay/CommonNew_img/head_link.png);background-repeat:no-repeat;background-position:right 0px;cursor:pointer;}
+.head_link_item_selected    { position:relative;z-index:1001;left:-1px;top:0px;display:block; height:26px;line-height:26px;border-left:1px #abdbf1 solid;padding:0px 20px 0px 10px;margin-right: -1px; color:#f60; background-image:url(../../img/shengpay/CommonNew_img/head_link.png);background-repeat:no-repeat;background-position:right -30px;cursor:pointer;}
+.head_link_child { position:relative;z-index:1;left:-1px;top:-1px;border:1px #a7d9f1 solid; background-color:#effaff;}
+.head_link_child ul{padding:0px;margin:0px;list-style:none; width:110px;}
+.head_link_child ul li{ line-height:25px;height:25px; padding:0px 19px 0px 10px;}
+
+.login_info{ float:left; padding-left:20px; font-size:12px;line-height:28px;}
+.login_info i {color:#d1d1d1; padding:0px 5px;font-style:normal;}
+.login_info a {color:#666;text-decoration:none;}
+.login_info a:hover {color:#f60;text-decoration:none;}
+.page_head_banner{ height:80px;}
+
+.page_body{}
+.page_body_side{float:right;width:236px;}
+.page_body_main{ width:714px;}
+.buy_card{ padding-top:8px; color:#474747; text-align:center; background-color:#ffffda;}
+.buy_card .dashed_line{margin-top:8px;}
+.btn_buycard{ display:block;width:218px;height:33px; margin:auto; margin-bottom:8px; background-image:url(../../img/shengpay/CommonNew_img/btn_buycard.png);background-repeat:no-repeat;}
+.guide_steps{ padding-bottom:0px;}
+.guide_steps_title{margin:0px;padding:0px; padding:8px 12px 6px; color:#313131; font-size:12px;font-weight:bold;}
+.step01{width:105px;height:29px;margin:0px 0px 8px 5px;background-image:url(../../img/shengpay/CommonNew_img/guide_steps.png);background-position:0px 0px;}
+.step02{width:105px;height:29px;margin:0px 0px 8px 5px;background-image:url(../../img/shengpay/CommonNew_img/guide_steps.png);background-position:0px -50px;}
+.step03{width:105px;height:29px;margin:0px 0px 8px 5px;background-image:url(../../img/shengpay/CommonNew_img/guide_steps.png);background-position:0px -100px;}
+.step04{width:105px;height:29px;margin:0px 0px 8px 5px;background-image:url(../../img/shengpay/CommonNew_img/guide_steps.png);background-position:0px -150px;}
+
+.hot_activity{}
+.hot_activity_point {display:block;overflow:hidden;text-indent:-100px;width:234px;height:53px;background-image:url(../../img/shengpay/CommonNew_img/hot_activity.jpg);background-repeat:no-repeat;background-position:0px 0px;}
+.hot_activity_gift 	{display:block;overflow:hidden;text-indent:-100px;width:234px;height:53px;background-image:url(../../img/shengpay/CommonNew_img/hot_activity.jpg);background-repeat:no-repeat;background-position:0px -53px;}
+.hot_activity_free 	{display:block;overflow:hidden;text-indent:-100px;width:234px;height:52px;background-image:url(../../img/shengpay/CommonNew_img/hot_activity.jpg);background-repeat:no-repeat;background-position:0px -106px;}
+
+.game_item{ padding:0px 7px 11px 7px; line-height:20px; font-family:Arial;}
+.price_old{ padding-left:1em; padding-top:5px;  color:#7d7d7d;}
+.price_new{ padding-left:1em; color:#eb6100;}
+.recommend_biz{ border:1px #bed5e0 solid; padding:8px 0px 8px 8px;font-family:"\5B8B\4F53",Arial, Helvetica, sans-serif;}
+.recommend_biz .text_title { padding:0px 5px 0px 4px; color:#313131;font-size:14px;font-weight:bold;}
+.recommend_biz .right_link { margin-top:5px; margin-right:10px;}
+.recommend_biz .dashed_line {margin-bottom:5px;}
+
+.cssmod_index_rolling {}
+.cssmod_index_rolling .rolling_pre 					{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:376px; background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:  0px   0px;}
+.cssmod_index_rolling .rolling_pause 				{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:404px; background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:-28px   0px;}
+.cssmod_index_rolling .rolling_next 				{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:432px; background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:-56px   0px;}
+.cssmod_index_rolling .rolling_pre_disabled 		{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:376px; background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:  0px -30px;}
+.cssmod_index_rolling .rolling_play			{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:404px;background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:-28px -30px;}
+.cssmod_index_rolling .rolling_next_disabled 		{position:absolute;overflow:hidden;text-indent:-100px;width:29px;height:20px;margin-top:155px;margin-left:432px; background-image:url(../../img/shengpay/CommonNew_img/btn_rolling_player.png); background-repeat:no-repeat;background-position:-56px -30px;}
+
+.cssmod_life_assist{padding:10px 20px;}
+.cssmod_life_assist .rolling_pre					{display:block;position:absolute;overflow:hidden;text-indent:-100px;width:10px;height:19px;margin-top:15px;margin-left:-10px;background-image:url(../../img/shengpay/CommonNew_img/roll_button.png);background-repeat:no-repeat;background-position:0px     0px;}
+.cssmod_life_assist .rolling_next					{display:block;position:absolute;overflow:hidden;text-indent:-100px;width:10px;height:19px;margin-top:15px;margin-left:670px;background-image:url(../../img/shengpay/CommonNew_img/roll_button.png);background-repeat:no-repeat;background-position:0px   -30px;}
+.cssmod_life_assist .rolling_pre_disabled			{display:block;position:absolute;overflow:hidden;text-indent:-100px;width:10px;height:19px;margin-top:15px;margin-left:-10px;background-image:url(../../img/shengpay/CommonNew_img/roll_button.png);background-repeat:no-repeat;background-position:-20px   0px;}
+.cssmod_life_assist .rolling_next_disabled			{display:block;position:absolute;overflow:hidden;text-indent:-100px;width:10px;height:19px;margin-top:15px;margin-left:670px;background-image:url(../../img/shengpay/CommonNew_img/roll_button.png);background-repeat:no-repeat;background-position:-20px -30px;}
+
+.life_assist_list{ height:71px;width:672px;overflow:hidden;}
+.life_assist_item { width:67px; height:71px;line-height:22px; text-align:center;white-space:nowrap;}
+.life_assist_item img {margin-bottom:3px;}
+
+.special_benefit_list {width:423px; height:143px; overflow:hidden;}
+.rolling_player_list {width:468px; height:207px; overflow:hidden;}
+.index_rolling_list {width:468px; height:178px; overflow:hidden;}
+
+.page_foot{}
+/**********************************
+* 布局样式 End
+**********************************/
+
+/**********************************
+* 常用复合组件样式,如menu,panel Start
+**********************************/
+
+.panel_box_tab {text-indent:0em;font-size:12px;}
+.panel_box_tab .tab_item 			{ float:left;height:29px;padding:1px 13px 0px 13px;color:#7d7d7d;border:0px #bed5e0 solid;}
+.panel_box_tab .tab_item_selected 	{ float:left;height:29px;padding:0px 12px 0px 12px;color:#313131;border-left:1px #bed5e0 solid;border-right:1px #bed5e0 solid;border-top:1px #bed5e0 solid;background-color:white;}
+
+.panel_box_tab_mini {text-indent:0em;font-size:12px;}
+.panel_box_tab_mini .tab_item 			{ float:left;height:30px;padding:0px 0.5em;color:#7d7d7d;border:0px #bed5e0 solid;}
+.panel_box_tab_mini .tab_item_selected 	{ float:left;height:28px;padding:0px 0.5em;color:#313131;border-left:1px #bed5e0 solid;border-right:1px #bed5e0 solid;border-top:1px #bed5e0 solid;background-color:white;}
+
+
+.panel_box_title 	{}
+.panel_box_top	    {}
+.panel_box_content  {}
+.panel_box_foot	    {}
+
+.panel_box_title .close{float:right; margin:5px 6px -30px 0px;  width:20px;height:20px; text-indent:0px;}
+
+h4 .right_link{float:right;font-size:12px;font-family:"\5B8B\4F53",Arial, Helvetica, sans-serif;font-weight:normal;color:#666666;padding-right:14px;}
+.panel_mini{width:236px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_mini .panel_box_title{ margin:0px;padding:0px;height:28px;line-height:28px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background:url(../../img/shengpay/CommonNew_img/panel_mini.png) repeat-x; border:1px solid #d4e2e9;}
+.panel_mini .panel_box_content{border:1px solid #bed5e0;border-top-width:0px; background-color:White;}
+.panel_mini .panel_box_foot{display:none;}
+
+.panel_small{width:352px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_small .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_small.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_small .panel_box_content{border:1px solid #bed5e0;border-top-width:0px; background-color:White;}
+.panel_small .panel_box_foot{display:none;}
+
+
+.panel_middle{width:468px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_middle .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_middle.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_middle .panel_box_content{border:1px solid #bed5e0;border-top-width:0px; background-color:White;}
+.panel_middle .panel_box_foot{display:none;}
+
+.panel_vbig{width:714px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_vbig .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_vbig.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_vbig .panel_box_content{border:1px solid #bed5e0;border-top-width:0px; background-color:White;}
+.panel_vbig .panel_box_foot{display:none;}
+
+.panel_normal{width:960px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_normal .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_normal.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_normal .panel_box_content{border:1px solid #bed5e0;border-top-width:0px;}
+.panel_normal .panel_box_foot{display:none;}
+
+.case_learn{float:left;width:682px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.case_learn .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_case_learn.png);background-position:0px 0px;background-repeat:no-repeat;}
+.case_learn .panel_box_content{border:1px solid #bed5e0;border-top-width:0px;padding:10px 30px;height:230px;}
+.case_learn .panel_box_foot{display:none;}
+
+.safe_question{float:right;width:268px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.safe_question .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_safe_question.png);background-position:0px 0px;background-repeat:no-repeat;}
+.safe_question .panel_box_content{border:1px solid #bed5e0;border-top-width:0px;padding:10px;height:230px;}
+.safe_question .panel_box_foot{display:none;}
+
+/**********************************
+* 常用复合组件样式,如menu,panel  End
+**********************************/
+/**********************************
+* 常用HTML组件样式如按钮,文本框,
+* 提示信息,只读文字等 Start
+**********************************/
+.field_item{zoom:1;}
+.field_item:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.field_item{clear:both;line-height:22px;padding-top:10px;} 
+
+.field_item_title{float:left;text-align:right;}
+.field_item_content{line-height:22px;}
+
+.field_item_content .msg_comment{line-height:18px;}
+
+.section_btn{text-align:right;}
+.section_btn a{text-decoration:none;}
+
+.section_mini{}
+.section_mini .field_item .field_item_title{width:65px;}
+.section_mini .field_item_content{margin-left:65px;}
+
+.section_small{}
+.section_small .field_item .field_item_title{width:115px;}
+.section_small .field_item_content{margin-left:115px;}
+
+.section_big{}
+.section_big .field_item .field_item_title{width:160px; font-size:14px;color:#7D7D7D;}
+.section_big .field_item_content{margin-left:140px;}
+
+.section_sbig{}
+.section_sbig .field_item .field_item_title{width:160px; font-size:12px;color:#7D7D7D;}
+.section_sbig .field_item_content{margin-left:140px;}
+
+.section_vbig{}
+.section_vbig .field_item .field_item_title{width:180px; font-size:14px;color:#7D7D7D;}
+.section_vbig .field_item_content{margin-left:190px;}
+
+.section_simple_big{}
+.section_simple_big .field_item .field_item_title{width:140px; font-size:14px;color:#7D7D7D;}
+.section_simple_big .field_item_content{margin-left:140px;}
+
+.section_card{padding-bottom:10px;}
+.section_card .field_item .field_item_title{width:55px;}
+.section_card .field_item_content{margin-left:65px;}
+
+.section_login{padding-bottom:10px;}
+.section_login .field_item .field_item_title{text-align:left;float:none;padding-left:15px;}
+.section_login .field_item_content{padding:0px 10px;}
+
+.freetext_mini {border:1px #cdcdcd solid;width:40px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_small{border:1px #cdcdcd solid;width:88px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_middle{border:1px #bbbbbb solid;width:138px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_normal{border:1px #cdcdcd solid;width:168px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_date{border:1px #cdcdcd solid;width:73px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_cardquery{border:1px #bed5e0 solid;width:152px;height:18px; line-height:22px; vertical-align:middle;}
+.freetext_cardquery_small{border:1px #bed5e0 solid;width:80px;height:18px; line-height:22px; vertical-align:middle;margin-right:10px;}
+.freetext_login{border:1px #bed5e0 solid;width:210px;height:22px; line-height:22px; vertical-align:middle;}
+.freetext_repo{border:1px #cdcdcd solid;width:300px;height:22px; line-height:22px; vertical-align:-4px;}
+.freetext_repo_area{border:1px #cdcdcd solid;width:300px;line-height:22px; vertical-align:-4px;}
+.text_color_red{color:red;}
+.select_normal{border:1px #cdcdcd solid;width:172px;height:22px; line-height:22px; vertical-align:-4px;}
+
+.btn_2t,.btn_3t,.btn_4t,.btn_5t,.btn_6t,.btn_7t,.btn_8t,.btn_11t,.btn_14t
+{height:25px;background-color:transparent;background-position:left top;background-image:url(../../img/shengpay/CommonNew_img/btn_t.png);background-repeat:no-repeat;vertical-align:-3px;font-size: 12px;font-weight:bold;color:#666666;border:0px;cursor:pointer;*line-height:28px;}
+.btn_2t{  width:68px;background-position:0px    0px;}
+.btn_3t{  width:68px;background-position:0px  -40px;}
+.btn_4t{  width:81px;background-position:0px  -80px;}
+.btn_5t{  width:94px;background-position:0px -120px;}
+.btn_6t{ width:107px;background-position:0px -160px;}
+.btn_7t{ width:120px;background-position:0px -200px;}
+.btn_8t{ width:133px;background-position:0px -240px;}
+.btn_11t{width:170px;background-position:0px -280px;}
+.btn_14t{width:211px;background-position:0px -320px;}
+
+.btn_login {width:96px;height:31px;border:0px;color:white;font-size:14px;font-weight:bold;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_login.png);background-repeat: no-repeat;background-position:0px 0px; cursor:pointer; vertical-align:middle;}
+.btn_login_link { display:inline-block;line-height:31px;text-align:center;width:96px;height:31px;border:0px;color:white;font-size:14px;font-weight:bold;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_login.png);background-repeat: no-repeat;background-position:0px 0px;}
+
+/**********************************
+/**********************************
+* 分割线 Start
+**********************************/
+.dashed_line{clear: both;font-size:1px;height:2px;line-height:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/dashed_line.png);background-position:left bottom;background-repeat:repeat-x;}
+.solid_line{font-size:1px;height:2px;line-height:1px;overflow:hidden;border-bottom:1px #d1d1d1 solid;}
+/**********************************
+* 分割线 End
+**********************************/
+
+/**********************************
+* 校验结果样式 Start
+**********************************/
+.txt_required{font-family: SimSun; font-size: 14px; color: red; margin-right:3px;} 
+
+.validate_img{background-image: url(../../img/shengpay/CommonNew_img/iconb_0703.png);height:18px;height:18px; margin-left:-20px;vertical-align:-3px;}
+.bubble_container .msg_comment { padding-left:10px; line-height:14px;}
+.msg_comment .validate_img{ display:none;}
+.validate_error {color:#ca2f00; padding-top: 2px; padding-left: 25px; font-size: 12px;line-height:18px;}
+.validate_error .validate_img{background-position: -200px -140px;}
+.validate_success {color:#009933; padding-top: 2px; padding-left: 25px; font-size: 12px;line-height:18px;}
+.validate_success .validate_img{background-position: -200px -70px;}
+
+.msg_comment .validate_td		{height:24px;vertical-align:middle;padding-left:6px;}
+table.validate_error 	{color:#ca2f00;font-size:12px;line-height:14px; padding:0px;  margin-left:5px; margin-top:1px;}
+table.validate_success	{color:#009933;font-size:12px;line-height:14px; padding:0px;  margin-left:5px; margin-top:1px;}
+table.validate_warn	    {color:#666666;font-size:12px;line-height:14px; padding:0px;  margin-left:5px; margin-top:1px;}
+.validate_success .validate_td	{height:24px;vertical-align:middle;padding-left:19px;background-image: url(../../img/shengpay/CommonNew_img/iconb_0703.png); background-repeat:no-repeat;background-position: -200px -68px;}
+.validate_error .validate_td	{height:24px;vertical-align:middle;padding-left:19px;background-image: url(../../img/shengpay/CommonNew_img/iconb_0703.png); background-repeat:no-repeat;background-position: -200px -138px; }
+.validate_warn .validate_td		{height:24px;vertical-align:middle;padding-left:19px;background-image: url(../../img/shengpay/CommonNew_img/iconb_0703.png); background-repeat:no-repeat;background-position: -200px -208px;}
+
+/**********************************
+* 校验结果样式 End
+**********************************/
+
+/**********************************
+* 密码强度 Start
+**********************************/
+.psw_grade0 {width:92px;height:13px;background-image:url(../../img/shengpay/CommonNew_img/password_strength.png);background-position:0px   0px;}
+.psw_grade1 {width:92px;height:13px;background-image:url(../../img/shengpay/CommonNew_img/password_strength.png);background-position:0px -20px;}
+.psw_grade2 {width:92px;height:13px;background-image:url(../../img/shengpay/CommonNew_img/password_strength.png);background-position:0px -40px;}
+.psw_grade3 {width:92px;height:13px;background-image:url(../../img/shengpay/CommonNew_img/password_strength.png);background-position:0px -60px;}
+.psw_grade4 {width:92px;height:13px;background-image:url(../../img/shengpay/CommonNew_img/password_strength.png);background-position:0px -80px;}
+/**********************************
+* 密码强度 End
+**********************************/
+
+
+
+/**********************************
+* 常用HTML组件样式如按钮,文本框,
+* 提示信息,只读文字等 End
+**********************************/
+/**********************************
+* 图标 Start
+**********************************/
+.icon8_recharge {}
+.buy_card_address	{width:18px;height:14px;border:none;background-image:url(../../img/shengpay/CommonNew_img/buyCard_address_icon.png);background-repeat:no-repeat;background-position: 0 0;}
+.buy_card_tel		{width:18px;height:14px;border:none;background-image:url(../../img/shengpay/CommonNew_img/buyCard_address_icon.png);background-repeat:no-repeat;background-position: 0 -18px;}
+
+.icon12_expand 	{width:12px;height:12px; background-image:url(../../img/shengpay/CommonNew_img/icon12_expand.png);background-repeat:no-repeat;background-position:0px   0px;}
+.icon12_collapse{width:12px;height:12px; background-image:url(../../img/shengpay/CommonNew_img/icon12_expand.png);background-repeat:no-repeat;background-position:0px -20px;}
+
+.icon48_cash				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_cash.png);}                 
+.icon48_exchange			{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_exchange.png);}        
+.icon48_game				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_game.png);}               
+.icon48_recharge			{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_recharge.png);}          
+.icon48_sdpoint				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_sdpoint.png);}            
+.icon48_shop				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_shop.png);}                
+.icon48_transfer			{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_transfer.png);}            
+.icon48_wallet_about		{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_wallet_about.png);}
+.icon48_activity			{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_activity.png);}            
+.icon48_movie				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_movie.png);}            
+.icon48_creditcard			{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_creditcard.png);}            
+.icon48_bambook				{width:83px;height:50px;background-image:url(../../img/shengpay/CommonNew_img/icon50_bambook.png);}
+.icon48_mobile				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_mobile.png);}
+.icon48_lottery				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_lottery.png);}
+.icon48_collect				{width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_collect.png);}
+.icon48_mobilefee                   {width:48px;height:48px;background-image:url(../../img/shengpay/CommonNew_img/icon48_mobilefee.png);}
+.icon70_email                          {margin-top:30px;width:73px;height:74px;background-image:url(../../img/shengpay/CommonNew_img/icon70_email.png);background-repeat:no-repeat;}
+.icon72_mobile                        {margin-top:30px;width:73px;height:74px;background-image:url(../../img/shengpay/CommonNew_img/icon72_mobile.png);background-repeat:no-repeat;}
+.icon46_box					{float:left;display:inline;margin-left:-54px;width:44px;height:46px;background-image:url(../../img/shengpay/CommonNew_img/icon46_box.png);background-repeat:no-repeat;}
+.icon46_house				{float:left;display:inline;margin-left:-54px;width:44px;height:46px;background-image:url(../../img/shengpay/CommonNew_img/icon46_house.png);background-repeat:no-repeat;}
+.icon50_true				{float:left;display:inline;margin-left:-65px;width:50px;height:50px;background-image:url(../../img/shengpay/CommonNew_img/icon50_true.png);background-repeat:no-repeat;}
+.icon50_smile				{float:left;display:inline;margin-left:-65px;width:50px;height:50px;background-image:url(../../img/shengpay/CommonNew_img/icon50_smile.png);background-repeat:no-repeat;}
+
+.biz_service_enter	{width:18px;height:14px;border:none;background-image:url(../../img/shengpay/CommonNew_img/buyCard_address_icon.png);background-repeat:no-repeat;background-position: 0 -37px;}
+.biz_service_tel	{width:18px;height:14px;border:none;background-image:url(../../img/shengpay/CommonNew_img/buyCard_address_icon.png);background-repeat:no-repeat;background-position: 0 -18px;}
+.icon10_play		{width:15px;height:9px;background-image:url(../../img/shengpay/CommonNew_img/icon10_play.png);background-repeat:no-repeat;background-position: 0 0;}
+.icon14_wanring		{width:22px;height:18px;background-image:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png);background-repeat:no-repeat;background-position: 0 -38px;}
+/**********************************
+* 图标 End
+**********************************/
+
+/**********************************
+* 按钮 Start
+**********************************/
+.text_recharge{width:50px;height:34px;background-image:url(../../img/shengpay/CommonNew_img/text_recharge.png);background-repeat:no-repeat;margin-top:5px;margin-left:5px;}
+.btn_check{width:83px;height:25px;border:none;color:#fff;font-weight:700;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_section.png);background-repeat:no-repeat;background-position: 0 0;}
+.biz_login{width:83px;height:25px;border:none;color:#494949;font-weight:700;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_section.png);background-repeat:no-repeat;background-position: 0 -28px;}
+.btn_order{width:75px;height:21px;border:none;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_order.png);background-repeat:no-repeat;}
+.btn_regsiter_choose{padding:8px 30px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px 0px;}
+.btn_regsiter_choose:hover{padding:8px 30px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px -39px;}
+.band_tel{padding:8px 20px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px 0px;}
+.band_tel:hover{padding:8px 20px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px -39px;}
+.band_tel_ok{padding:8px 13px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px 0px;}
+.band_tel_ok:hover{padding:8px 13px;color:#fff;font-weight:700;font-size:14px;text-align:center;text-decoration:none;background-image:url(../../img/shengpay/CommonNew_img/btn_register_bg.png);background-repeat:no-repeat;background-position:0px -39px;}
+/**********************************
+* 按钮 End
+**********************************/
+/**********************************
+* 特殊页面样式 Start
+**********************************/
+.cssmod_gamelist {}
+.cssmod_gamelist ul {margin:0px;padding:0px;list-style:none;}
+.cssmod_gamelist dl {margin:0px;padding:0px;list-style:none;}
+.cssmod_gamelist dt {margin:0px;padding:0px;list-style:none;}
+.cssmod_gamelist dd {margin:0px;padding:0px;list-style:none;}
+.game-other a{background:url(../../img/shengpay/CommonNew_img/game.png) no-repeat -999px -999px;}
+.game-all a{background:url(../../img/shengpay/CommonNew_img/game.png) no-repeat -999px -999px;}
+.game-other dt{background:url(../../img/shengpay/CommonNew_img/game.png) no-repeat -999px -999px;}
+.game-all dt{background:url(../../img/shengpay/CommonNew_img/game.png) no-repeat -999px -999px;}
+.tab-game .tab-holder{background:url(../../img/shengpay/CommonNew_img/game.png) no-repeat -999px -999px;}
+.tab_safe .tab_safe_holder{background:url(../../img/shengpay/CommonNew_img/tab_bg_line.png) repeat-x;}
+.game{ margin-top:10px;}
+.game .box-bd{  border-color:#d1d1d1; }
+.game .box-border{  border-color:#f6f6f6; border-width:3px;}
+.tab-game{ overflow:hidden; position:relative;}
+.tab-game label{ position:absolute; left:28px; top:13px; font-weight:700; line-height:18px;}
+.tab-game .tab-holder{ height:48px; background-position:0 0 ; padding-left:58px;}
+.tab_safe .tab_safe_holder{ height:48px; background-position:0 34px ; padding-left:58px;}
+.tab-game .tab-holder li{ float:left; display:inline; margin:13px 0 0 12px; height:22px; line-height:18px; font-weight:700;padding:0px 9px; }
+.tab-game .tab-holder li a{ display:inline-block; color:#313131; padding-top:1px;}
+.tab-game .tab-holder li a:hover {color:#ed5400;}
+.tab-game .tab-holder li.tab-current { margin-top:12px;border:1px #bed5e0 solid;border-bottom-width:0px;background-color:white;}
+.tab-game .tab-holder li.tab-current a:hover{ color:#ed5400;}
+.tab-game .tab-holder li.tab-current a{ color:#ed5400;}
+.tab-game .tab-panel{}
+.game_tab_item_selected{padding:5px 10px;color:#F35400;margin-top:12px;border:1px #bed5e0 solid;border-bottom-width:0px;background-color:white;font-weight: 700;line-height:44px;}
+.game_tab_item{margin:0px 5px;font-weight: 700;color:#533131;padding:5px 10px;line-height:44px;}
+.game-other dt{ width:43px; float:left; margin-left:10px;}
+.game-all dt{ width:43px; float:left; margin-left:10px;}
+.game-other a{ display:inline-block; float:left; background-position:-86px -48px; background-color:#f5f5f5; margin:0px 0px 8px 14px; height:18px; padding:1px 1px 1px 14px; border:solid 1px #bababa; color:#666;}
+.game-all a{ display:inline-block; float:left; background-position:-86px -48px; background-color:#f5f5f5; margin:0px 0px 8px 14px; height:18px; padding:1px 1px 1px 14px; border:solid 1px #bababa; color:#666;}
+.game-other a:hover{ background-position:-86px -70px; border-color:#f0b57d; background-color:#faefdd; text-decoration:none; color:#ed5400;}
+.game-all a:hover{ background-position:-86px -70px; border-color:#f0b57d; background-color:#faefdd; text-decoration:none; color:#ed5400;}
+.game-all{ height:360px; font-family:"\5B8B\4F53",Arial, Helvetica, sans-serif;}
+.game-all dt{ height:352px; background-position:0 -48px;}
+.game-all dd{ height:352px; padding-top:0px; overflow:hidden;}
+.game-all a{ width:72px; height:15px;padding-top:3px;}
+.game-all a.game-high{ color:#ed5400;}
+dl.game-other{ padding-top:8px; height:65px; border-top:dotted 1px #d1d1d1;}
+.game-other dt{ height:58px; background-position:0px -410px; float:left; }
+.game-other dd{ height:65px;}
+.game-other a{ padding-right:4px;}
+.game-category{ padding-left:50px; clear:both;}
+.game-category dt{ color:#ed5400; display:inline; font-weight:700; font-size:14px; margin-left:-32px; float:left;}
+.game-category li{ display:block; width:106px; height:18px; padding:3px 0 1px 0; float:left; overflow:hidden; border-bottom:dashed 1px #ccc;}
+.game-category li.none{ color:#999; text-align:center; padding-top:4px; border-bottom-width:0;}
+.game-category a{ padding-left:16px; border-left:solid 1px #ccc;}
+
+/* page_body_side */
+
+.buy_card_list{background-color:#ffffda;padding:10px;}
+.buy_card_list h3{margin:0px;padding:5px 0px;color:#eb6100;font-size:14px;}
+.buy_card_list p{margin:0px;padding:5px 0px;color:#7d7d7d;}
+
+.note_list{margin:0px;padding:0px;list-style:none;padding:10px;line-height:22px;}
+.note_list li a{padding-left:10px;color:#474747;background-image:url(../../img/shengpay/CommonNew_img/icon_list_Arrow.png);background-repeat:no-repeat;background-position: 0 center;}
+
+.biz_service{padding:10px;line-height:22px;}
+.biz_service p{margin:0px;padding:0px;}
+
+/* login and regsiter */
+.regsiter_enter{padding-top:10px;text-align:center;background-color:#f0f0f0;}
+.regsiter_enter p{margin:0px 5px;padding:5px 0px;color:#7d7d7d;border-bottom:1px #bed5e0 solid;}
+.btn_regsiter{width:218px;height:33px;border:none;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_regsiter.png);background-repeat:no-repeat;}
+
+.biz_service{padding:10px;}
+.biz_service p{margin:0px;padding:2px 0px;}
+.biz_service i{color:#07679c;font-weight:700;font-size:14px;}
+.biz_service_title{margin:0px;padding:2px 0px;font-size:14px;}
+
+/* off info slide */
+.off_info{text-align:center;padding:0 0 6px 0px;}
+.roll_off_info{height:15px;}
+.roll_status{float:right;margin:0px;padding-right:10px;list-style:none;height:15px;}
+.roll_status li{cursor:pointer;float:left;_display:inline;margin:0px 3px;width:10px;height:10px;background-image:url(../../img/shengpay/CommonNew_img/icon_roll_status.png);background-repeat:no-repeat;overflow:hidden;background-position: -15px 0px;}
+.roll_status li.selected{background-position: 0px 0px;}
+
+/* index Panel */
+.vip_card{width:350px;height:240px;border:1px #bed5e0 solid;background-image:url(../../img/shengpay/CommonNew_img/panel_index_bg.png);background-repeat:no-repeat;background-position:left top;overflow:hidden;}
+.vip_card .panel_box_title{font-size:14px;margin:0px;padding:10px 15px;}
+.vip_card .panel_box_content{padding:0px 15px 0px 15px;}
+.vip_card .panel_box_foot{height:1px;line-height:1px;}
+.person_service{line-height:17px;padding:5px 0px;}
+.person_service a{padding:0px 6px;color:#07679c;}
+.person_service a:hover {color:#f60;}
+.service_list{margin:0px;padding:0px;}
+.service_list a{}
+.person_title{display:block;float:left;width:36px;height:17px;color:#fff;line-height:17px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/service_bg.png);background-repeat:no-repeat;background-position:0px -23px;}
+.biz_title{display:block;float:left;clear:left;width:36px;height:17px;color:#fff;line-height:17px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/service_bg.png);background-repeat:no-repeat;background-position:0px 0px;}
+.life_assist_title{margin:0px;padding:0px;font-size:14px;}
+
+.more_service_title{font-size:14px;font-weight:700;}
+.card_tips{margin:0px;padding:3px 0px;font-size:12px;color:#d13500;}
+.sheng_card{}
+.sheng_card p{margin:0px;padding:5px 0px;}
+.sheng_card i{padding-right:10px;}
+.sheng_card a{color:#07679c;padding-right:10px;}
+.sheng_card a:hover {color:#f60;}
+.sheng_card_list{padding:0px 0px 0px 120px;}
+.sheng_card_img{float:left;display:inline;margin-left:-120px;margin-top:5px;padding:2px;width:120px;height:72px;border:1px #e5e5e5 solid;}
+.sheng_card_list_sub{margin:0px;padding:0px;list-style:none;line-height:22px;}
+.sheng_card_list_sub li{}
+.sheng_card_list_sub li a{color:#313131;}
+.sheng_card_list_sub li a:hover {color:#f60;}
+.hit_hot{position:absolute;margin-left:295px;margin-top:-1px;width:56px;height:55px;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/hit_hot.png);background-repeat:no-repeat;}
+.tips_card{position:absolute;margin-left:245px;margin-top:40px;width:82px;height:59px;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/icon_card.png);background-repeat:no-repeat;}
+.news_list{line-height:22px;}
+.news_list ul {margin:0px;padding:15px;list-style:none;}
+.news_list li{padding-left:10px;background-image:url(../../img/shengpay/CommonNew_img/icon_list_Arrow.png);background-repeat:no-repeat;background-position:left center;}
+.news_list li a{color:#313131;}
+.news_list li a:hover {color:#f60;}
+.news_list .date{float:right;color:#7d7d7d;}
+
+.safe_list{line-height:22px;}
+.safe_list ul {margin:0px;padding:15px;list-style:none;}
+.safe_list li{padding-left:10px;background-image:url(../../img/shengpay/CommonNew_img/icon_list_Arrow.png);background-repeat:no-repeat;background-position:left center;}
+.safe_list li a{color:#313131;}
+.safe_list li a:hover {color:#f60;}
+.safe_list .date{float:right;color:#7d7d7d;}
+
+.choose_ticket {}
+.choose_ticket .field_item{padding-top:13px;} 
+
+/* Mobile Regsiter */
+.shengpay_sub_logo{padding-top:25px;}
+.icon50_regsiter{width:50px;height:31px;background-image:url(../../img/shengpay/CommonNew_img/icon50_reg.png);background-repeat:no-repeat;}
+.shengpay_regsiter_sub_menu{text-align:right;}
+.shengpay_regsiter_sub_menu a{color:#666666;}
+.shengpay_regsiter_sub_menu i{color:#d1d1d1;padding:0px 10px;}
+.reg_mobile{}
+.reg_mobile_title{margin:0px;padding:0px 0px 0px 50px;height:25px;font-size:14px;background-image:url(../../img/shengpay/CommonNew_img/regsiter_line.png);background-repeat:repeat-x;background-position:left bottom;}
+.reg_step_login{width:625px;margin-left:50px;padding:15px 0px}
+.reg_step_login_title{margin:0px;padding:0px;font-size:14px;font-weight:normal;height:20px;border-bottom:1px #d1d1d1 solid;}
+.reg_step_login_content {padding-top:5px;}
+.mail_reg{font-size:12px;font-weight:normal;padding-left:10px;}
+
+.regsiter_choose{width:825px;margin:30px auto;}
+
+.email_reg{float:right;width:397px;}
+.email_reg .panel_box_top{height:15px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:left top;}
+.email_reg .panel_box_content{height:280px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg_line.png);background-repeat:repeat-y;}
+.email_reg .panel_box_foot{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px -15px;}
+
+.email_reg_mouse_over{float:right;width:397px;}
+.email_reg_mouse_over .panel_box_top{height:15px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px -27px;}
+.email_reg_mouse_over .panel_box_content{height:280px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_over_bg_line.png);background-repeat:repeat-y;}
+.email_reg_mouse_over .panel_box_foot{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px bottom;}
+
+.mobile_reg{float:left;width:397px;}
+.mobile_reg .panel_box_top{height:15px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:left top;}
+.mobile_reg .panel_box_content{height:280px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg_line.png);background-repeat:repeat-y;}
+.mobile_reg .panel_box_foot{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px -15px;}
+
+.mobile_reg_mouse_over{float:left;width:397px;}
+.mobile_reg_mouse_over .panel_box_top{height:15px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px -27px;}
+.mobile_reg_mouse_over .panel_box_content{height:280px;text-align:center;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_over_bg_line.png);background-repeat:repeat-y;}
+.mobile_reg_mouse_over .panel_box_foot{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/panel_reg_bg.png);background-repeat:no-repeat;background-position:0px bottom;}
+
+.icon70_email{margin-top:30px;width:73px;height:74px;background-image:url(../../img/shengpay/CommonNew_img/icon70_email.png);background-repeat:no-repeat;}
+.icon72_mobile{margin-top:30px;width:73px;height:74px;background-image:url(../../img/shengpay/CommonNew_img/icon72_mobile.png);background-repeat:no-repeat;}
+
+.email_reg_title{margin:0px;padding:5px 0px;font-size:16px;}
+.reg_note{padding:20px 0px 25px 110px;}
+.reg_note ul{margin:0px;padding:0px;list-style:none;line-height:30px;text-align:left;}
+.reg_note ul li{padding-left:25px;background-image:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png);background-repeat:no-repeat;background-position:0px 10px;}
+
+/* regsiter succeed */
+.mobile_reg_succeed{padding:20px 0px 0px 40px;}
+.mobile_reg_succeed_tips{width:746px;}
+.mobile_reg_succeed_tips .panel_box_top{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/reg_succeed_bg.png);background-repeat:no-repeat;background-position:0px 0px;}
+.mobile_reg_succeed_tips .panel_box_content{border-left:1px #d1d1d1 solid;border-right:1px #d1d1d1 solid;background-color:#ffffe0;}
+.mobile_reg_succeed_tips .panel_box_foot{height:5px;line-height:1px;font-size:1px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/reg_succeed_bg.png);background-repeat:no-repeat;background-position:0px bottom;}
+
+.mobile_reg_succeed_more{padding:15px 0px 0px 10px; }
+.mobile_reg_succeed_tips_title{margin:0px;padding:0px;font-size:14px;height:25px;}
+.mobile_reg_succeed_tips_text{color:#7d7d7d;line-height:22px;padding-top:5px;}
+.mobile_reg_succeed_tips_content{padding:30px 170px 30px 120px;}
+.open_sdo_app{padding-left:54px;line-height:22px;padding-bottom:20px;}
+.open_sdo_app_title{margin:0px;padding:0px;font-size:14px;font-weight:normal;}
+.mobile_reg_succeed_more_title{margin:0px;padding:0px;font-size:14px;padding:15px 0px;}
+.open_sdo_app_content{}
+.mobile_reg_succeed_tips_text_b{color:#7d7d7d;line-height:22px;font-size:14px;padding-bottom:15px;}
+.mobile_reg_succeed_tips_text_b a{color:#009944;}
+.check_email{margin:10px 0px;padding:8px 19px;font-size:14px;font-weight:700;color:#fff;width:157px;height:31px;background-image:url(../../img/shengpay/CommonNew_img/btn_login.png);background-repeat:no-repeat;background-position:0px -40px;}
+.cont_receive{color:#7d7d7d;}
+
+/* about us */
+.pensent_nav{padding-bottom:10px;border-bottom:1px #bed5e0 solid;}
+.pensent_nav ul{margin:0px;padding:0px;line-height:22px;list-style:none;}
+.pensent_nav ul li{display:inline;padding-right:5px;}
+.about_us{}
+.about_us_content{float:right;width:764px;padding:10px 0px;line-height:22px;}
+.about_us_content_sub{padding:20px;}
+.about_us_content_sub p{margin:0px;padding:0px 0px 20px 0px;text-indent:20px;}
+.about_us_nav{float:left;height:378px;width:173px;background-image:url(../../img/shengpay/CommonNew_img/about_us_bg_line.png);background-repeat:no-repeat;background-position:right top;}
+
+
+.about_us_nav ul{margin:0px;padding:0px;list-style:none;line-height:31px;}
+.about_us_nav ul li{border-bottom:1px #bed5e0 solid;background-image:url(../../img/shengpay/CommonNew_img/about_us_bg01.png);background-repeat:repeat-y;}
+.about_us_nav_select a{padding:2px 0px;color:#fff;background-image:url(../../img/shengpay/CommonNew_img/about_us_bg_right.png);background-repeat:no-repeat;background-position:left center;}
+.about_us_nav_select_down a{padding:2px 0px;border-bottom:none;color:#fff;background-image:url(../../img/shengpay/CommonNew_img/about_us_bg_down.png);background-repeat:no-repeat;background-position:left center;}
+.about_us_nav ul li a{display:block;padding-left:20px;font-size:14px;font-weight:700;}
+
+.about_us_nav_sub{padding-left:5px;line-height:22px;}
+.about_us_nav_sub_unselect{margin:5px 0px;}
+.about_us_nav_sub_select{margin:5px 0px;background-image:url(../../img/shengpay/CommonNew_img/about_us_bg_select.png);background-repeat:no-repeat;}
+.about_us_nav_sub_unselect a{height:21px;background-image:none;padding-left:25px;line-height:17px;}
+.about_us_nav_sub_select a{height:21px;background-image:none;padding-left:25px;line-height:17px;}
+
+.about_us_nav_sub_unselect span{font-size:12px;font-weight:normal;color:#516974;}
+.about_us_nav_sub_select span{font-size:12px;font-weight:normal;color:#eb6100;}
+
+.hot_exercise_list{width:100%;line-height:22px;}
+.hot_exercise_list th{height:28px;padding-left:20px;border-bottom:1px #bed5e0 solid;font-weight:normal;background-color:#e2ecf1;}
+.hot_exercise_list  td{height:28px;padding-left:20px;color:#7d7d7d;border-bottom:1px #bed5e0 dashed;}
+.data_list{float:right;padding-right:10px;}
+
+.page_nav_hot_buy{text-align:center;color:#7d7d7d;padding:20px 0px;}
+.page_nav_hot_buy dl{margin:0px auto;padding:0px;width:550px;}
+.page_nav_hot_buy dl dt{margin:0px;padding:0px;float:left;padding-right:15px;}
+.page_nav_hot_buy dl dd{margin:0px;padding:0px;float:left;}
+.page_nav_hot_buy dl dd a{padding:0px 3px;}
+.page_nav_hot_buy_select a{color:red;}
+
+.biz_partners{width:764px;margin-bottom:10px;background-image:url(../../img/shengpay/CommonNew_img/biz_parn_bg.png);background-repeat:no-repeat;background-position:left top;}
+.biz_partners .panel_box_top{display:none;}
+.biz_partners .panel_box_content{padding:15px 15px;border-left:1px #bed5e0 solid;border-right:1px #bed5e0 solid;border-bottom:1px #bed5e0 solid;}
+.biz_partners .panel_box_foot{display:none;}
+
+.biz_partners_content{padding-left:158px;}
+.biz_partners_logo{float:left;height:61px;margin-left:-160px;display:inline;}
+.biz_partners_text{color:#7d7d7d;}
+.biz_partners_text p{margin:0px;padding:0px 0px 5px 0px;text-indent:20px;}
+
+/* partners */
+
+.biz_banks_list{}
+.biz_banks_list img{float:left;margin:5px 10px;display:inline-block;}
+
+.bank_content{}
+.bank_content a {padding:0px 5px;}
+
+
+/* expense service */
+.expense{width:236px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.expense .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_mini.png);background-position:0px 0px;background-repeat:no-repeat;}
+.expense .panel_box_content{border:1px solid #bed5e0;border-top-width:0px;padding:10px;}
+.expense .panel_box_foot{display:none;}
+
+.expense_list{margin-bottom:10px;border:1px #bed5e0 solid;padding:3px;background-color:#e9f1f5;}
+
+
+.shengpay_simple{width:960px;background-image:url(../../img/shengpay/CommonNew_img/page_simple_bg.png);background-repeat:no-repeat;background-position:left top;}
+.recharge_step{text-align:right;padding:5px 0px;}
+.recharge_step ul{margin:0px;padding:0px;list-style:none;line-height:22px;}
+.recharge_step ul li{font-size:14px;display:inline;padding:0px 3px;}
+.recharge_step ul li a{}
+.recharge_step i{color:#ccc;}
+.recharge_step_select a{color:#EB6100;}
+
+/* safe */
+.safe_page_banner{margin-bottom:10px;}
+.case_learn_title{margin:0px;padding:0px;font-weight:normal;color:#EB6100;font-size:14px;}
+.case_learn_content{line-height:22px;}
+.case_learn_content_list{width:920px;height:178px;overflow:hidden;}
+.case_learn_content_table{width:100%;}
+.case_learn_content_sub{width:920px;height:178px;}
+.case_learn_content_sub p{margin:0px;padding:0px;text-indent:25px;}
+.case_learn_tips{color:#7D7D7D;}
+.case_learn_page{text-align:center;padding:10px 0px;}
+.case_learn_page a {margin:0px 5px;}
+.case_learn_fav_page{padding:4px 16px;background-image:url(../../img/shengpay/CommonNew_img/icon_next_page.png);background-repeat:no-repeat;background-position:0 0;}
+.case_learn_next_page{padding:4px 16px;background-image:url(../../img/shengpay/CommonNew_img/icon_next_page.png);background-repeat:no-repeat;background-position:0 -24px;}
+
+.safe_question_list{}
+.safe_question_list ul{margin:0px;padding:0px;list-style:none;line-height:28px;}
+.safe_question_list ul li{padding-left:15px;background-image:url(../../img/shengpay/CommonNew_img/icon_safe_question_list.png);background-repeat:no-repeat;background-position:left center;}
+.safe_question_list ul li a{color:#7D7D7D;}
+
+.safe_class_tab{height:25px;background-image:url(../../img/shengpay/CommonNew_img/tab_bg_line.png);background-repeat:repeat-x;background-position:left bottom;}
+.safe_class_tab a{padding:5px 10px}
+.safe_class_select{border:1px solid #BED5E0;border-bottom-width:0px;background-color:#fff;color:#EB6100;font-weight:700;line-height:22px;}
+.safe_class_content{}
+
+/* cssmod popup list */
+.cssmod_card_query{width:502px;border:1px #98BCE1 solid;}
+.cssmod_card_query .panel_box_title{font-size:14px;color:#07679C;line-height:27px;margin:0px;padding-left:12px;padding-top:2px;height:29px;text-align:left;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-x.png);background-repeat:repeat-x;background-position: 0 0;}
+.cssmod_card_query .panel_box_content{background-color:#fff;text-align:center;}
+.cssmod_card_query .panel_box_foot{font-size:1px;line-height:1px;height:1px;}
+
+.cssmod_band_mobile{width:494px;border:1px #98BCE1 solid;}
+.cssmod_band_mobile .panel_box_title{font-size:14px;color:#07679C;line-height:27px;margin:0px;padding-left:12px;padding-top:2px;height:29px;text-align:left;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-x.png);background-repeat:repeat-x;background-position: 0 0;}
+.cssmod_band_mobile .panel_box_content{background-color:#fff;text-align:center;}
+.cssmod_band_mobile .panel_box_foot{font-size:1px;line-height:1px;height:1px;}
+.cssmod_band_mobile .panel_box_title_new{font-size:14px;color:#07679C;line-height:27px;margin:0px;padding-left:12px;padding-top:2px;height:29px;text-align:left;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-x.png);background-repeat:repeat-x;background-position: 0 0;}
+.cssmod_band_mobile_colse{display:block;float:right;margin-right:10px;margin-top:5px;width:14px;height:14px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-close.png);background-repeat:no-repeat;background-position: 0px 0;cursor:pointer;}
+.cssmod_band_mobile_colse_new{display:block;float:right;margin-right:10px;margin-top:5px;width:14px;height:14px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-close.png);background-repeat:no-repeat;background-position: 0px 0;cursor:pointer;}
+
+.card_query_colse{display:block;float:right;margin-right:10px;margin-top:5px;width:14px;height:14px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup-title-close.png);background-repeat:no-repeat;background-position: 0px 0;cursor:pointer;}
+
+.repo_tips{text-align:center;}
+
+
+
+/* authentication */
+.href_normal{font-weight:normal;}
+.icon_list_Arrow{background-image:url(../../img/shengpay/CommonNew_img/icon_list_Arrow.png);background-repeat:no-repeat;background-position:left center;}
+.auth_title{margin:0px;padding:10px 0px 10px 30px;font-size:14px;}
+.auth_tips{width:450px;color:#7D7D7D;line-height:22px;margin-left:30px;padding:10px 10px 10px 30px;border:1px solid #FF9F00;background-color:#FFFAAC;background-image:url(../../img/shengpay/CommonNew_img/icon12_warning.png);background-repeat:no-repeat;background-position:10px 15px;}
+.more_auth_tips{padding:10px;border:1px solid #DAE6EA;background-color:#F0F6F8;}
+.account_other_list{padding-left:20px;}
+.back_safe{width:157px;height:31px;font-size:14px;font-weight:700;color:#fff;border:none;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_login.png);background-repeat:no-repeat;background-position:0px -40px;}
+
+.auth_error_tips{padding:20px 0px 20px 40px;font-size:14px;}
+.auth_error_tips_content{padding-left:60px;padding-bottom:5px;line-height:22px;color:#7d7d7d;background-image:url(../../img/shengpay/CommonNew_img/icon48_warning.png);background-repeat:no-repeat;}
+.auth_error_tips_content b{color:#000}
+.band_tel_tips{padding:20px 0px 20px 100px;font-size:14px;}
+.auth_tips_list{line-height:22px;}
+.auth_tips_list ul{margin:0px;padding:0px;list-style:none;}
+.auth_tips_list ul li{padding-left:15px;color:#7d7d7d;background-image:url(../../img/shengpay/CommonNew_img/icon_list_Arrow.png);background-repeat:no-repeat;background-position:left center;}
+
+.sure_auth{}
+.auth_title{}
+
+.band_mobile_popup_title{font-size:14px;padding-bottom:10px;}
+.band_mobile_popup{text-align:left;padding-left:80px;background-image:url(../../img/shengpay/CommonNew_img/icon64_wanring.png);background-repeat:no-repeat;}
+.band_mobile_popup p{margin:0px;padding:0px;line-height:25px}
+/**********************************
+* 特殊页面样式 End
+**********************************/
+
+.menu_item{float:left;line-height:16px;margin-left:-1px;padding-top:6px;background:url(../../img/shengpay/CommonNew_img/head_menu_sep.png) no-repeat left 7px;}.menu_item a{display:block;width:84px;height:22px;text-align:center;color:#333333;text-decoration:none;padding:0 10px;}.menu_item_selected{float:left;line-height:24px;margin-left:-1px;background:url(../../img/shengpay/CommonNew_img/head_menu_sep.png) no-repeat left 7px;}.menu_item_selected a{display:block;width:90px;height:24px;text-align:center;color:#EB6100;text-decoration:none;padding:0 10px;background-image:url(../../img/shengpay/CommonNew_img/head_menu_selected.png);background-position:center center;background-repeat:no-repeat;}.child_menu_container{position:absolute;display:block;width:500px;}.nosubmenu{background-image:url(../../img/shengpay/CommonNew_img/head_bg_nosubmenu.png);height:38px;}.page_head_tabs{overflow:hidden;margin-left:25px;font-size:14px;}.page_head_tabs ul{padding:0px;margin:0px;list-style:none;float:left;margin-left:-2px;background:url(../../img/shengpay/CommonNew_img/menu_sep.png) repeat-x 2px 5px;}.head_tab_first{float:left;width:122px;padding-left:1px;text-align:center;line-height:26px;}.head_tab_item{float:left;width:122px;text-align:center;line-height:26px;}.head_tab_last{float:left;width:122px;text-align:center;line-height:26px;}.head_tab_item_selected{background-image:url(../../img/shengpay/CommonNew_img/head_tab_selected.png);background-position:center top;background-repeat:no-repeat;float:left;width:122px;height:37px;border:0px;position:relative;top:-2px;text-align:center;line-height:34px;overflow:hidden;}.head_tab_item_selected a{color:#000;font-weight:bold;text-decoration:none;}.head_tab_last a{color:white;font-weight:bold;text-decoration:none;}.head_tab_first a{color:white;font-weight:bold;text-decoration:none;}.head_tab_item a{color:white;font-weight:bold;text-decoration:none;}.page_head_menu{font-size:12px;padding-left:25px;height:30px;background:url(../../img/shengpay/CommonNew_img/page_head_menu.png) no-repeat 0 bottom;}.page_head_menu ul{padding:0px;margin:0px;list-style:none;float:left;margin-right:20px;overflow:hidden;}
+
+.page_head_top_right{float:right;text-align:right;font-size:12px;color:#666;line-height:32px;font-family:宋体;}
+.page_head_top_right a{color:#666;zoom:1;}
+.page_head_top_right a.key_blue{color:#056A98;}
+.page_head_top_right a.key_txt{color:#f60;}
+.page_head_top_right span{margin-left:6px;zoom:1;}
+.page_head_flap{float:right;font-size:14px;font-weight:700;color:#fff;line-height:32px;background:url(../../img/shengpay/CommonNew_img/head_flap.png) no-repeat center 0;height:32px;width:117px;text-align:center;margin-top:-2px;_display:inline;}
+.page_head_flap a{color:#fff;}
+
+.btn_right_link{display:inline-block;border-style:none;width:73px;height:22px;line-height:22px;background:url(../../img/shengpay/CommonNew_img/btn_right_link.png) no-repeat center center;text-align:center;margin:0 0 0 8px;}
+.icon_more_list{width:14px;height:12px;background:url(../../img/shengpay/CommonNew_img/icon_head_down_arrow2.gif) no-repeat center center;}
+
+/*20110601*/
+.txt_yellow{color:#FFE900;}
+.key_blue{color:#056A98;}
+.key_txt{color:#f60;}
+.txt_weak{color:#666;}
+
+.em_money{color:#F60;font-size:16px;font-family:宋体;}
+.dead_money{color:#666;}
+
+.icon_discount{width:27px;height:22px;background:url(../../img/shengpay/CommonNew_img/icon_discount.png) no-repeat 0 0;margin-top:-22px;_margin-top:-16px;vertical-align:baseline;position:absolute;}
+.icon_laba{width:14px;height:14px;background:url(../../img/shengpay/CommonNew_img/icon_laba.png) no-repeat center center;}
+
+.tab_content{display:none;}
+
+.dashed_line06{clear:both;height:0;border-top:dashed 1px #BDD5DF;line-height:0;font-size:0;overflow:hidden;margin:10px 0;}
+
+.dashed_line08{clear:both;height:0;border-top:dashed 1px #BDD5DF;line-height:0;font-size:0;overflow:hidden;margin:0;}
+.dashed_line09{clear:both;height:0;border-top:dashed 1px #BDD5DF;line-height:0;font-size:0;overflow:hidden;margin:0;}
+
+.btn_checkin{width:89px;height:25px;margin-top:10px;_display:inline;line-height:25px;float:right;color:#484848;font-weight:700;background:url(../../img/shengpay/CommonNew_img/btn_checkin.png) no-repeat center center;text-align:center;}
+
+
+/* copy on line */
+.question_list{padding-left:9px;color:#333333;font-size:12px;line-height:20px;list-style:none;}
+.question_list ul{margin:0px;padding:0px;list-style:none;}
+.question_list li{ padding-left:10px; background-image: url(../../img/shengpay/CommonNew_img/list_disc.png);background-position:0px 8px;background-repeat:no-repeat;}
+.question_list li a{text-decoration:none;color:#666666}
+
+.special_discount{}
+.special_discount_slide { float:left;width:500px;}
+.special_discount_container {width: 645px; margin-left: 34px; padding:20px 0px 15px 0px; overflow: hidden;}
+
+.special_discount_left_arrow {position: absolute;width: 14px;height: 44px;background-image: url(../../img/shengpay/CommonNew_img/sdpoint_board_tabs_arrow.png);background-position: 0px 0px;}
+.special_discount_right_arrow {position: absolute;width: 14px;height: 44px;background-image: url(../../img/shengpay/CommonNew_img/sdpoint_board_tabs_arrow.png);background-position: -80px 0px;}
+.special_discount_table {}
+.special_discount_table td{text-align:center;}
+.special_discount_table td img { margin:0 18px 5px ;}
+.special_discount_list { float:left;width:180px; padding-left:5px; padding-top:5px; margin-left:10px; background-image:url(../../img/shengpay/CommonNew_img/special_discount_list_bg.png);background-repeat:no-repeat;background-position:left center; }
+
+.icon16_mobile	{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px 0px;}
+.icon16_email	{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -20px;}
+.icon16_cid		{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -40px;}
+.icon16_userinfo{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -60px;}
+.icon16_message	{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -80px;}
+.icon16_gift	{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -100px;}
+.icon16_help	{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/icon16_1124.png);background-position:0px -120px;}
+
+
+.bubble_normal {width:100px; position:absolute; color:#666; line-height:18px;padding:10px;}
+.bubble_normal .bubble_content{background-color:#ffffcd;border:1px #ffcc66 solid; padding:3px;}
+.bubble_normal .bubble_arrow_left	{ margin-left:-13px; padding-left:13px;		background-repeat:no-repeat;background-image:url(../../img/shengpay/CommonNew_img/bubble_arrow_left.png);	background-position:left center;}
+.bubble_normal .bubble_arrow_right	{ margin-right:-13px;padding-right:13px;	background-repeat:no-repeat;background-image:url(../../img/shengpay/CommonNew_img/bubble_arrow_right.png);	background-position:right center;}
+.bubble_normal .bubble_arrow_top	{ margin-top:-13px;  padding-top:13px;		background-repeat:no-repeat;background-image:url(../../img/shengpay/CommonNew_img/bubble_arrow_top.png);	background-position:center top;}
+.bubble_normal .bubble_arrow_bottom	{ position:relative;top:13px; margin-top:-13px; padding-bottom:13px;background-repeat:no-repeat;background-image:url(../../img/shengpay/CommonNew_img/bubble_arrow_bottom.png);	background-position:center bottom;}
+/*老版本带图片[已作兼容处理可以和新版本并用] Start*/
+.bubble_normal .bubble_arrow{text-align:center; margin-top:-1px;*margin-top:-3px;}
+.bubble_normal .bubble_arrow img {margin:auto;width:20px;height:10px;background-image:url(../../img/shengpay/CommonNew_img/bubble_msg_arrow.png);background-repeat:no-repeat;background-position:left top;}
+
+/* new create */
+.top_welcome{height:30px;line-height:30px;margin-bottom:10px;}
+.top_welcome_right{height:28px;float:right;padding-left:30px;line-height:28px;border:solid 1px #FFE489;width:415px;font-size:12px;background:#FFF8D3 url(../../img/shengpay/CommonNew_img/icon_laba.png) no-repeat 10px center;}
+.top_welcome_right p{ margin:0;}
+.top_welcome_txt{font-size:14px;color:#000;font-weight:700;}
+.common_app{border:solid 1px #BED4DF;margin-bottom:10px;padding:10px 15px;}
+.common_app_table{width:100%;}
+.common_app_table td{vertical-align:top;line-height:2;}
+.common_app_table td h4{margin:0;padding-bottom:5px;line-height:20px;font-size:12px;font-weight:700;}
+
+
+.recom_list{padding-left:60px;line-height:20px;color:#777;min-height:55px;_height:55px;}
+.recom_list img{margin-left:-60px;margin-top:5px;float:left;_display:inline;}
+.recom_list p{ margin:0;padding-top:6px;}
+
+.list_recent_table{width:100%;color:#333;}
+.list_recent_table thead th{line-height:30px;border-bottom:solid 1px #D9D9D9;text-align:center;font-size:12px;font-weight:400;background-color:#EEEEEE;}
+.list_recent_table td{line-height:30px;text-align:center;}
+.list_recent_table .tr_even td{background-color:#EEEEEE;}
+.list_recent_table tfoot td{padding-right:20px;text-align:right;}
+
+.panel_vlarge .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;border-style:none solid;border-width:1px;border-color:#BED5E0;background-image:url(../../img/shengpay/CommonNew_img/panel_box_title_x.png);background-position:0px 0px;background-repeat:repeat-x;}
+.panel_vlarge .panel_box_content{border-style:none solid solid;border-width:1px;border-color:#BED5E0;}
+
+.panel_box_tab{height:30px;line-height:30px;background:url(../../img/shengpay/CommonNew_img/panel_box_title_x.png) repeat-x 0 0;border-style:none solid;border-width:1px;border-color:#BED5E0;}
+
+.panel_box_tab .tab_item_selected{border-style:none solid;border-width:1px;border-color:#BED5E0;margin-top:1px;margin-left:-1px;_display:inline;line-height:29px;}
+.tab_item{cursor:pointer;}
+
+.panel_box_tab .couple_tab_item{width:50%;float:left;font-size:14px;font-weight:700;text-align:center;color:#888;cursor:pointer;}
+.panel_box_tab .couple_tab_item_selected{width:50%;float:left;font-size:14px;font-weight:700;text-align:center;background-color:#fff;margin-top:1px;_display:inline;margin-right:-1px;margin-left:-1px;border-right:solid 1px #BED5E0;border-left:solid 1px #BED5E0;height:29px;line-height:28px;}
+
+.panel_box_tab2{height:30px;line-height:30px;background:url(../../img/shengpay/CommonNew_img/panel_box_title_x.png) repeat-x 0 0;border-style:none solid;border-width:1px;border-color:#BED5E0;}
+.panel_box_tab2 .tab_item{float:left;height:29px;padding:1px 10px 0px 10px;color:#7d7d7d;border:0px #bed5e0 solid;}
+.panel_box_tab2 .tab_item_selected{border-style:none solid;border-width:1px;border-color:#BED5E0;margin-left:-1px;_display:inline;line-height:29px;float:left;height:29px;padding:0px 12px 0px 12px;color:#313131;border-left:1px #bed5e0 solid;border-right:1px #bed5e0 solid;border-top:1px #bed5e0 solid;background-color:white;}
+
+
+.myapp_list{background:url(../../img/shengpay/CommonNew_img/icon_bag.png) no-repeat 0 center;padding:1px 0 1px 30px;display:inline-block;width:80px;height:20px;line-height:20px;;margin:4px 0;}
+.myapp_list_container{margin-right:-40px;}
+
+.wallet_info{margin:0 5px;padding:5px;border-bottom:solid 1px #BED5E0;line-height:1.8;}
+.basic_info{margin:0 5px;padding:5px;line-height:1.8;}
+.basic_info .dashed_line06 {margin:5px 0;}
+
+.bottom_btn{padding:10px 0;}
+
+.basic_info_line{height:22px;padding-bottom:5px;margin-bottom:5px;border-bottom:dashed 1px #BDD5DF;line-height:22px;}
+
+.page_head_ad{float:right;line-height:30px;width:234px;padding-top:5px;font-family:宋体;}
+.page_head_ad a{color:#FFEA03;}
+.panel_tab_title{font-size:14px;height:29px;border-right:solid 1px #BED5E0;line-height:28px;padding:0 5px;background-color:#fff;float:left;_display:inline;}
+
+.top_ad_table{width:100%;}
+.top_ad_table td{vertical-align:top;}
+
+.mini_ad_list{width:125px;height:80px;padding:8px 10px 8px 100px;line-height:1.6;color:#666;border:solid 1px #BED4DF;}
+.mini_ad_list_title{color:#000;}
+.mini_ad_list .icon_left{float:left;_display:inline;margin-left:-90px;width:80px;height:80px;}
+.mini_ad_list a{color:#666;}
+.mini_ad_list a:hover{color:#f60;}
+
+.mini_ad_list p{margin:0;padding:0;}
+
+/******  2011-7-8 by wur ****/
+.rolling_titles{background:url(../../img/shengpay/CommonNew_img/rolling_titles.png) no-repeat 0 0;padding-left:30px;height:28px;line-height:28px;overflow:hidden;}
+.rolling_titles ul{list-style:none;margin:0;padding:0;}
+.rolling_titles li{list-style:none;margin:0;padding:0;}
+/******* ---- ********/
+
+.rolling_icons{border:solid 1px #BED4DF;margin-top:10px;margin-bottom:10px;background:url(../../img/shengpay/CommonNew_img/panel_index_bg2.png) repeat-x center 0;}
+
+.special_service{height:30px;line-height:30px;padding:0 12px;}
+.special_service_left{display:inline-block;width:360px;}
+
+.icon18_suc{width:18px;height:18px;background: url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -200px -70px;}
+
+.dropdown {display:inline;margin-right:10px;line-height:24px; font-family:Arial, Helvetica, sans-serif; }
+.dropdown select { position:absolute;visibility:hidden;width:1px;overflow:hidden;}
+.dropdown input { width:213px;height:22px;padding:0px;line-height:22px;border:1px #bfd5e0 solid; font-family:"\5B8B\4F53";text-indent:10px;background:url(../../img/shengpay/CommonNew_img/select.png) no-repeat right 0px;cursor:pointer; }
+.dropdown input.over {border-color:#bfd5e0;background-position:right -30px;cursor:pointer;}
+.dropdown ul {position:absolute;width:213px;max-height:215px;_height:expression(this.scrollHeight>214?'215px':''); overflow-y:auto; overflow-x:hidden; margin:0px;padding:0px;list-style:none;margin-top:24px; display:none;border:1px #bfd5e0 solid;}
+.dropdown ul li {min-width:213px;_width:213px;height:24px;margin:0px;padding:0px; margin-right:-17px; line-height:24px;color:#09c; text-indent:11px; background:#fff;cursor:default;}
+.dropdown ul li.normal {color:#09c; background:#fff;cursor:pointer;}
+.dropdown ul li.over {color:#f60;background:#e1f5ff;cursor:pointer;}
+.dropdown ul li.current {color:#09c;background:#ededed;}
+.dropdown ul.show {display:inline;*display:block;} 
+
+.btn_order6{width:93px;height:21px;padding:0;border:none;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_order6.png);background-repeat:no-repeat;}
+
+.reg_reasons{line-height:2;padding:7px 12px;height:161px;overflow:hidden;}
+.reg_reasons .bottom_btn{padding-top:12px;}
+.reg_reasons .dashed_line{margin-top:10px;}
+
+.flap_icon{margin-top:-2px;margin-left:5px;position:absolute;_margin-top:-8px;}
+
+.shzs_list{position:absolute;width:70px;border:solid 1px #BED5E0;background-color:#EFFAFF;padding:0 8px;text-align:left;line-height:24px;margin-left:-77px;margin-top:3px;margin-left:-74px \0;margin-top:4px \0;}
+
+.tab_quickway{float:right;}
+.btn_check_link{display:inline-block;text-align:center;line-height:25px;width:83px;height:25px;border:none;color:#fff;font-weight:700;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_section.png);background-repeat:no-repeat;background-position: 0 0;}
+
+
+
+/* iselect plugin */
+ul,li{margin:0;padding:0;list-style:none;}
+.sel{ background:url(../../img/shengpay/CommonNew_img/sel.png) no-repeat right 0;  border:1px solid #BFD5E0; cursor:default; font-family:宋体; font-size:13px; }
+span div.hover{ background:url(../../img/shengpay/CommonNew_img/sel.png) no-repeat right -30px; }
+.opt{ background-color:#FFFFFF; border:solid 1px #7F9DB9; cursor:default; font-family:宋体; font-size:13px; }
+.opt li{ display:block; width:100%; }
+.opt li.now{ background-color:#316AC5; color:#FFF; }
+
+
+
+
+/***************** 2011-6-13 *****************/
+.dashed_line07{height:0;border-top:dashed 1px #BDD5DF;line-height:0;font-size:0;overflow:hidden;margin:10px 0;}
+
+.wallet_intro{line-height:1.6;}
+
+.wallet_tese{line-height:1.8;}
+.wallet_tese span{display:inline-block;width:335px;height:22px;}
+.wallet_tese b{line-height:30px;}
+
+.common_app2{border:solid 1px #BED4DF;padding:10px 5px;}
+.common_app2 .common_app_title{text-indent:12px;line-height:1;}
+.common_app_title{font-size:14px;line-height:30px;font-weight:700;margin:0;padding:0;}
+
+.tiny_panels{}
+.tiny_panels td{border:solid 1px #BED5E0;vertical-align:top;width:33%;}
+.tiny_panel h3{background:url(../../img/shengpay/CommonNew_img/panel_mini.png) no-repeat center bottom;line-height:29px;height:29px;font-size:12px;font-weight:700;margin:0;padding:0;text-indent:12px;}
+.tiny_panel_body01{text-align:center;line-height:2;padding:10px 15px;}
+.tiny_panel_body01 img{height:60px;width:180px;}
+
+.tiny_panel_body02{padding:10px 15px;}
+.tiny_panel_body03{text-align:left;padding:10px 15px;line-height:2;}
+.tiny_panel_body03 img{margin:10px 0;}
+
+
+.icon_tese01{width:16px;height:16px;background:url(../../img/shengpay/CommonNew_img/icon_201.png) no-repeat center center;}
+.icon_tese02{width:16px;height:16px;background:url(../../img/shengpay/CommonNew_img/icon_202.png) no-repeat center center;}
+.icon_tese03{width:16px;height:16px;background:url(../../img/shengpay/CommonNew_img/icon_203.png) no-repeat center center;}
+.icon_tese04{width:16px;height:16px;background:url(../../img/shengpay/CommonNew_img/icon_204.png) no-repeat center center;}
+
+.icon45_wallet{width:55px;height:60px;background:url(../../img/shengpay/CommonNew_img/icon45_wallet.png) no-repeat 0 0;}
+
+.bottom_txt{text-align:left;}
+
+.tiny_list {padding-left:65px;height:50px;line-height:1.8;}
+.tiny_list img{float:left;margin-left:-60px;_display:inline;}
+
+.btn_weibo_link{display:inline-block;background:url(../../img/shengpay/CommonNew_img/btn_weibo.png) no-repeat center center;font-weight:700;font-size:12px;color:#fff;width:72px;height:23px;line-height:23px;text-align:center;}
+.bottom_btn{padding-top:10px;}
+
+.task_list{padding:6px 15px;line-height:2.2;}
+
+.page_bg_login{position: absolute;top: 0px;z-index: -1;left: 0px;width: 100%;min-width: 960px;height: 115px;background-image: url(../../img/shengpay/CommonNew_img/page_bg_error.png);background-position:center top;background-repeat: repeat-x;}
+
+.page_login_main{float:left;width:680px;overflow:hidden;}
+
+.panel_login{border:solid 1px #A9BECF;padding:0;background:url(../../img/shengpay/CommonNew_img/login_bottom.png) repeat-x 0 bottom;}
+.login_tab{height:30px;line-height:27px; text-align:left;}
+.login_body{padding:0px 15px 15px 15px;}
+
+.login_tab .couple_tab_item_selected{background:url(../../img/shengpay/CommonNew_img/login_tab_item_selected.png) repeat-x 0 0;width:50%;float:left;font-size:14px;font-weight:700;text-align:center;_display:inline;}
+.login_tab .couple_tab_item{background:url(../../img/shengpay/CommonNew_img/login_tab_item.png) repeat-x 0 0;width:100%;float:left;font-size:14px;font-weight:700;text-align:left;_display:inline;height:27px;line-height:27px;color:#7A7E7F;cursor:pointer;border-bottom:solid 1px #A9BECF;}
+
+.unactive{color:#ccc;}
+
+.login_section_table{width:100%;}
+.login_section_table th{text-align:right;font-weight:400;}
+.login_section_table td{text-align:center;padding:5px 10px;vertical-align:middle;}
+
+.btn_checkin2{vertical-align:middle;width:89px;height:25px;display:inline-block;line-height:25px;color:#484848;font-weight:700;background:url(../../img/shengpay/CommonNew_img/btn_checkin.png) no-repeat center center;text-align:center;}
+
+
+.news_list2 {margin:0px;padding:10px;list-style:none;line-height:22px;}
+.news_list2 li{padding-left:10px;background-image:url(../../img/shengpay/CommonNew_img/list_disc.png);background-repeat:no-repeat;background-position:left center;}
+
+.popup{position:fixed;_position:absolute;z-index:1000;left:0px;top:0px;width:100%;height:100%;display:none;}
+.popup_overlay{background-color:#000;position:fixed;_position:absolute;text-align:center;left:0px;top:0px;_top:expression(documentElement.scrollTop);width:100%;height:100%;_height:expression(documentElement.clientHeight);z-index: 600;filter: alpha(opacity=30); moz-opacity: 0.30; opacity: 0.30;}
+.popup_overlay iframe{	position:absolute;z-index:601;left:0px;top:0px;width:100%;height:100%;_height:expression(documentElement.clientHeight); border:0px; filter:alpha(opacity=10); moz-opacity:0.1; opacity:0.1;}
+.popup_container{text-align:center;position:absolute;left:0px;top:0px;padding-top:15%;height:95%;width:100%;z-index:601;_top:expression(documentElement.scrollTop + 0);}
+
+.panel_login_popup{width:310px;font-size:12px;font-family:宋体;margin:0 auto;border:solid 1px #A9BECF;background-color:#FFF;text-align:left;}
+
+.btn_popup_close{width:16px;height:16px;font-weight:700;color:#666;position:absolute;cursor:pointer;margin-left:290px;margin-top:5px;}
+
+
+
+
+.btn_kaitongqianbao{width:150px;height:33px;background:url(../../img/shengpay/CommonNew_img/btn_kaitongqianbao.png) no-repeat center 0;}
+.btn_syqb_link{display:inline-block;width:150px;height:33px;background:url(../../img/shengpay/CommonNew_img/btn_shiyongqianbao.png) no-repeat 0 0;}
+.btn_ktqb_bottom{padding-top:10px;background:url(../../img/shengpay/CommonNew_img/btn_kaitongqianbao.png) no-repeat center -33px;}
+.btn_ktqb_bottom .sep{margin:0 5px;color:#07679C;}
+.icon45_wallet{width:55px;height:60px;background:url(../../img/shengpay/CommonNew_img/icon45_wallet.png) no-repeat 0 0;}
+
+
+/* 20110628 */
+.myapp_list_quan{background-image:url(../../img/shengpay/CommonNew_img/icon_app_quan.png);}
+.weibo{border:1px solid #BED5E0;padding:10px 10px 10px 70px;background:url(../../img/shengpay/CommonNew_img/weibo.png) no-repeat 10px 12px;line-height:2;}
+.btn_big6_link{display:inline-block;  text-decoration:none;font-size:14px;font-weight:700;color:#fff;text-align:center;width:110px;height:25px;line-height:25px;background:url(../../img/shengpay/CommonNew_img/btn_big.png) no-repeat;text-indent:0;}
+.wallet_info_unactive{text-indent:20px;margin:0 5px;padding:10px 5px 5px;border-bottom:solid 1px #BED5E0;line-height:1.8;}
+
+/*遮罩*/
+div.light{width:100%; height:100%; display:block;}
+div.lightbg{width:100%; height:100%;position:absolute; left:0px; top:0px;z-index:10000;background:#000; filter:alpha(opacity=30);opacity:0.3!important;}
+div.lightbox{ width:590px; height:auto; position:absolute; top:80px; left:50%; margin-left:-295px; background-color:#fff; z-index:10001; border:solid 4px #888;  text-align:left;}
+div.lighthead{ height:30px; background:url(../../img/shengpay/img/hilight/lighthead.png) left bottom repeat-x;font-size:14px; font-weight:700; color:#000; line-height:32px; padding-left:16px; border:solid 1px #fff; overflow:hidden; }
+div.lightbody{ border-top:solid 1px #d3d3d3; padding:16px 0; background-color:#fff;}
+label.lightclose{ width:20px; height:20px; display:block; background :url(../../img/shengpay/img/hilight/lightclose.png) ; margin:5px 5px 0 0; position:absolute; right:0; cursor:pointer; _margin-left:-50px;}
+div.lightlogin{ width:340px;}
+
+.lightnotice{ width:480px; margin:0 auto 32px auto; color:#666666}
+.notice { padding-left:32px;}
+.notice p{ margin-top:10px;}
+.notice s, .info s{ background:url(../../img/shengpay/img/hilight/message.png) no-repeat; float:left; margin-left:-32px; display:inline-block; position:relative; width:24px; height:24px;}
+.info s{ background-position: 0 0; margin-top:0;}
+
+.activity_gift{ padding-top:5px; }
+.activity_gift a{ color:#666}
+.activity_gift a:hover{ color:#f60}
+
+.btn_4_link
+{padding:8px 25px 12px;line-height:26px;font-size:14px;font-weight:700;color:#fff;background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;border:0px;cursor:pointer;text-align:center;vertical-align:middle; }
+.btn_4_link {background-position:0px   -80px; background-position:0px   -76px\9;*background-position:0px  -80px;}
+a.btn_4_link:hover{background-position:-200px  -80px;background-position:-200px  -76px\9;*background-position:-200px  -80px;color:#fff;}
+
+
+
+/*20110708 zzf新增*/
+
+.btn_big6_link{display:inline-block;text-decoration:none;font-size:14px;font-weight:700;color:#fff;text-align:center;width:110px;height:25px;line-height:25px;background:url(../../img/shengpay/CommonNew_img/btn_big.png) no-repeat;text-indent:0;}
+.wallet_info_unactive{text-indent:20px;margin:0 5px;padding:10px 5px 5px;border-bottom:solid 1px #BED5E0;line-height:1.8;}
+
+.myapp_list_container span{background-repeat: no-repeat;background-position:2px center;padding:1px 0 1px 20px;display:inline-block;width:90px;height:20px;line-height:20px;;margin:4px 0;}
+.myapp_list_container span img{float:left;margin-left:-20px;margin-top:3px;_display:inline;}
+
+.myapp_list{background:url(../../img/shengpay/CommonNew_img/icon_bag.png) no-repeat 0 center;padding:1px 0 1px 30px;display:inline-block;width:80px;height:20px;line-height:20px;;margin:4px 0;}
+.tr_hover {background-color:#ffffe7;}
+.txt_fail{color:#cc3300;}
+.list_table{width:100%;font-size:12px; line-height:22px;}
+.list_table th{/*border-top:1px #bed5e0 solid;border-bottom:1px #dae1e7 solid;*/padding:6px 0px 6px 15px;background-color:#eff9ff;font-weight:normal;text-align:left;}
+.list_table td{border-top:1px #dae1e7 solid;padding:6px 0px 6px 15px;text-align:left;}
+
+p{margin:0;padding:0;}
+
+.page_head{zoom:1;}
+
+.special_discount_left_arrow.disabled {background-position: 0px -50px;}
+.special_discount_right_arrow.disabled {background-position: -80px -50px;}
+
+
+
+/* 20110720 */
+.btn_right_link{display:inline-block;border-style:none;width:73px;height:22px;line-height:22px;background:url(../../img/shengpay/CommonNew_img/btn_right_link.png) no-repeat center center;text-align:center;margin:0 0 0 8px;}
+.icon_more_list{width:14px;height:12px;background:url(../../img/shengpay/CommonNew_img/icon_head_down_arrow2.gif) no-repeat center center;}
+
+.bubble_container{display:inline;position:absolute; z-index:1000;}
+.shzs_list{position:absolute;width:70px;border:solid 1px #BED5E0;background-color:#EFFAFF;padding:0 8px;text-align:left;line-height:24px;margin-left:-77px;margin-top:3px;margin-left:-74px \0;margin-top:4px \0;}
+
+.font_14{font-size:14px;}
+.page_body{font-size:12px;color:#333;}
+
+.account_info{border:solid 1px #BED4DF;background-color:#F3F8FB;padding:10px 120px;line-height:2;margin-bottom:10px;}
+
+.panel_cz{}
+.panel_cz_tab{padding-left:30px;height:31px;line-height:31px;background:url(../../img/shengpay/CommonNew_img/cz_tab.png) repeat-x 0 0;border-top:solid 1px #BED4DF;border-left:solid 1px #BED4DF;border-right:solid 1px #BED4DF;color:#4C4E4D;font-size:14px;font-weight:700;_overflow:hidden;}
+.panel_cz_tab .tab_item_selected{display:inline-block;background:url(../../img/shengpay/CommonNew_img/tab_item_selected.png) center 0;line-height:40px;vertical-align:top;height:45px;width:85px;text-align:center;position:relative;top:-5px;}
+.panel_cz_tab .tab_item{display:inline-block;text-align:center;width:85px;cursor:pointer;color:#08679F;}
+
+.cz_box{border:solid 3px #A6CEF1;padding-left:30px;padding-right:20px;}
+.cz_title{border-bottom:dotted 1px #ccc;padding:5px 0 0;margin:0;font-weight:400;font-size:14px;line-height:30px;}
+.cz_content{padding-top:10px;line-height:2;}
+
+.cz_section_table{width:98%;}
+.cz_section_table th{vertical-align:top;font-weight:400;line-height:30px;width:84px;text-align:right;}
+.cz_section_table td{line-height:30px;}
+
+.right_link{float:right;font-size:12px;}
+.form_tip{color:#999;}
+a{color:#07689F;}
+.icon_more_bank{background:url(../../img/shengpay/CommonNew_img/icon_more_bank.png) no-repeat center center;width:14px;}
+
+.msg_warn{padding-left:20px;line-height:30px;background:url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -200px 5px;}
+
+.bottom_btn{padding-top:10px;}
+
+.cssmod_banks .banks_normal label{vertical-align:top;border:solid 1px #ccc;}
+
+.dashedline{height:0;overflow:hidden;border-top:dashed 1px #ccc;margin:10px 0;}
+
+.btn_normal{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;line-height:31px;height:31px;width:96px;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none; cursor:pointer;}
+
+.warm_tip{font-size:12px;margin-top:20px;line-height:2;}
+.warm_tip_title{margin:0;padding:0;line-height:30px;background:url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -200px -203px;padding-left:20px;margin-left:20px;font-size:12px;}
+.warm_tip_body{padding-left:40px;}
+.warm_tip_body p{margin:0;padding:0;}
+
+.sft_foot{margin-top:50px;background-color:#EEEEEE;text-align:center;line-height:32px;color:#666;}
+
+
+/*popup*/
+
+/*IE6 fixed*/
+html { _background:url(blank.txt) fixed;}
+html body { _margin:0; _height:100%; }
+html .popup_overlay_new { _position: absolute; _left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth); _top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight); }
+
+
+.close_img{padding:0px;margin:0px;margin-right:7px; margin-top:13px; font-size:16px;float:right;display:inline;}
+.close_img a{border:0px;margin-top:5px; cursor:pointer; color:#07689b;}
+/*popup*/
+
+.bank_table{border-top:solid 1px #C8C8C8;border-left:solid 1px #C8C8C8;}
+.bank_table td{border-bottom:solid 1px #C8C8C8;border-right:solid 1px #C8C8C8;text-align:left;width:auto;padding-left:5px;}
+.bank_table th{border-bottom:solid 1px #C8C8C8;border-right:solid 1px #C8C8C8;text-align:left;width:auto;padding-left:5px;}
+.bank_table thead th{background-color:#E7E7E7;}
+
+.btn_big9{width:166px;height:31px;background:url(../../img/shengpay/CommonNew_img/btn_big9.png) no-repeat 0 0;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none; line-height:30px; cursor:pointer;}
+
+
+
+.top_nav{height:30px;line-height:30px;font-size:14px;}
+.top_nav b{color:#B00000;}
+
+.order_box{border:solid 1px #BED4DF;margin-bottom:10px;}
+
+.order_table{width:100%;}
+.order_table thead th{background-color:#F3F8FB;line-height:36px;border-bottom:solid 1px #BED4DF;padding-left:20px;}
+.order_table tbody th{font-weight:400;line-height:36px;padding-left:20px;}
+.order_table tbody td{line-height:26px;padding:10px 20px;border-top:solid 1px #BED4DF;}
+
+
+.form_item{}
+.form_label{display:inline-block;width:120px;text-align:right;}
+
+.big_money{font-size:14px;color:#f00;}
+
+
+/*yeh*/
+.kaitong_ydc{ height:31px; margin-top:20px; padding:6px 12px; line-height:31px; border:dashed 1px #a7cdf1; color:#f2680f; font-size:14px; font-weight:700;background-color:#EDF7FF;}
+.btn_mid5{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;height:31px;width:96px;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none;}
+.ydc_intro_title{ font-size:16px; margin:20px 0 0 0; color:#0383cc;}
+.ydc_intro_content{ margin-top:14px; padding-bottom:10px;}
+
+.ydc_intro_content p{ line-height:24px; margin:0;}
+
+/* ouyangchong */
+.top_nav{font-size:14px;margin-bottom:10px;}
+.top_nav b{color:#af0000;font-weight:700}
+
+.result_err{border:1px #f6d2b2 solid;padding:30px 0px;margin-bottom:30px;background-color:#fff1e4;}
+.result_err_content{padding-left:70px;line-height:22px;}
+.result_title{margin:0px;padding:0px;font-size:14px;}
+.result_err_img{float:left;margin-left:70px;display:inline;}
+.icon48_worring{width:56px;height:50px;background:url(../../img/shengpay/CommonNew_img/icon48_worring.png) no-repeat;}
+.icon50_true{width:60px;height:50px;background:url(../../img/shengpay/CommonNew_img/icon50_true.png) no-repeat;}
+
+.result_ok{border:1px #c3ecaa solid;padding:30px 0px;margin-bottom:30px;background-color:#e6ffd7;}
+.result_ok_content{padding-left:70px;line-height:22px;}
+.result_ok_img{float:left;height:300px;margin-left:70px;display:inline;}
+
+.paid_invoice{border:1px #c7c7c7 solid;margin:10px 0px 10px 130px;width:420px;padding:10px;background-color:#ffffff;}
+.paid_invoice_title{margin:0px;padding:0px;font-size:12px;margin:0px 5px;border-bottom:1px #c7c7c7 solid;}
+.paid_invoice_content{padding-left:5px;line-height:27px;}
+
+/*bank mini*/
+.icon_bank_mini_bojs,.icon_bank_mini_icbc, .icon_bank_mini_cmb, .icon_bank_mini_cib, .icon_bank_mini_comm, .icon_bank_mini_szpab, .icon_bank_mini_sdb, .icon_bank_mini_boc, .icon_bank_mini_ceb, .icon_bank_mini_ccb, .icon_bank_mini_spdb, .icon_bank_mini_cmbc, .icon_bank_mini_bos, .icon_bank_mini_abc, .icon_bank_mini_bccb, .icon_bank_mini_hkbchina, .icon_bank_mini_njcb, .icon_bank_mini_hccb, .icon_bank_mini_nbcb, .icon_bank_mini_hkbea, .icon_bank_mini_gdb, .icon_bank_mini_bjrcb, .icon_bank_mini_citic, .icon_bank_mini_psbc, .icon_bank_mini_hxb, .icon_bank_mini_cbhb, .icon_bank_mini_czb, .icon_bank_mini_gnxs, .icon_bank_mini_gzcb, .icon_bank_mini_hnnxs, .icon_bank_mini_jcb, .icon_bank_mini_ips, .icon_bank_mini_sde, .icon_bank_mini_shrcb, .icon_bank_mini_sxjs, .icon_bank_mini_wzcb, .icon_bank_mini_zhnx{margin:0 4px 0 0; height:20px; width:20px; background-image:url(../../img/shengpay/CommonNew_img/banks.png);}
+.icon_bank_mini_icbc				{background-position:0px 0px;}
+.icon_bank_mini_cmb				{background-position:0px -20px;}
+.icon_bank_mini_cib				{background-position:0px -40px;}
+.icon_bank_mini_comm		{background-position:0px -60px;}
+.icon_bank_mini_szpab		{background-position:0px -80px;}
+.icon_bank_mini_sdb				{background-position:0px -100px;}
+.icon_bank_mini_boc			{background-position:0px -120px;}
+.icon_bank_mini_ceb			{background-position:0px -140px;}
+.icon_bank_mini_ccb				{background-position:0px -160px;}
+.icon_bank_mini_spdb			{background-position:0px -180px;}
+.icon_bank_mini_cmbc			{background-position:0px -200px;}
+.icon_bank_mini_bos			{background-position:0px -220px;}
+.icon_bank_mini_abc				{background-position:0px -240px;}
+.icon_bank_mini_bccb		{background-position:0px -260px;}
+.icon_bank_mini_hkbchina	{background-position:0px -280px;}
+.icon_bank_mini_njcb				{background-position:0px -300px;}
+.icon_bank_mini_bojs				{background-position:0px -320px;}
+.icon_bank_mini_hccb				{background-position:0px -340px;}
+.icon_bank_mini_nbcb		{background-position:0px -360px;}
+.icon_bank_mini_hkbea		{background-position:0px -420px;}
+.icon_bank_mini_gdb			{background-position:0px -440px;}
+.icon_bank_mini_bjrcb			{background-position:0px -460px;}
+.icon_bank_mini_citic			{background-position:0px -480px;}
+.icon_bank_mini_psbc		{background-position:0px -500px;}
+.icon_bank_mini_hxb			{background-position:0px -540px;}
+.icon_bank_mini_cbhb		{background-position:0px -558px;}
+.icon_bank_mini_czb			{background-position:0px -579px;}
+.icon_bank_mini_gnxs		{background-position:0px -600px;}
+.icon_bank_mini_gzcb		{background-position:0px -620px;}
+.icon_bank_mini_hnnxs		{background-position:0px -640px;}
+.icon_bank_mini_jcb			{background-position:0px -660px;}
+.icon_bank_mini_ips			{background-position:0px -680px;}
+.icon_bank_mini_sde			{background-position:0px -700px;}
+.icon_bank_mini_shrcb		{background-position:0px -720px;}
+.icon_bank_mini_sxjs			{background-position:0px -740px;}
+.icon_bank_mini_wzcb		{background-position:0px -760px;}
+.icon_bank_mini_zhnx			{background-position:0px -700px;}
+/*yeh*/
+.kaitong_ydc{ height:31px; margin-top:20px; padding:6px 12px; line-height:31px; border:dashed 1px #a7cdf1; color:#f2680f; font-size:14px; font-weight:700;}
+.btn_mid5{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;height:31px;width:96px;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none;}
+.ydc_intro_title{ font-size:16px; margin:20px 0 0 0; color:#0383cc;}
+.ydc_intro_content{ margin-top:14px; padding-bottom:10px;}
+.ydc_intro_content p{ line-height:24px; margin:0;}
+/*yeh 消费卡*/
+.radio_title{ margin-top:20px; font-size:14px;}
+.radio_title label{ margin-right:10px; cursor:pointer;}
+.radio_title label.current{ font-weight:700;}
+.cz_card_box{ border:solid 1px #a6cef1; margin:20px 0; padding:10px;}
+.cz_card_box th{ width:110px; text-align:right; vertical-align:top; padding-top:10px; font-size:14px; font-weight:300;}
+.cz_card_box td{vertical-align:bottom; padding:5px 0 2px 6px;}
+.cz_card_box label{ display:inline-block; margin-right:10px; height:18px; padding-top:4px;}
+.cz_card_box label input{ margin:0 2px 0 0; }
+.msg_info{ height:16px; margin-top:10px;background:url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -200px -210px;padding-left:20px;font-size:12px; color:#666;}
+.freetext_middle{ border:solid 1px #bbb; height:24px; width:140px; padding:0 4px;}
+/*pop*/
+.pop_up{ position:relative;}
+.pop_icon{ width:15px; height:9px; display:block; background:url(../../img/shengpay/CommonNew_img/pop.png) no-repeat; position:absolute; left:0; top:-9px;}
+.pop_up_137px .pop_icon{ left:137px;}
+.pop_up_278px .pop_icon{ left:278px;}
+.pop_up_405px .pop_icon{ left:405px;}
+
+.txt_weak{color:#666;}
+.unipay_tip{line-height:30px;}
+.unipay_tip_bottom{padding-left:64px;}
+.unipay_tip_bottom label{float:left;margin-left:-64px;}
+
+.btn_downcount{width:118px;height:25px;background:url(../../img/shengpay/CommonNew_img/btn_downcount.png);border-style:none;font-weight:700;}
+.btn_downcount b{color:#ccc;}
+
+.close_img{padding:0px;margin:0px;margin-right:7px; margin-top:13px; font-size:16px;float:right;display:inline;}
+.close_img a{border:0px;margin-top:5px; cursor:pointer; color:#07689b;}
+/*popup*/
+
+.icon_tip_erro{background:url(../../img/shengpay/CommonNew_img/icon_tip.png) no-repeat 0px 0px; width:48px; height:48px;}
+.tip_box{ width:700px; text-align:center;  overflow:hidden; background-color:#F1F5F7; border:1px solid #C4D5DF; padding:20px;-moz-border-radius:3px;}
+.tip_box a{margin:0px 4px;}
+.tip_box_left{width:50px; float:left; text-align:left; height:60px;}
+.tip_box_right{width:600px; float:left;text-align:left;}
+.tip_box_title{line-height:50px; font-size:14px; font-weight:bold; background:url(../../img/shengpay/CommonNew_img/dashed_line.png) repeat-x left bottom;}
+.tip_btn{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -120px; width:183px; height:31px; border:0px; margin:0px; padding:0px; line-height:31px; color:#FFF;
+ font-size:14px; font-weight:bold; margin:8px 0px;}
+.tip_btn_small{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -120px; }
+ 
+.banks_list{margin:0px; padding:0px; margin-left:20px;}
+.banks_list li{float:left; height:40px; width:161px; padding-right:15px;}
+
+.banks_list2{margin:0px; padding:0px;}
+.banks_list2 li{float:left; height:40px; width:150px; padding-right:5px;}
+.cssmod_banks .banks_list2 label{width:120px;}
+
+.bank_card_tip{font-style:normal;background-color:#E0EEF9;padding:3px;margin-top:10px;display:inline-block;line-height:1;}
+
+.bank_limit{width:500px;}
+.bank_limit .bank_table{width:500px;}
+.bank_limit_title{margin:0;padding:0;font-weight:400;color:#4D4D4D;font-size:12px;}
+
+.btn_gray{width:62px;height:25px;color:#333;font-weight:700;text-align:center;display:inline-block;border-style:none;background:url(../../img/shengpay/CommonNew_img/btn_gray.png);}
+
+.pay_method{line-height:2;}
+.pay_method label{display:inline-block;width:200px;}
+.pay_method_card{display:inline-block;width:200px;}
+
+/**************************************
+	2011-7-20
+*/
+.link_like{color:#07689F;cursor:pointer; padding-top:3px; display:inline-block;}
+.icon_wrap_bank{background:url(../../img/shengpay/CommonNew_img/icon_wrap_bank.png) no-repeat center center;width:14px;}
+.shengpay_regsiter_sub_menu{margin-top:-20px;}
+
+.jihuo_right{float:right;padding-top:20px;}
+.jihuo_section{}
+
+.form_table{line-height:1.8;}
+.form_table th{width:100px;text-align:right;vertical-align:top;padding-top:10px;font-weight:400;font-size:14px;color:#6776679;}
+.form_table td{vertical-align:top;text-align:left;padding-top:10px;}
+.form_table td.form_required{color:red;text-align:center;width:20px;font-size:14px;}
+.form_table td.form_required img{margin-top:5px;}
+.form_table td.form_midimg{vertical-align:middle;}
+
+.form_tip{line-height:2;color:#6776679;}
+
+.qianbao_tequan,.qianbao_tequan dt,.qianbao_tequan dd{margin:0;padding:0;}
+.qianbao_tequan{line-height:1.8;border-left:dashed 1px #B4D1E1;padding-left:20px;}
+.qianbao_tequan dt{padding:5px 0;}
+.qianbao_tequan dd{padding:5px 0;padding-left:18px;}
+.qianbao_tequan dd img{float:left;margin-left:-18px;margin-top:3px;_display:inline;}
+
+.icon_tese00{width:16px;height:16px;background:url(../../img/shengpay/CommonNew_img/icon_app_quan.png) no-repeat center center;}
+
+.tip_success{background:url(../../img/shengpay/CommonNew_img/icon50_smile.png) no-repeat 10px center;line-height:50px;padding-left:70px;font-size:14px;font-weight:700;color:#676767;}
+
+.titile_cz{font-size:14px;padding:10px 0;border-bottom:solid 1px #BED4DF;margin-bottom:10px;color:#AEAEAE;}
+.titile_cz .right_link{font-size:14px;}
+.titile_cz b{color:#303030;}
+
+.result_container{border:solid 1px #D9D9D9;background-color:#FFFFE1;padding:20px;}
+.result_container table{width:100%;}
+.result_container td{padding:0 10px 0;}
+.result_recom{border:solid 1px #D9D9D9;background-color:#fff;line-height:2;padding:10px;margin:10px 0;width:495px;}
+
+.result_icon{margin-left:50px;}
+
+.result_other,.result_other dt,.result_other dd{margin:0;padding:0;}
+.result_other{line-height:2;}
+
+.result_container .sub_title{font-size:14px;line-height:30px;font-weight:400;margin:10px 0;}
+
+.sep_line_td{border-left:dashed 1px #ccc;width:30px;}
+
+.ad_container{border:solid 1px #D9D9D9;margin-top:20px;padding:10px 0;}
+.ad_table{line-height:22px;width:100%;}
+.ad_table td{text-align:center;}
+.ad_table a{color:#666;}
+.ad_table b{color:#333;}
+
+.btn_big6{width:132px;height:31px;line-height:31px;cursor:hand; background:url(../../img/shengpay/CommonNew_img/btn_big6.png) no-repeat 0 0;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none;}
+.btn_big6:hover{color:#fff;}
+.cssmod_band_mobile{margin:0 auto;}
+
+.poptip{padding-left:90px;font-size:12px;text-align:left;padding-top:20px;padding-bottom:20px;}
+.poptip_title{margin:0;padding:0;font-size:14px;line-height:1.6;padding-top:5px;}
+.poptip_icon{float:left;margin-left:-60px;_display:inline;width:50px;height:50px;background:url(../../img/shengpay/CommonNew_img/icon48_warning.png) no-repeat 0 0;}
+.poptip_helper{color:#666;line-height:1.8;font-size:12px;}
+.poptip_foot{border-top:dashed 1px #BFD5E2;line-height:36px;text-align:right;font-size:12px;margin:0 15px;}
+
+.section_poptip{font-size:14px;color:#4D4D4D;}
+.section_poptip a{font-size:12px;}
+.section_poptip .bottom_btn{padding-left:70px;padding-top:20px;}
+.section_poptip .field_item{padding-top:5px;}
+.txt_msg_info{background:url(../../img/shengpay/CommonNew_img/msg_info.png) no-repeat 0 center;padding-left:20px;text-align:left;}
+.cssmod_popup{font-family:宋体;}
+
+
+/**********************************
+* 弹出DIV层样式 Start
+**********************************/
+
+.cssmod_popup{position:absolute;z-index:1000;left:0px;top:0px;width:100%;height:100%;display:none;}
+.cssmod_popup .popup_overlay{background-color:#000;position:fixed;_position:absolute;text-align:center;left:0px;top:0px;_top:expression(documentElement.scrollTop);width:100%;height:100%;_height:expression(documentElement.clientHeight);z-index: 600;filter: alpha(opacity=30); moz-opacity: 0.30; opacity: 0.30;}
+.cssmod_popup .popup_overlay iframe{	position:absolute;z-index:601;left:0px;top:0px;width:100%;height:100%;_height:expression(documentElement.clientHeight); border:0px; filter:alpha(opacity=10); moz-opacity:0.1; opacity:0.1;}
+.cssmod_popup .popup_container{text-align:center;position:absolute;left:0px;top:0px;padding-top:20%;height:95%;width:100%;z-index:601;}
+
+/**********************************
+* 弹出DIV层样式 End
+**********************************/
+
+input.active{border:solid 2px #9FC1E6;}
+input.error{background-color:#FFF8C4;}
+.tip_ok{color:red;background:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png) no-repeat 10px -20px;padding:2px 0 2px 30px;}
+.tip_error{color:red;background:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png) no-repeat 10px -60px;padding:2px 0 2px 30px;}
+.tip_info{color:#06679C;padding:2px 0 2px 10px;}
+
+.yditem01 .yingdao_item{background-position:5px -316px;}
+.yditem02 .yingdao_item{background-position:5px -626px;}
+.yditem01 .yingdao_item.hover{background-position:5px 5px;}
+.yditem02 .yingdao_item.hover{background-position:5px -939px;}
+
+.yingdao_item{height:300px;width:300px;background:url(../../img/shengpay/CommonNew_img/yd_item.png) no-repeat center 0;padding:10px;text-align:center;font-family:宋体;}
+.yingdao_item .icon{margin-top:30px;}
+.yingdao_item .tese{line-height:30px;padding:2px 0 2px 20px;background:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png) no-repeat 0 0;}
+.yingdao_item .title{padding:12px;margin:0;font-size:16px;}
+
+.yingdao_title{margin:0;padding:5px 15px;font-size:14px;}
+
+.test_list3{padding:5px 0 10px 60px;text-align:left;height:90px;}
+.test_list2{padding:25px 0 0 70px;text-align:left;height:80px;}
+.test_list1{padding:35px 0 0 0;height:70px;}
+
+.tip_RegWarn{background:url(../../img/shengpay/CommonNew_img/icon_tip.png) no-repeat 10px center;line-height:50px;padding-left:70px;font-size:14px;font-weight:700;color:#676767;}
+
+/* 20110802 */
+
+.poptip_body{padding:10px 15px;text-align:left;line-height:2;}
+
+.pop_app_table{width:100%;line-height:1.4;}
+.pop_app_table th{width:5%;vertical-align:top;padding-bottom:10px;}
+.pop_app_table td{width:45%;vertical-align:top;padding-bottom:10px;}
+
+.right_step{float:right;color:#666;}
+.right_step_current{color:#0A689E;}
+.msg_info{line-height:1.4;}
+
+.cz_section_table th,.cz_section_table td{padding:5px 0;}
+.fukuan_content{text-align:left;padding:20px;}
+.fukuan_content .msg_warn{font-size:14px;}
+.fukuan_content .form_table th{color:#666;width:100px;}
+
+.form_table th{width:150px;color:#666;}
+
+.form_tip{line-height:1.4;padding-top:8px;font-size:12px;}
+.account_info_block{font-size:14px;border:solid 1px #BED4DF;background-color:#F3F8FB;padding:5px 0 5px 160px;line-height:2;margin-bottom:10px;margin-top:10px;color:#666;}
+.account_info_block .field_name{width:150px;float:left;margin-left:-160px;text-align:right;_display:inline;}
+
+.cssmod_band_mobile .result_container{background-color:#fff;}
+.msg_warn_block{padding-left:30px;line-height:26px;background:#FFF4CC url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -195px 7px;border:solid 1px #FFDA7F;color:#333;}
+
+.content_send_ok{text-align:left;padding:20px;}
+.verlidate_code_form{padding-left:70px;}
+.tip_block{border:solid 1px #E1CDA8;background-color:#FFF5D2;padding:10px;color:#333;margin:10px;line-height:2;}
+.tip_block .signed_txt{color:#1B6AAC;}
+
+.cssmod_contact{width:320px;border:1px #98BCE1 solid;}
+.cssmod_contact .panel_box_title{font-size:14px;color:#07679C;line-height:27px;margin:0px;padding-left:5px;height:29px;text-align:left;overflow:hidden;background-image:url("../../img/shengpay/CommonNew_img/popup-title-x.png");background-repeat:repeat-x;background-position: 0 0;}
+.cssmod_contact .panel_box_content{background-color:#fff;text-align:center; max-height:200px;overflow:auto;_height:expression(this.scrollHeight >200?'200px':'auto');}
+.user-more-box{padding-top:5px; height:25px; background-color:#E1F1FE; text-align:center; color:#076599; cursor:pointer;}
+.contact{text-align:left;padding:0 10px;}
+.contact li{border-bottom:dashed 1px #BED4DF;padding:5px 0;line-height:20px;height:20px;}
+
+/*20110805*/
+
+.mini_ad_list{padding-left:10px;width:157px;margin-top:10px;}
+.mini_ad_list_container{margin-top:-10px;}
+.mini_ad_list .icon_left{width:auto;height:auto;margin-left:0;margin-right:8px;}
+.mini_ad_list_txt{text-indent:2em;}
+
+.panel_box_tab.fixcolor .tab_item{color:#07679A;}
+.panel_box_tab.fixcolor{background:url(../../img/shengpay/CommonNew_img/panel_title_new.png) repeat-x 0 0;}
+
+.weibo{padding:5px 0 15px 75px;border-style:none;background-image:none;line-height:30px;height:51px;overflow:hidden;color:#666;}
+.weibo_icon{float:left;margin-left:-65px;margin-top:8px;_display:inline;}
+.btn_weibo_link{height:21px;width:58px;line-height:21px;font-weight:400;color:#333;}
+.btn_weibo_link:hover{color:#EB6100;}
+
+.index_rolling_list{width:525px;}
+
+.cssmod_index_rolling {}
+.cssmod_index_rolling .rolling_pre 			{margin-left:426px; }
+.cssmod_index_rolling .rolling_pause 		{margin-left:454px; }
+.cssmod_index_rolling .rolling_next 		{margin-left:482px; }
+.cssmod_index_rolling .rolling_pre_disabled {margin-left:426px; }
+.cssmod_index_rolling .rolling_play			{margin-left:454px;}
+.cssmod_index_rolling .rolling_next_disabled{margin-left:482px;}
+
+.btn_order{width:72px;height:23px;line-height:23px;display:inline-block;text-align:center;font-weight:700;color:#fff;font-size:12px;border:none;background-color:transparent;background-image:url('../../img/shengpay/CommonNew_img/btn_order.png');background-repeat:no-repeat;}
+
+.special_service{line-height:28px;}
+.panel_box_tab{overflow:hidden;}
+
+
+
+.page_body_main{overflow:hidden;}
+
+
+/*2011 08-22*/
+.border_bottom_no{border-bottom:none; margin-bottom:0px; padding-bottom:0px; padding-top:1px;}
+.title_styel01_wapper{padding-top:3px; padding-bottom:8px;}
+.title_style_01{border-bottom:1px solid #d1d1d1; margin:0px;}
+.title_style_01 div{background:url(../../img/shengpay/CommonNew_img/icon_arrow.png) no-repeat 10px 8px; padding-left:28px; border-bottom:2px solid #4ab4ee; color:#313131; line-height:26px; font-size:14px;}
+.tip_text{color:#959595; line-height:26px;}
+.table_wapper{border:1px solid #bed5e0; background-color:#f3f8fa; height:68px;}
+.font_big{font-size:14px;}
+.table_style_01{padding-top:10px;}
+.table_style_01 thead th{height:28px; background-color:#eeeeee; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; text-align:center; color:#7d7d7d;}
+.table_style_01 td{height:32px; text-align:center; line-height:28px;}
+.tr_odd{background-color:#eeeeee;}
+.thead_first{border-left:1px solid #d9d9d9; text-align:left;}
+.thead_last{border-right:1px solid #d9d9d9;}
+.page_layout{text-align:right; padding-top:8px;}
+
+.wallet_info_layout{padding-left:174px;padding-bottom:20px;}
+.wallet_info_content{background:url(../../img/shengpay/CommonNew_img/wallet_show.png) no-repeat; width:619px; height:270px;}
+.wallet_info_a{padding-left:210px; font-size:14px; font-weight:700; padding-top:22px;}
+.wallet_info_b{padding-left:311px; padding-top:25px; padding-bottom:25px;}
+.wallet_info_c{padding-left:210px; line-height:25px;}
+.wallet_info_d{font-size:14px; font-weight:700; text-align:right; padding-right:25px;}
+
+.money_big{font-size:36px; font-family:Tahoma; color:#da251c;}
+a.font_style01_link,a.font_style01_link:link,a.font_style01_link:visited,a.font_style01_link:hover,a.font_style01_link:active{color:#eb6100; text-decoration:none;}
+
+/* add 2010-08-26 */
+.anquan_mod_warring{font-size:14px;font-weight:700;padding-left:50px;height:32px;line-height:32px;margin-bottom:20px;background:url('../../img/shengpay/CommonNew_img/icon32_warring.png') no-repeat left center}
+.anquan_mod_con{margin-bottom:10px;}
+.anquan_mod_title{margin:0px;padding:0px 0px 0px 25px;font-size:14px;height:29px;line-height:27px;background:url('../../img/shengpay/CommonNew_img/safe_title_bg.png') no-repeat}
+.anquan_mod_table{width:100%;border:1px solid #d3d3d3;border-collapse:collapse;}
+.anquan_mod_table th{height:35px;padding-left:70px;font-weight:normal;border-bottom:1px solid #d3d3d3;background:#eeeeee;}
+.anquan_mod_table td{height:65px;padding-left:70px;border-bottom:1px solid #d3d3d3;}
+.anquan_mod_table td b{color:#676767;}
+.anquan_mod_table_td{background-color:#f1f6fa;}
+
+.icon14_ok{width:14px;height:14px;background:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png) no-repeat -1px -20px}
+.icon14_warring{width:14px;height:14px;background:url(../../img/shengpay/CommonNew_img/icon_reg_choose.png) no-repeat -1px -40px}
+.btn_big5{width:72px;height:23px;background:url(../../img/shengpay/CommonNew_img/btn_order.png) no-repeat 0 0;display:inline-block;color:#fff;font-size:12px;line-height:22px;font-weight:700;text-align:center;border-style:none;}
+
+
+/* add 2011-9-9  实名认证 */
+
+.renzheng-menu-list{margin-bottom:10px;padding-left:15px;background:url('../../img/shengpay/CommonNew_img/menu-bg-arrow.png') no-repeat left center;}
+.renzheng-menu-list i{padding:0px 5px;}
+.renzheng-step-01{margin-bottom:10px;}
+.renzheng-con{border:1px solid #e1e1e1;margin-bottom:10px;}
+.renzheng-con-error{border:1px solid #e1e1e1;margin-bottom:10px;background:#ffffe0;}
+.renzheng-con-ok{border:1px solid #e1e1e1;margin-bottom:10px;background:#e5f5ff;}
+.renzheng-section{padding:20px 0px 20px 120px;}
+.renzheng-section-list{padding:5px 0px;line-height:27px}
+.renzheng-section-list label{float:left;text-align:right;width:120px;padding-right:10px;line-height:27px;}
+.renzheng-freetext-nomal{padding:4px 3px;width:175px;height:18px;color:#000;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+.renzheng-freetext-nomal-wait{padding:4px 3px;width:175px;height:18px;color:#989898;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+.renzheng-freetext-nomal-focus{padding:4px 3px;width:173px;height:16px;border:2px solid #9fc1e7;background:#fff;vertical-align:middle}
+.renzheng-freetext-nomal-error{padding:4px 3px;width:175px;height:18px;border:1px solid #e1e1e1;background:#fff9b2;vertical-align:middle}
+.renzheng-bank-freetext-nomal{padding:0px 5px;height:37px;width:100px;font-size:14px;color:#000;line-height:32px;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+.renzheng-bank-freetext-nomal-wait{padding:0px 5px;height:37px;width:100px;font-size:14px;line-height:32px;color:#989898;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+.renzheng-bank-freetext-nomal-focus{padding:0px 5px;width:98px;height:35px;font-size:18px;line-height:32px;font-weight:700;color:#000;border:2px solid #9fc1e7;background:#fff;vertical-align:middle}
+.renzheng-bank-freetext-nomal-error{padding:0px 5px;height:37px;width:100px;font-size:14px;line-height:32px;border:1px solid #e1e1e1;background:#fff9b2;vertical-align:middle}
+.renzheng-freetext-small{padding:5px 3px;width:115px;color:#989898;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+.renzheng-tips{padding-left:10px;color:#999}
+.renzheng-error-tips{padding-left:10px;color:#ff6600}
+.renzheng-help{border:1px solid #e1e1e1;padding:1px;}
+.renzheng-help-title{margin:0px;padding:0px;font-size:12px;color:#666;height:29px;background:url('../../img/shengpay/CommonNew_img/renzheng-panel-bg.png') repeat-x;}
+.renzheng-help-title span{display:block;margin-left:15px;height:29px;line-height:30px;padding-left:15px;background:url('../../img/shengpay/CommonNew_img/menu-bg-arrow.png') no-repeat left center}
+.renzheng-help-con{padding:15px 30px;}
+.renzheng-help-con-sub{margin-bottom:10px;color:#b5b5b5;line-height:17px;}
+.renzheng-help-con-sub h4{margin:0px;padding:0px;color:#898989;font-size:12px;font-weight:normal}
+.renzheng-help-more{text-align:right;}
+.renzheng-submit{border:none;width:96px;height:31px;cursor:pointer;font-size:14px;font-weight:700;color:#fff;background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;}
+.renzheng-upload{border:none;width:77px;height:23px;cursor:pointer;font-size:12px;color:#07679c;background:transparent url('../../img/shengpay/CommonNew_img/btn-renzheng-upload.png') no-repeat; vertical-align:middle; line-height:23px; display:inline-block; text-align:center;}
+.renzheng-upload-big{border:none;width:98px;height:23px;cursor:pointer;font-size:12px;color:#07679c;background:transparent url('../../img/shengpay/CommonNew_img/btn-renzheng-upload-big.png') no-repeat;}
+.renzheng-bank-tips{float:left;width:178px;position:relative;}
+.renzheng-bank-tips-con{position:absolute;display:none;left:0px;top:25px;width:200px;border:1px solid #e1e1e1;padding:5px;font-size:16px;font-weight:700;color:#000;background:#fff;}
+.renzheng-bank-tips-sp{float:left;line-height:28px;}
+.renzheng-select-zone{float:left;padding-top:3px;}
+.renzheng-select-zone input{vertical-align:-2px;}
+.user-id-select{border:2px #9ed9f9 solid;position:relative;margin-left:5px;margin-bottom:5px;}
+.user-id-select span{display:block;position:absolute;left:-6px;top:5px;width:4px;height:7px;background:url('../../img/shengpay/CommonNew_img/user-id-select-arrow.png') no-repeat}
+.user-id-select-text{color:#888888;padding-left:25px;}
+.user-id-unselect{border:2px #fff solid;margin-left:5px;margin-bottom:5px;}
+.renzheng-id-zone{position:relative;min-height:66px;_height:66px;}
+.renzheng-id-zone-tips{position:absolute;left:230px;top:5px;line-height:17px;padding:4px;width:280px;color:#8d8d8d;background:#f6f8fb;}
+.renzheng-result-con{font-size:14px;}
+.renzheng-result-tips{height:30px;border:1px #ffdb86 solid;padding-left:30px;margin-bottom:10px;line-height:30px;background:#fff4da url('../../img/shengpay/CommonNew_img/msg_warn.png') no-repeat 10px center;}
+.renzheng-result-list{padding:5px 0px;}
+.renzheng-result-list label{float:left;text-align:right;width:130px;padding-right:5px; overflow:hidden;}
+.btn-back{font-size:12px;}
+.renzheng-wait{padding:30px 40px}
+.renzheng-wait-con{padding-left:200px;line-height:22px;padding-bottom:20px;border-bottom:1px solid #ccc}
+.renzheng-wait-con h3{margin:0px;padding:0px;font-size:14px;}
+.renzheng-wait-con-icon{float:left;display:inline;margin-left:-45px;width:32px;height:32px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-time.png') no-repeat}
+.renzheng-wait-con-tips{padding-top:10px;}
+.renzheng-wait-notes{padding:20px 0px 0px 80px}
+.renzheng-wait-notes-pic{padding-top:5px;}
+.btn-rezheng-back-submit{width:119px;height:31px;display:inline-block;cursor:pointer;font-size:14px;color:#fff;font-weight:700;text-align:center;line-height:32px;background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -40px;}
+.renzheng-tips-notes{padding:5px 0px 10px 0px;width:580px;}
+.renzheng-con-error-con{padding:30px 50px 20px 150px;}
+.renzheng-con-error-con h3{margin:0px;padding:0px;font-size:14px;}
+.renzheng-con-error-con  table{/*width:100%*/_width:auto;}
+.renzheng-tips-notes-div{border-right:1px dashed #b4d1cb}
+.renzheng-con-error-more{padding-left:20px;}
+.renzheng-con-error-con b{color:#666666;}
+.renzheng-con-error-con ul{margin:0px;padding:0px;}
+.renzheng-con-error-con ul li{margin:0px;padding:0px;line-height:22px;padding-left:15px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-dotted.png') no-repeat left center}
+.user-id-info{padding:20px 0px;font-size:14px;color:#636363;}
+.user-id-info-title{margin:0px;padding:0px;}
+.renzheng-bank{padding-top:10px;}
+.renzheng-bank h3{margin:0px;padding:15px 0px 15px 250px;font-size:14px;}
+.renzheng-bank-pay{padding:30px 0px 20px 250px}
+.renzheng-bank-submit{padding:0px 0px 30px 370px;_padding:0px 0px 30px 375px;text-align:left;}
+.renzheng-bank-pay-tips{color:#ff6600;padding-left:15px;}
+.renzheng-popup{width:179px;position:relative}
+.renzheng-popup a{text-decoration:underline;}
+.renzheng-popup .panel-box-top{height:2px;overflow:hidden;background:url('../../img/shengpay/CommonNew_img/popup-renzheng-top-bg.png') no-repeat 0px 0px;}
+.renzheng-popup .panel-box-content{text-align:left;color:#b78711;line-height:18px;padding:7px 0px 8px 9px;background:url('../../img/shengpay/CommonNew_img/popup-renzheng-line-bg.png') repeat-y}
+.renzheng-popup .panel-box-foot{height:10px;overflow:hidden;background:url('../../img/shengpay/CommonNew_img/renzheng-enter-foot-bg.png') no-repeat 0px 0px}
+.renzheng-pop-text{width:145px;}
+.renzheng-pop-close{display:block;width:7px;height:7px;position:absolute;top:6px;right:7px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-pop-close.png') no-repeat}
+.up-pic{position:relative;width:230px;_width:100px}
+.up-pic a{position:absolute;right:0px;bottom:0px;}
+.renzheng-shiyitu{padding-left:10px;font-size:14px;background:url('../../img/shengpay/CommonNew_img/icon-arrow-renzheng.jpg') no-repeat left center;}
+.renzheng-con-error-con-title{font-size:12px;font-weight:normal;padding-left:10px;}
+/* cssmod popup list */
+.cssmod_band_rezheng{width:449px;border:1px #98bce1 solid;margin:auto;margin-top:-102px}
+.cssmod_band_rezheng .panel_box_title{font-size:14px;color:#07679c;line-height:27px;margin:0px;padding-left:5px;height:30px;text-align:left;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup_blue_renzheng_bg.png);background-repeat:no-repeat;background-position: 0 0;}
+.cssmod_band_rezheng .panel_box_content{background-color:#fff;text-align:left;}
+.cssmod_band_rezheng .panel_box_foot{font-size:1px;line-height:1px;height:1px;}
+.cssmod_band_rezheng .panel_box_title_new{font-size:14px;color:#fff;line-height:27px;margin:0px;padding-left:5px;height:29px;text-align:left;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup_blue_renzheng_bg.png);background-repeat:no-repeat;background-position: 0 0;}
+.cssmod_band_renzheng_colse{display:block;float:right;margin-right:10px;margin-top:10px;width:8px;height:7px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/popup_blue_renzheng_bg.png);background-repeat:no-repeat;background-position: 0px -32px;}
+
+.renzheng-upload-file{text-align:right;display:inline-block;overflow:hidden;;border:none;width:77px;height:23px;cursor:pointer;font-size:12px;color:#07679c;background:transparent url('../../img/shengpay/CommonNew_img/renzheng-upload-file.png') no-repeat;}
+.renzheng-upload-file input{opacity:0;filter:alpha(opacity=0);cursor:pointer;width:80px;_margin-left:-10px;}
+
+
+/**20110906 bug fix */
+.chg_norm_input{float:left;}
+
+/*fixed by wur 2011-9-7 */
+.popup{position:absolute;z-index:1000;left:0px;top:0px;width:100%;height:100%;_width:expression(documentElement.clientWidth);_height:expression(documentElement.clientHeight);display:none;}
+.popup .popup_overlay{background-color:#000;position:fixed;_position:absolute;text-align:center;left:0px;top:0px;_top:expression(documentElement.scrollTop);width:100%;height:100%;_width:expression(Math.max(documentElement.clientWidth,960)+"px");_height:expression(documentElement.clientHeight);z-index: 600;filter: alpha(opacity=30); moz-opacity: 0.30; opacity: 0.30;}
+.popup .popup_overlay iframe{	position:absolute;z-index:601;left:0px;top:0px;width:100%;height:100%;_height:expression(documentElement.clientHeight); border:0px; filter:alpha(opacity=10); moz-opacity:0.1; opacity:0.1;}
+.popup .popup_container{text-align:center;position:fixed;left:0px;top:0px;padding-top:10%;height:95%;width:100%;z-index:601;_top:expression(documentElement.scrollTop + 0);_position:absolute;_height:auto;}
+
+html{
+_background-image: url(blank.txt);/**空白文件***/
+_background-color: white;
+_background-attachment: fixed; /* prevent screen flash in IE6 */	
+}
+
+
+.deal-detail{color:#5D5D5D;text-align:left;padding:15px 30px;}
+.deal-detail-title{line-height:2;font-size:14px;}
+.deal-detail-title-sub{line-height:1.6;}
+.em-key{font-size:150%;color:#D58E18;}
+.em-normal{font-size:140%;}
+.deal-detail-table-container{padding-top:15px;line-height:26px;}
+.deal-detail-table{width:100%;border-top:solid 1px #F0F0F0;}
+.deal-detail-table th{width:20%;font-weight:400;text-align:right;border-bottom:solid 1px #F0F0F0;}
+.deal-detail-table td{width:30%;border-bottom:solid 1px #F0F0F0;text-indent:6px;}
+.bottom-btn{padding-top:15px;}
+
+/*20110909 盛付通卡充值 */
+.recharge-pop-confirm{text-align:left;font-size:14px;line-height:1.6;padding:20px 0 20px 75px;}
+.recharge-pop-confirm h3{margin:10px 0;padding:0;font-size:14px;font-weight:400;}
+.recharge-pop-confirm .form_tip{padding-top:4px;}
+
+/*2011.9.15 */
+.loading-progress{margin:0 auto;padding:30px;width:205px;height:68px;overflow:hidden;text-align:center;background:url(../../img/shengpay/CommonNew_img/loading-box-265-128.png) no-repeat 0 0;}
+.loading-gif{height:60px;background:url(../../img/shengpay/CommonNew_img/loading32.gif) no-repeat center center;}
+
+/* 2011.9.16 */
+#TopMenuTable td span{color:#D1D1D1;}
+
+.icon16_shiminlight{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/shiminlight.png);}
+.icon16_shimingray{ width:16px;height:16px;background-image:url(../../img/shengpay/CommonNew_img/shimingray.png);}
+
+.btn_normal2{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;height:31px; line-height:31px;width:96px;display:inline-block;color:#fff;font-size:14px;font-weight:700;text-align:center;border-style:none;}
+/******************************************************************************************************/
+/*                                     2011-10-11                                                     */
+/******************************************************************************************************/
+.line-height-25{line-height:25px; height:25px;}
+
+/**********************************
+*  表单模块 Start
+**********************************/
+.section-input{margin:10px; font-size:12px; text-align:left;}
+.section-input-title{font-size:20px; margin:0px; color:#797979; font-weight:600;}
+.section-tip-box{border:1px solid #E9F1F8; line-height:30px; padding-left:20px; background-color:#F1F6FF; color:#7291AC;}
+.section-tip-box02{border:1px solid #E9F1F8; line-height:30px; padding-left:20px; background-color:#F1F6FF; color:#5D6976; margin-left:-180px;}
+.input-box-tip{padding-left:142px;}
+.section-style02{margin:10px; padding-left:120px;}
+
+.input-box-item{margin:10px 0px;}
+.input-label{font-size:14px; width:130px; text-align:right; display:inline-block; vertical-align:middle; padding-right:5px;}
+.input-text{vertical-align:middle;}
+
+.box-margin-01{margin-left:65px; margin-right:150px; margin-top:20px;}
+.input-box-item input[type=radio]{vertical-align:middle; margin:0px 8px;}
+
+/**********************************
+*  表单模块 End
+**********************************/
+
+/**********************************
+* 提示模块 Start
+**********************************/
+.tip_box_style2 { background-color:#e3f4fe; border:1px solid #e1e1e1; padding:20px 20px 30px 50px; margin:50px 10px 10px 10px; }
+.tip_box_style { background-color:#e3f4fe; border:1px solid #e1e1e1; padding:35px 20px 50px 120px; margin:10px 0px 10px 0px; }
+.erro_box{background-color:#ffffe0;}
+.tip_section {overflow:hidden; *zoom:1; text-align:left;}
+
+.tip_content { float:left; *zoom:1;padding-left:15px; }
+.tip_content h3 { margin:0px; padding:8px 0px; font-size:14px; }
+.tip_body{line-height:25px;}
+.tip_body p{padding-top:5px; margin:0px;}
+.tip_panel_box { background-color:#FFF; text-align:left; padding:20px 10px 30px 10px; }
+.tip_button_box{padding-top:20px;}
+
+.tip_sub{float:right; padding-right:50px; border-left:1px dashed #B4D1CB; padding-left:15px;}
+.tip_sub dl{margin:0px;}
+.tip_sub dd{margin:0px; line-height:25px;}
+.tip_sub dt{font-size:12px; color:#000; font-weight:700; margin-bottom:10px;}
+.tip_sub .font-gray{padding-right:5px;}
+
+.tipBox-style-01{border:1px solid #dee9ff; background-color:#F1F6FF; color:#666666; line-height:22px; padding-left:8px; padding-right:8px; display:inline-block; margin-right:20px; margin-top:10px; _margin-top:12px; margin-left:8px; max-width:385px; min-width:200px; display:none;}
+.tipBox-style-01 p{margin:0px; padding:3px 0px;}
+.tipBox-style-02{border:1px solid #E8E8E8; background-color:#F8F8F8; padding:5px 5px 5px 15px; line-height:22px;}
+
+.tip-box-style3{ background-color:#FFF; border:1px solid #e1e1e1; padding:35px 20px 30px 150px; margin:10px 0px 10px 0px; }
+
+
+.txt_comment { color:#7D7D7D;vertical-align:middle;}
+
+
+.tip-box-style01{border:1px solid #EAF1F9; background-color:#F2F6FF; padding:8px; margin-left:-50px; margin-right:50px; color:#656B81;}
+.tip-box-style02{border:1px solid #EAF1F9; background-color:#F2F6FF; padding:8px;  color:#656B81;}
+
+.tip-box-style05 .tip-head{background:url(../../img/shengpay/CommonNew_img/tip-box-03.png) no-repeat 0px -35px; height:7px; width:263px; overflow:hidden;}
+.tip-box-style05 .tip-content{background:url(../../img/shengpay/CommonNew_img/tip-box-bg-05.png) repeat-y; width:233px; font-size:12px;color:#949494;  padding:10px 15px; text-align:center;}
+.tip-box-style05 .tip-content p{text-align:left; padding:0px; padding-left:15px; margin:0px; padding-top:3px; color:#3e3e3e; font-size:14px; font-weight:bold;}
+.tip-box-style05 .tip-footer{background:url(../../img/shengpay/CommonNew_img/tip-box-03.png) no-repeat 0px -50px; height:7px; width:263px;}
+
+.tip-box-style03 .tip-head{background:url(../../img/shengpay/CommonNew_img/tip-box-03.png) no-repeat 0px 0px; height:7px; width:373px; overflow:hidden;}
+.tip-box-style03 .tip-content{background:url(../../img/shengpay/CommonNew_img/tip-box-bg-03.png) repeat-y; width:353px; color:#747474; padding:10px;}
+.tip-box-style03 .tip-footer{background:url(../../img/shengpay/CommonNew_img/tip-box-03.png) no-repeat 0px -20px; height:7px; width:373px;}
+
+/*特殊提示*/
+.tip-right-box{position:absolute; margin-left:700px; margin-top:10px; border-left:1px #ccc dashed; height:280px; text-align:center; width:250px;}
+.tip-right-box02{position:absolute; margin-left:700px; margin-top:50px; height:280px; border-left:1px dashed #CCC; padding-left:20px;}
+.tip-right-box p{line-height:2; margin:0px; padding:0px;}
+
+/**********************************
+*  提示模块 End
+**********************************/
+/**********************************
+* icon Start
+**********************************/
+/*特殊提示应用*/
+.icon-32-erro, .icon-32-suc { background:url(../../img/shengpay/CommonNew_img/icon_32.png) no-repeat 0px 0px; float:left; overflow:hidden; height:32px; width:32px; }
+.icon-32-suc { background:url(../../img/shengpay/CommonNew_img/icon_32.png) no-repeat 0px -40px; }
+.icon-32-info { background:url(../../img/shengpay/CommonNew_img/icon_32.png) no-repeat 0px -80px; float:left; overflow:hidden; height:32px; width:32px; }
+/*公用*/
+.icon-14-warn{background:url(../../img/shengpay/CommonNew_img/msg_warn.png) no-repeat; display:inline-block; height:18px; width:14px; vertical-align:middle;}
+
+/*css箭头*/
+.border-dowm, .border-left, .border-up, .border-right,.border-blue-dowm { display: inline-block; width: 0; height: 0; border-width: 6px; overflow: hidden; }
+.border-dowm { border-color: #6cabe1 transparent transparent; border-style: solid dotted dotted;  vertical-align:bottom;}
+.border-left { border-color: transparent #6cabe1 transparent transparent; border-style: dotted solid dotted dotted; }
+.border-up { border-color: transparent transparent #fe6700; border-style: dotted dotted solid;border-width: 6px;  }
+.border-right { border-color: transparent transparent transparent #ADADAD; border-style: dotted dotted dotted solid; border-width: 4px; }
+
+.border-gray-right { border-color: transparent transparent transparent #b2b2b2; border-style: dotted dotted dotted solid; display: inline-block; width: 0; height: 0; border-width: 6px; overflow: hidden; }
+
+.border-blue-dowm{ border-color: #5B9FC4 transparent transparent; border-style: solid dotted dotted;  vertical-align:bottom;}
+
+
+/**********************************
+* icon End
+**********************************/
+
+/**********************************
+*  文字Start
+**********************************/
+.font-gray{color:#999999;}
+.font-big{font-size:18px; vertical-align:middle;}
+.font-yellow{color:#EE8A15;}
+.font-14{font-size:14px;}
+.font-red{color:#f00;}
+.font-12{font-size:12px; font-weight:normal;}
+.font-tip-gray{color:#999999; padding-left:10px;}
+.font-vbig-orange{font-size:18px; font-weight:bold; color:#f60;}
+.font-green{color:#66B025;}
+.font-olive-green{color:#008C2B;}
+
+
+.text-b{font-weight:bold;}
+.text-b-red{color:#C31A1D; font-weight:bold;}
+
+a.orange_link:link, a.orange_link:visited, a.orange_link:hover, a.orange_link:active { color:#f60; text-decoration:none; }
+
+.tip-yellow-middle{color:#EE8A15; display:inline-block; vertical-align:middle; padding-left:8px;}
+.tip-yellow-down{color:#EE8A15; display:inline-block; vertical-align:middle;}
+
+/**********************************
+*  文字End
+**********************************/
+
+
+/**********************************
+* layout Start
+**********************************/
+.margin-top-20{margin-top:20px;}
+/**********************************
+* layout End
+**********************************/
+
+
+/**********************************
+* 密码强度 Start
+**********************************/
+.psw_grade0 {width:92px;height:13px;background-image:url('../../img/shengpay/CommonNew_img/password_strength.png');background-position:0px   0px; display:inline-block;}
+.psw_grade1 {width:92px;height:13px;background-image:url('../../img/shengpay/CommonNew_img/password_strength.png');background-position:0px -20px;display:inline-block;}
+.psw_grade2 {width:92px;height:13px;background-image:url('../../img/shengpay/CommonNew_img/password_strength.png');background-position:0px -40px;display:inline-block;}
+.psw_grade3 {width:92px;height:13px;background-image:url('../../img/shengpay/CommonNew_img/password_strength.png');background-position:0px -60px;display:inline-block;}
+.psw_grade4 {width:92px;height:13px;background-image:url('../../img/shengpay/CommonNew_img/password_strength.png');background-position:0px -80px;display:inline-block;}
+/**********************************
+* 密码强度 End
+**********************************/
+
+/**********************************
+*  表单Start
+**********************************/
+.checkbox-style-01{margin:0px; padding:0px;}
+.input-width-normal{width:175px; border:1px solid #CDCDCD; line-height:22px; height:18px; line-height:18px;font-size:12px; vertical-align:middle; padding:5px 3px;}
+.input-text-big{ background-color:#FFFFFF; border: 2px solid #9FC1E7; font-size: 18px; font-weight: 700; height: 34px; line-height:34px; padding: 0 10px; vertical-align: middle; }
+.input-focus{border:2px solid #9FC1E7; height:16px; line-height:16px; width:173px;}
+
+.select-width-normal{width:183px; border:1px solid #CDCDCD;vertical-align:middle;font-size:12px}
+.button-style-01,.button-style-01-d{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px; height:31px; width:96px; border:0px; color:#FFF; font-size:14px; font-weight:700; line-height:31px; margin-right:25px; display:inline-block; text-decoration:none; text-align:center; cursor:pointer;}
+.button-style-01:hover{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat -120px 0px;}
+.button-style-01-d{color:#444; background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -160px;}
+.button-style-02{border:0px; background:url(../../img/shengpay/CommonNew_img/btn-big.png) no-repeat; height:23px; line-height:23px; width:120px; color:#333; font-size:12px;display:inline-block; text-decoration:none; text-align:center; cursor:pointer;}
+.button-style-disable-02{background:url(../../img/shengpay/CommonNew_img/btn-big.png) no-repeat 0px -27px; color:#d5d2c7; }
+.button-style-03{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -40px; height:31px; width:119px; border:0px; color:#FFF; font-size:14px; font-weight:700; line-height:31px; margin-right:25px;display:inline-block; text-decoration:none; text-align:center; cursor:pointer;}
+.button-style-04{background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px -80px; height:31px; width:170px; border:0px; color:#FFF; font-size:14px; font-weight:700; line-height:31px; margin-right:25px;display:inline-block; text-decoration:none; text-align:center; cursor:pointer;}
+a.button-style-01:hover,a.button-style-02:hover,a.button-style-03:hover{color:#fff;}
+
+
+
+.fb {color: #07689F;}
+.fr {color: #f60;}
+.tfocus {border: 2px solid #99CCFF;	font-size: 12px;	height: 16px;	line-height: 16px;	padding: 5px 3px;	vertical-align: middle;	width: 175px;}
+.tblur {border: 1px solid #cdcdcd;background-color: #FFFF99;font-size: 12px;height: 18px;line-height: 22px;	padding: 5px 3px;	vertical-align: middle;	width: 175px;}
+.erro-bg{background-color:#FFF9B2;}
+/**********************************
+*  表单End
+**********************************/
+
+
+/**********************************
+* step Start
+**********************************/
+/*可扩展step*/
+.step03-01{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -30px;}
+.step03-02{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px 0px;}
+.step03-03{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -60px;}
+.step02-01{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -120px;}
+.step02-02{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -90px;}
+.step-box03,.step-box02,.step-box04{font-size:14px;width:960px; height:29px;}
+.step-box03 li,.step-box02 li,.step-box04 li{float:left; height:29px; line-height:29px; color:#605F5F; text-align:center; width:33%;}
+.step-box02 li{ width:50%;}
+.step-current{font-weight:bold; color:#005390;}
+.step04-01{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -150px;}
+.step04-02{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -180px;}
+.step04-03{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -210px;}
+.step04-04{background:url(../../img/shengpay/CommonNew_img/step_merge.png) no-repeat 0px -240px;}
+.step-box04 li{ width:25%;}
+
+/*图片 step 绑定手机*/
+.bindPhone-step-01 { background:url(../../img/shengpay/CommonNew_img/flow_02.png) no-repeat 0px 0px; width:960px; height:30px; margin-top:20px; }
+.bindPhone-step-02 { background:url(../../img/shengpay/CommonNew_img/flow_02.png) no-repeat 0px -40px; width:960px; height:30px;margin-top:20px; }
+.bindPhone-step-03 { background:url(../../img/shengpay/CommonNew_img/flow_02.png) no-repeat 0px -80px; width:960px; height:30px; margin-top:20px;}
+.bindPhone-step-04 { background:url(../../img/shengpay/CommonNew_img/flow_02.png) no-repeat 0px -120px; width:960px; height:30px;margin-top:20px; }
+
+
+/**********************************
+* step End
+**********************************/
+
+
+/*flow box*/
+.flow-body { border:1px solid #E1E1E1; padding:35px 20px 20px 200px; margin-top:10px;  }
+.folow-title { font-size:14px; font-weight:700; padding:10px 0px;}
+.flow-body-style02{ border:1px solid #E1E1E1; padding:15px 20px 20px 200px; margin-top:10px; }
+.flow-title-style02{line-height:40px; border-bottom:1px solid #E2E2E2; margin-left:-162px; font-size:14px; font-weight:bold; margin-right:20px; color:#666;}
+.flow-body-02{ border:1px solid #E1E1E1; padding:15px 20px 20px 20px; margin-top:10px;  }
+.icon18_suc2{width:18px;height:18px;background: url(../../img/shengpay/CommonNew_img/iconb_0703.png) no-repeat -200px -70px; display:inline-block; vertical-align:middle; margin-left:5px;}
+
+.flow-body-03 { border:1px solid #E1E1E1; padding:35px 20px 20px 200px; margin-top:-4px; border-top:4px solid #eef5f6;  }
+
+
+/*add login 11-10-14*/
+.page_login_right{float:right;width:320px;overflow:hidden; margin-bottom:15px;}
+
+.panel-login-head{background:url(../../img/shengpay/CommonNew_img/login_head.png) repeat-x; margin:0 1px; height:33px; line-height:33px; font-size:14px; font-weight:bold; padding-left:15px;}
+.panel-login-body{padding-top:15px;}
+.panel-login-item{padding:5px 0px;}
+.panel-login-item label{display:inline-block; text-align:right; width:100px;}
+/*pupup normal*/
+.popup-normal{border:3px solid #B2CCE5; width:530px; margin:0 auto; background-color:#fff; text-align:left;}
+.popup-normal .popup-head{background:url(../../img/shengpay/CommonNew_img/login_head.png) repeat-x; height:33px; line-height:33px;}
+.popup-normal .popup-body{padding:30px 20px 15px 30px;}
+.popup-head h3{margin:0px; padding:0px; padding-left:10px; float:left; font-size:14px;}
+
+a.popup-close-02{float:right; padding-right:10px; cursor:pointer;display:inline-block; font-size:12px; _font-size:14px; font-weight:bold; color:#000; font-family:Arial; line-height:18px;}
+
+
+.btn-login,.btn-regdit{background:url(../../img/shengpay/CommonNew_img/btn_min_width.png) no-repeat 0px 0px; width:82px; height:31px; line-height:31px; border:0px; text-decoration:none; display:inline-block; color:#FFF; font-size:14px; font-weight:bold;}
+.btn-regdit{background:url(../../img/shengpay/CommonNew_img/btn_min_width.png) no-repeat 0px -35px; color:#676767; margin-left:10px;}
+.panel-login-bottom{padding-left:100px; padding-top:8px;}
+.panel-login-footer{padding-left:21px; color:#242424; padding-left:87px;}
+.page_login_right .panel-login-footer{padding-left:60px; padding-bottom:10px;}
+.login-text1{padding-top:10px;}
+.login-body{padding-bottom:20px;}
+.page_login_right .login-body{padding-bottom:0px;}
+.page_login_right object{vertical-align:middle;}
+.login-text2{}
+
+.page_login_main{width:554px;}
+.login-tip-erro{background:url(../../img/shengpay/CommonNew_img/msg_warn.png) no-repeat 10px 7px #FFF3D9; padding-left:26px; line-height:30px; border:1px solid #FFDB85; margin:10px 23px 0px 22px; color:#CA6D12;}
+.panel-login-popup{border:3px solid #b2cce5; padding:0px 0px 20px;}
+.btn_popup_close2{width:16px;height:16px;font-weight:700;color:#666;position:absolute;cursor:pointer;margin-left:336px;margin-top:12px; color:#6C92AC;}
+
+/*个人用户注册*/
+
+.regedit-head{border-bottom:2px solid #4AB4EE; line-height:30px; margin-bottom:10px;}
+.regedit-head-noLine{line-height:30px; margin-bottom:10px;}
+.regedit-head h3,.regedit-head-noLine h3{margin:0px; padding:0px; padding-left:5px; font-size:14px; float:left;}
+.regedit-head div,.regedit-head-noLine div{float:right; font-weight:bold;}
+.regedit-step-01{background:url(../../img/shengpay/CommonNew_img/regdit_flow.png) no-repeat 0px 0px; width:960px; height:30px;}
+.regedit-step-02{background:url(../../img/shengpay/CommonNew_img/regdit_flow.png) no-repeat 0px -35px; width:960px; height:30px;}
+.regedit-step-03{background:url(../../img/shengpay/CommonNew_img/regdit_flow.png) no-repeat 0px -70px; width:960px; height:30px;}
+
+.regedit-flow-box{background:url(../../img/shengpay/CommonNew_img/regdit_flow_bg.png) repeat-x left top; height:329px; text-align:center;}
+.regedit-flow01{background:url(../../img/shengpay/CommonNew_img/regdit_flow_hover.png) no-repeat -310px 0px; width:297px; vertical-align:top; height:53px; padding-top:220px; display:inline-block;}
+a.regedit-flow01:hover{background:url(../../img/shengpay/CommonNew_img/regdit_flow_hover.png) no-repeat 0px 0px;}
+.regedit-flow02{background:url(../../img/shengpay/CommonNew_img/regdit_flow_hover.png) no-repeat -310px -290px; width:297px; vertical-align:top; height:53px; padding-top:220px; display:inline-block;}
+a.regedit-flow02:hover{background:url(../../img/shengpay/CommonNew_img/regdit_flow_hover.png) no-repeat 0px -290px;}
+.regedit-flow01 input,.regedit-flow02 input{margin-right:0px;}
+
+.regedit-flow{background:url(../../img/shengpay/CommonNew_img/sub_bg.png) repeat-y top right; border: 1px solid #E1E1E1; margin-top: 10px; padding: 15px 20px 20px; position:relative;}
+.regedit-flow .tip-right-box{border:none; width:176px; height:auto; margin-left:0px; right:0px; _right:1px;}
+.re-nav{width:176px; height:80px; margin-bottom:100px; background:url(../../img/shengpay/CommonNew_img/regedit_change.png) no-repeat 0px 0px;}
+.re-nav-02{background:url(../../img/shengpay/CommonNew_img/regedit_change.png) no-repeat 0px -80px;}
+.re-phone,.re-email{cursor:pointer; height:40px; display:block;}
+.re-text{padding-left:10px;}
+
+
+.panel-login{border:solid 1px #A9BECF;background:url(../../img/shengpay/CommonNew_img/login_bottom.png) repeat-x 0 bottom;}
+.panel-height-sub{height:205px; overflow:hidden;}
+.login-tab{line-height:28px; height:28px;}
+.login-tab .couple_tab_item_selected{background:url(../../img/shengpay/CommonNew_img/login_tab_item_selected.png) repeat-x 0 0;width:50%;float:left;font-size:14px;font-weight:700;text-align:center;_display:inline;}
+.login-tab .couple_tab_item{background:url(../../img/shengpay/CommonNew_img/login_tab_item.png) repeat-x 0 0;width:50%;float:left;font-size:14px;text-align:center;_display:inline;height:27px;line-height:27px;color:#808d93;cursor:pointer;border-bottom:solid 1px #A9BECF;}
+.login-section-table{width:100%;}
+.login-section-table th{font-size:14px; font-weight:normal; text-align:right;}
+.single_tab_item{background:url(../../img/shengpay/CommonNew_img/login_tab_item.png) repeat-x 0 0;border-bottom:solid 1px #A9BECF;padding-left:10px; text-align:left; font-weight:bold; color:#222; font-size:14px;}
+
+.login-tip-box{background:url(../../img/shengpay/CommonNew_img/login_tip_box.png) no-repeat; width:391px; height:113px; position:absolute; margin-top:-273px; margin-left:90px; padding-top:35px; padding-left:60px; color:#626262;}
+.login-tip-box .tip-body{width:315px;}
+a.btn-w118{width:118px;height:25px;background:url(../../img/shengpay/CommonNew_img/btn_downcount.png);border-style:none;font-weight:700; display:inline-block; text-decoration:none; color:#4f4e4e; text-align:center; line-height:25px;}
+a.btn-w118:hover{color:#4f4e4e;}
+.box-padding-02{padding-left:20px;}
+.box-padding-02 p{margin:0px; padding:0px; line-height:25px;}
+.bg-style-10{background:url(../../img/shengpay/CommonNew_img/img_index_01.png) no-repeat right 0px;}
+
+
+
+/**********************************
+* line Start
+**********************************/
+.line-style-01{border-bottom:1px dashed #BDD6E7; height:5px; overflow:hidden;}
+.line-style-02{border-bottom:1px dashed #BED5E1; margin:10px; height:3px; overflow:hidden;}
+.line-style-03{border-bottom:1px solid #E3E3E3; height:2px; overflow:hidden; margin-left:-50px; margin-right:50px;}
+.line-style-04{border-bottom:1px solid #ccc; margin:10px 0px;height:3px; overflow:hidden;}
+.line-style-05{border-bottom:1px dashed #BDD6E7; margin-left:-180px;height:3px; overflow:hidden}
+.line-style-06{border-bottom:1px dashed #BED5E1; margin:8px;*margin:6px; height:3px; overflow:hidden;}
+
+/**********************************
+* line End
+**********************************/
+
+/**********************************
+* tab Start
+**********************************/
+.tab-nav-mini{border-bottom:1px solid #E2E2E2;}
+.tab-nav-mini a{display:inline-block; padding:3px 10px; background-color:#F4F4F4; border:1px solid #E2E2E2; border-bottom:0px; margin-left:3px; color:#7C7C7C;}
+.tab-nav-mini a:hover{text-decoration:underline; color:#000;}
+.tab-nav-mini a.selected{border:1px solid #174574; border-bottom:0px; background-color:#356AA0; color:#FFF; font-weight:bold;}
+.tab-nav-mini a.selected:hover{text-decoration:none;}
+
+
+/**********************************
+* tab End
+**********************************/
+
+/**********************************
+*  2011-11-03 改版 Start
+**********************************/
+/* edit 20111114 */
+.page_head_top{height:80px;}
+.page_head_flap{margin-top:2px;}
+.page_head_top_left{float:left;padding-top:27px;}
+.rolling_icons{border:1px solid #d4e2e9}
+.panel_mini .panel_box_content{border:1px solid #d4e2e9;border-top-width:0px; background-color:White;}
+.panel_box_tab .couple_tab_item_selected{width:50%;float:left;font-size:14px;font-weight:700;text-align:center;background-color:#fff;margin-top:1px;_display:inline;margin-right:-1px;margin-left:-1px;border-right:solid 1px #d4e2e9;border-left:solid 1px #d4e2e9;height:29px;line-height:28px;}
+
+
+
+
+/*轮播*/
+.payCard-index-slide{float:left; width:554px; position:relative;}
+.payCard-index-slide-sub{width:150px; float:left; padding-left:10px; margin-top:-10px;}
+.payCard-index-slide-sub img{margin-top:10px;}
+.right-link{position:absolute; right:12px; top:180px;}
+.slide-point ul{margin:0px; padding:0px;}
+.slide_point li{float:left; list-style:none; margin-left:3px;}
+.slide_point .selected a{font-size:14px; font-weight:bold; color:#FFF; display:inline-block; width:18px; height:18px; text-align:center; line-height:18px; background-color:#64c4dd;}
+.slide_point a{font-size:14px; font-weight:bold; color:#999; display:inline-block;width:20px; height:20px; text-align:center; line-height:18px; background-color:#dadada; opacity:0.7;-moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px;}
+
+.section_small_new{}
+.section_small_new .field_item{padding-top:10px;}
+.section_small_new .field_item .field_item_title{width:60px;}
+.section_small_new .field_item_content{margin-left:64px;}
+
+.right_link_sns{float:right;display:inline-block;height:26px;line-height:normal;padding:4px 10px 0px 0px;overflow:hidden}
+
+.special_service_new{line-height:30px;padding:0 12px;margin-bottom:10px;}
+.special_service_list{width:100%;}
+.special_service_box {width:220px;margin:auto;}
+.special_service_box h3{padding:0px 0px 0px 10px;text-align:left;margin:0px;font-size:12px;color:#07679c;line-height:27px;height:27px;background-color:#d7ebf3;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+
+.btn_order_new{display:inline-block;text-align:center;width:75px;height:23px;color:#07679c;border:none;line-height:25px;cursor:pointer;background-color:transparent;background-image:url('../../img/shengpay/CommonNew_img/btn_order_new.png');background-repeat:no-repeat;}
+
+
+.spay-card{text-align:center;padding:10px 0px;}
+.spay-card-buy{padding:8px 0px 0px 55px;*padding:14px 0px 0px 55px}
+
+.spay-vip-centrer{padding:5px 15px;}
+.spay-vip-centrer h3{margin:0px;padding:0px 0px 5px 0px;font-size:12px;}
+.m-hot{}
+.spay-m-hot{margin:0px;padding:0px;clear:left}
+.spay-m-hot dt{margin:0px;padding:5px 0px 0px 0px;float:left;}
+.spay-m-hot dd{margin:0px;padding:0px 10px;float:left;display:inline-block;line-height:27px;}
+.spay-shopping{margin:0px;padding:0px;}
+.spay-shopping dt{margin:0px;padding:5px 0px 0px 0px;float:left;height:30px;}
+.spay-shopping dd{margin:0px;padding:0px 5px 5px 5px;float:left;line-height:27px;}
+.top-hot{display:block;width:47px;text-align:center;color:#fff;font-weight:700;line-height:17px;height:15px;background:url('../../img/shengpay/CommonNew_img/hot-title.png') no-repeat}
+.user-word{padding-left:80px;color:#666;line-height:22px;margin-bottom:10px;}
+.user-word img{float:left;margin-left:-80px;display:inline}
+.user-more{width:100%;}
+.user-more td{padding:5px 0px;}
+.user-more dl{margin:0px;padding:0px;line-height:22px;}
+.user-more dl dt{margin:0px;padding:0px;}
+.user-more dl dd{margin:0px;padding:0px 0px 0px 10px;color:#666;background:url('../../img/shengpay/CommonNew_img/list_disc.png') no-repeat left center}
+.user-more dl dd a{color:#666}
+.user-more dl dd a:hover{color:#ff6600}
+.spay-news{padding:10px;}
+.spay-news ul{margin:0px;padding:0px;line-height:22px;}
+.spay-news ul li{margin:0px;padding:0px 0px 0px 10px;background:url('../../img/shengpay/CommonNew_img/list_disc.png') no-repeat left center}
+.spay-news ul li a{color:#666}
+.spay-news ul li a:hover{color:#ff6600}
+.spay_passport{padding-left:65px;color:#66;line-height:22px;}
+.spay_passport img{float:left;margin-left:-65px;display:inline;}
+.spay-passport{width:100%;color:#666;}
+.spay-passport td{line-height:17px;}
+.spay-passport img{margin-right:10px;}
+.spay-banks{line-height:27px;}
+.spay-banks a{display:inline-block;margin:5px;}
+.spay-passport a{color:#494b4b;}
+.spay-passport a:hover{color:#ff6600;}
+.wallet_info_unactive_new{margin:0 5px;padding:5px 10px;border-bottom:dashed 1px #BED5E0;line-height:1.8;}
+.have-card-get{padding-left:3px;padding-top:5px;_padding-top:10px;}
+.have-card-get img{vertical-align:text-top}
+.text-o{color:#ff6600;}
+.btn_check_link_new{display:inline-block;text-align:center;line-height:25px;width:72px;height:23px;border:none;color:#fff;font-weight:700;background-color:transparent;background-image:url("../../img/shengpay/CommonNew_img/btn_order.png");background-repeat:no-repeat;background-position: 0 0;}
+.btn_check_link_new_big{display:inline-block;text-align:center;line-height:25px;width:99px;height:23px;border:none;color:#fff;font-weight:700;background-color:transparent;background-image:url("../../img/shengpay/CommonNew_img/btn_order_big.png");background-repeat:no-repeat;background-position: 0 0;}
+
+
+/*二维码模块*/
+.mobile-zone{padding:10px;background:#e8f3f7 url('../../img/shengpay/CommonNew_img/icon-robot.png') no-repeat right bottom;color:#666}
+.mobile-zone-con{padding:10px 0px 0px 65px;}
+.mobile-zone h3{margin:0px;padding:0px;font-size:14px;}
+.mobile-zone h3 a{color:#494b4b;}
+.mobile-zone h3 a:hover{color:#ff6600;}
+.mobile-zone .show-qr {position:relative;float:left;margin-left:-65px;display:inline;z-index:1000;}
+.btn-dl-pc{display:inline-block;width:90px;height:23px;background:url('../../img/shengpay/CommonNew_img/btn-dl-pc.png') no-repeat}
+.show-qr-con{position:absolute;right:-75px;top:-65px;display:none;width:117px;height:119px;border:1px solid #8dc7e3;padding:10px;background-color:#fff;}
+.btn-qr-close{position:absolute;right:3px;top:3px;display:inline-block;width:10px;height:10px;background:url('../../img/shengpay/CommonNew_img/btn-qr-close.png') no-repeat}
+
+.life_assist_item{position:relative;width:67px;height:70px;}
+.life_assist_item img{margin:0px;}
+.life_assist_item p{padding:0px;margin:0px;display:block;height:75px;position:relative}
+.life_assist_item p a {display:inline-block;background:url('../../img/shengpay/CommonNew_img/dock-bg.png') no-repeat center 44px;}
+.life_assist_item p a span{display:block;text-align:center;width:50px;padding-top:52px}
+.life_assist_item p a  img{position:absolute;left:16px;top:6px;}
+.life_assist_item p a:hover  img{top:5px;}
+.life_assist_item p a:hover{zoom:1}
+
+.section_login_new{/*height:137px;*height:140px;*/ padding-top:5px;} /***login Fix 20111207***/
+.section_login_new .field_item,#login-panel-sdp .field_item{padding-top:3px;}
+#login-panel-sdp .field_item_title{line-height:30px;}
+.section_login_new .field_item .field_item_title{width:57px; text-align:right;}
+.section_login_new .field_item_content{margin-left:62px;}
+.login-tips{color:#a9a9a9;padding-left:5px;}
+.login-bottom{text-align:center;padding-bottom:5px;}
+.btn-regsiter{display:inline-block;font-weight:700;color:#484848;text-align:center;line-height:27px;width:89px;height:25px;background:url('../../img/shengpay/CommonNew_img/btn_checkin.png') no-repeat}
+
+
+/**********************************
+* 2011-11-03 改版 End
+**********************************/
+
+/*2011-11-17*/
+.menu_item_selected{padding-top:2px;}
+.section_small_new .field_item_content {*margin-left: 60px;}
+.field-layout{padding-left:38px; padding-top:10px;text-align:left;}
+
+/*2011-11-30 OuYangXiaoChong*/
+.panel_box_tab_login{height:27px;line-height:30px;background:url(../../img/shengpay/CommonNew_img/panel_box_title_x_login.png) repeat-x 0 0;border-style:none solid;border-width:1px;border-color:#dce0e1;}
+.panel_box_tab_login .tab_item_selected{border-style:none solid;border-width:1px;border-color:#BED5E0;margin-top:1px;margin-left:-1px;_display:inline;line-height:29px;}
+.tab_item{cursor:pointer;}
+.panel_box_tab_login .couple_tab_item{width:50%;float:left;font-size:12px;text-align:center;color:#979797;cursor:pointer;}
+.panel_box_tab_login .couple_tab_item_selected{width:50%;float:left;font-size:14px;font-weight:700;text-align:center;background:#fff url(../../img/shengpay/CommonNew_img/panel_box_title_x_login_select.png) repeat-x;margin-top:1px;_display:inline;margin-right:-1px;margin-left:-1px;border-right:solid 1px #dce0e1;border-left:solid 1px #dce0e1;height:26px;line-height:28px;}
+
+.section_login_new .field_item{/*padding-top:13px;*/ text-align:left;}
+.section_login_new .field_item .field_item_title{width:57px;line-height:27px;}
+.section_login_new .field_item_content{margin-left:62px;}
+
+.input-width-login{width:140px;height:22px;padding-left:5px;background:#fff;line-height:22px;border:1px solid #bbbbbb;}
+.input-width-login-focus{width:138px;height:22px;color:#000;padding-left:5px;background:#fff;line-height:22px;border:2px solid #9fc1e6;}
+.input-width-login-code{width:70px;height:22px;color:#999999;padding-left:5px;background:#fff;line-height:22px;border:1px solid #bbbbbb;}
+.input-width-login-code-focus{width:68px;height:22px;color:#000;padding-left:5px;background:#fff;line-height:22px;border:2px solid #9fc1e6;}
+.icon-code-login{vertical-align:bottom}
+
+
+/**********************************
+* 安全中心 Start
+**********************************/
+.text-box-02{padding:10px 20px 20px 50px; border:1px solid #d6d7d6; background:url(../../img/shengpay/CommonNew_img/box_bottom_bg02.png) repeat-x left bottom; border-bottom-left-radius:6px; border-bottom-right-radius:6px; line-height:150%;} 
+.shield-info-banner{background:url(../../img/shengpay/CommonNew_img/safe_center_shield.png) no-repeat; height:202px; margin-bottom:10px;}
+.shield-info-banner ul{padding-left:380px; font-size:14px; font-weight:bold; color:#000; padding-top:100px;}
+.shield-info-banner li{padding-top:5px;}
+
+/*  修改绑定邮箱手机  */
+.renzheng-xz-panel{height:220px;background:url('../../img/shengpay/CommonNew_img/renzheng-bg.png') repeat-x left bottom}
+.renzheng-xz-right{width:50%;float:right}
+.renzheng-xz-left{width:49%;float:left;border-right:1px dashed #ccc;}
+.renzheng-xz-con{margin-left: 115px;width:257px;height:191px;background:url('../../img/shengpay/CommonNew_img/renzheng-xuanze-bg.png') no-repeat;overflow:hidden}
+.renzheng-xz-con:hover{width:257px;height:191px;background:url('../../img/shengpay/CommonNew_img/renzheng-bg-active.png') no-repeat;overflow:hidden}
+.renzheng-xz-con h3{font-size:14px;margin:0px;padding:5px 0px 15px 0px;}
+.renzheng-xz-con h3 a{}
+.renzheng-xz-con-sub{padding-top: 25px;text-align: center;line-height:22px;}
+
+.code-width520{width:520px;}
+.tipBox-style-td-01{padding-right:30px;border-right:1px dashed #ccc;}
+.tipBox-style-td-02{padding-left:20px;}
+
+
+.anquan-ok-demo{border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;padding:20px 50px;}
+.anquan-ok-demo-sub{width:630px;margin:auto;line-height:22px}
+.anquan-ok-demo-sub table {width:100%}
+.anquan-ok-demo-sub table td{padding-left:30px;}
+.anquan-ok-demo-sub-title{padding:0px 0px 10px 0px;margin:0px;font-size:14px;color:#505050;}
+
+/**********************************
+*安全中心  End
+**********************************/
+
+/*修改手机流程中 密保选择框*/
+.mibao-select-list li{float:left;width:66px; height:73px; text-align:center; line-height:2; margin-top:10px;}
+.mibao-select-list li.mibao-selected{background:url(../../img/shengpay/CommonNew_img/merge_shengpay.png) no-repeat;}
+.mibao-num{width:40px; background:url(../../img/shengpay/CommonNew_img/merge_shengpay.png) no-repeat 0px -80px; height:29px; text-align:center; border:1px solid #ccc; font-size:18px; font-weight:bold;}
+.mibao-select-list .mibao-tip-text{color:#EE8A15; padding-top:27px; display:inline-block; float:left; width:auto;}
+
+/**********************************
+* 404 Start
+**********************************/
+.page_bg_error{position: absolute;top: 0px;z-index: -1;left: 0px;width: 100%;min-width: 960px;height: 160px;background-image: url(../../img/shengpay/CommonNew_img/page_bg_error.png);background-position:center top;background-repeat: repeat-x;}
+
+.page_head_top_right_error{float:right;padding-top:20px;text-align:right;font-size:12px;color:#666;line-height:32px;font-family:宋体;}
+.page_head_top_right_error a{color:#666;zoom:1;}
+.page_head_top_right_error a.key_blue{color:#056A98;}
+.page_head_top_right_error a.key_txt{color:#f60;}
+.page_head_top_right_error span{margin-left:6px;zoom:1;}
+
+.head-right-01{float:right;text-align:right;font-size:12px;color:#666;line-height:32px;font-family:宋体; margin-top:-20px;}
+.head-right-01 a{color:#666;zoom:1;}
+.head-right-01 a.key_blue{color:#056A98;}
+.head-right-01 a.key_txt{color:#f60;}
+.head-right-01 span{margin-left:6px;zoom:1;}
+
+.shengpay-404{border:1px solid #efefef;padding-left:400px;height:300px;margin-top:50px;background:url('../../img/shengpay/CommonNew_img/icon-error-coffce.png') no-repeat 156px 40px}
+.sp-404-con{width:265px;line-height:22px;padding-top:40px;}
+.sp-404-con h1{margin:0px;padding:0px 0px 5px 0px;font-size:18px;color:#333333;}
+.sp-404-con ul{margin:0px;padding:0px;list-style:none;}
+.sp-404-con ul li{padding-left:10px;background:url('../../img/shengpay/CommonNew_img/icon-error-dotto.png') no-repeat left center}
+.sp-404-con b{color:#666;}
+
+/**********************************
+* 404 End
+**********************************/
+
+.btn-white{background:url('../../img/shengpay/CommonNew_img/btn_white.png') 0px 0px; width:97px; height:30px; display:inline-block; text-decoration:none; border:0px; text-align:center; line-height:30px; color:#4b4b4b;}
+
+.footer-mini{}
+.footer-mini div{padding-top:5px; color:#7d7d7d;}
+
+.input-focus02{border:2px solid #9FC1E7; height:16px; line-height:20px;}
+
+.login-way{padding-left:15px; clear:both;}
+.login-way .input-box-item02{padding-top:3px;}
+.login-way .input-width-normal{height:16px; line-height:16px;}
+.userInfo-subBox{border:1px solid #e9eff4; background-color:#f9fcff; display:inline-block; padding:8px 30px 8px 10px; margin-left:68px; color:#7a8ba2; margin-bottom:0px; margin-top:5px; line-height:1.5;}
+.font-gray-normal{color:#999; font-size:12px; font-weight:normal; width:250px;}
+.login-way .button-style-01{margin-top:3px;}
+
+/*footer*/
+.footer-box{width:960px; margin:0 auto; height:180px; margin-top:10px;}
+.footer-mini{clear:both;}
+
+
+/*我的盛付通账户管理*/
+.panel-account{border:1px solid #d4e2e9;margin-bottom:10px;color:#626262;}
+.panel-account-title{margin:0px;padding:0px 0px 0px 10px;height:25px;font-size:14px;font-weight:normal;line-height:25px;background:url('../../img/shengpay/CommonNew_img/spay-acc-title-bg.png') repeat-x}
+.panel-account-title b{font-size:14px;float:left;}
+.panel-account-title span{font-size:12px;color:#777}
+.panel-account-con{padding:10px;}
+.spay-acc-new{padding:0px 15px;line-height:20px;}
+.spay-acc-new-icon{padding-bottom:5px;}
+.spay-acc-new-w{}
+.spay-acc-new-w b{font-size:16px;color:#b31111;padding:0px 5px;}
+.spay-acc-new-w-list{padding:5px 0px 5px 25px;}
+.spay-acc-new-btn{text-align:center;padding-bottom:20px;}
+.spay-acc-new-list{}
+.spay-acc-new-list-table{width:100%;background:#f4faff;}
+.spay-acc-new-list-table th{padding:5px 2px;font-weight:normal;border-top:1px solid #dde2e7;border-bottom:1px dashed #dde2e7;background:#e5eff8;}
+.spay-acc-new-list-table td{padding:5px 8px;border-bottom:1px dashed #dde2e7;}
+.spay-acc-new-list-table-td-hit{background:#eaf4fd;color:#000;cursor:position}
+.btn-spay-w-band{display:inline-block;width:50px;height:18px;background-image:url('../../img/shengpay/CommonNew_img/btn-spay-acc-band.png');background-repeat:no-repeat;background-position:0 0}
+.btn-spay-w-band:hover{display:inline-block;width:50px;height:18px;background-image::url('../../img/shengpay/CommonNew_img/btn-spay-acc-band.png');background-repeat:no-repeat;background-position:0 -18px}
+.account-jf{display:inline-block;width:90px;}
+ 
+.account-dashed{border-bottom:1px #bdd5df dashed;height:1px;font-size:1px;overflow:hidden;margin:10px 50px 0px 50px;}
+.spay-account-band{background:#fffeec;padding-bottom:15px;}
+.btn-acc-band{display:inline-block;padding-left:15px;background:url('../../img/shengpay/CommonNew_img/icon-acc+.png') no-repeat left center;}
+.acc-band-table{width:600px;margin:10px auto;border:1px solid #e4e4e4;background:#fff;border-collapse:collapse;}
+.acc-band-table th{height:27px;padding-left:15px;border:1px solid #e4e4e4;font-weight:normal;background:url('../../img/shengpay/CommonNew_img/acc-band-tbg.png') repeat-x;}
+.acc-band-table td{border:1px solid #e4e4e4;height:27px;padding-left:15px;}
+.acc-band-table-ski{float:left;position:relative;margin-right:5px;}
+.acc-band-null{text-align:center;padding:20px 0px;color:#254c7c;}
+.acc-band-show{position:absolute;left:28px;top:-5px;width:130px;background:#fffed1;border:1px solid #e3d67f;padding:5px 50px 5px 20px;_padding-left:40px;color:#775438;line-height:22px;}
+.acc-band-show b{float:left;margin-left:-24px;display:block;width:4px;height:9px;background:url('../../img/shengpay/CommonNew_img/icon-acc-unband-arr.png') no-repeat}
+.btn-acc-unband{display:inline-block;width:48px;height:21px;color:#747474;text-align:center;background:url('../../img/shengpay/CommonNew_img/btn-acc-unband.png') no-repeat}
+
+.choose-pay-card{position:relative;line-height:25px;}
+.choose-pay-card-box{position:absolute;left:0px;top:25px;color:#f8fbff;border:1px solid #c2d0e2;padding:10px;background:#f8fbff;}
+.choose-pay-card-box ul{list-style:none;line-height:25px;}
+.choose-pay-card-box ul li{padding:0px 50px 0px 0px;}
+.choose-pay-card-box ul li a{font-size:16px;color:#383838;font-weight:700;padding-left:10px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-dotted.png') no-repeat left center}
+.choose-pay-card-box ul li a:hover{color:#0855b5}
+
+.biz-current-menu{display:inline-block;position:relative}
+.biz-current-menu-b-down{position:absolute;top:10px;right:-10px;display:block;width:7px;height:4px;background:url('../../img/shengpay/CommonNew_img/icon12_expand.png') no-repeat -2px -3px}
+.biz-current-menu-b-up{position:absolute;top:10px;right:-10px;display:block;width:7px;height:4px;background:url('../../img/shengpay/CommonNew_img/icon12_expand.png') no-repeat -2px -23px}
+
+.citiao-title{padding:15px 20px 5px 20px;font-size:14px;border-bottom:2px solid #4bb4ee;}
+.citiao-title a{font-size:12px;font-weight:normal;position:absolute;margin-left:550px;}
+.citiao-box{border:1px solid #ededed;padding:25px 100px 25px 100px;}
+.citiao-tips{border:1px solid #ffdb85;height:30px;line-height:30px;padding-left:35px;color:#6c5012;background:#fff3d9 url('../../img/shengpay/CommonNew_img/msg_warn.png') no-repeat 10px center}
+.citiao-table label{display:block;padding-right:10px;text-align:right;line-height:35px;_line-height:40px;}
+.citiao-table b{font-size:18px;font-weight:700;color:#7d7d7d;}
+.citiao-rechange{font-size:18px;font-weight:700;color:#7d7d7d;}
+.citiao-exp-tips{color:#bababa;}
+.citiao-exp-content{line-height:35px;}
+.citiao-exp-content input{vertical-align:-2px}
+.citiao-form-area{width:700px;margin:15px auto}
+.citiao-table td{padding:10px 0px;}
+.citiao-history{position:relative;float:left;margin-left:10px;margin-top:10px;width:230px;}
+.citiao-history-box{position:absolute;_left:0px;_top:15px;color:#f8fbff;border:1px solid #c2d0e2;padding:10px;background:#f8fbff;}
+.citiao-history-box ul{list-style:none;}
+.citiao-history-box ul li{padding:3px 50px 3px 0px;}
+.citiao-history-box ul li a{font-size:16px;color:#383838;font-weight:700;padding-left:10px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-dotted.png') no-repeat left center}
+.citiao-history-box ul li a:hover{color:#0855b5}
+.citiao-b-height{display:inline-block;line-height:35px}
+.citiao-box-close{position:absolute;right:3px;top:5px;_top:0px;}
+.renzheng-freetext-big-focus{padding:4px 3px;width:173px;height:16px;font-size:18px;color:#7d7d7d;font-weight:700;border:2px solid #9fc1e7;background:#fff;vertical-align:middle}
+.renzheng-freetext-smaller{padding:4px 3px 3px 3px;width:50px;vertical-align: middle;color:#989898;border:1px solid #e1e1e1;background:#fff;vertical-align:middle}
+
+.spay-w-box{padding-left:60px;}
+.spay-w-box span{padding-left:5px;}
+.spay-w-box ul{margin:0px;padding:0px;line-height:19px;}
+.spay-w-box ul li{padding-left:8px;background:url('../../img/shengpay/CommonNew_img/icon_gray_arrow.png') no-repeat left center}
+
+.wenhao-div{position:relative;float:left;height:27px;padding-top:5px;padding-left:5px;*line-height:17px;}
+.panel-wenhao{width:337px;position:absolute;right:-65px;top: 21px;}
+.panel-wenhao-top{height:9px;line-height:1px;overflow:hidden;background:url('../../img/shengpay/CommonNew_img/wenhao-top.png') no-repeat}
+.panel-wenhao-con{background:url('../../img/shengpay/CommonNew_img/wenhao-line.png') repeat-y}
+.panel-wenhao-foot{height:4px;line-height:1px;overflow:hidden;background:url('../../img/shengpay/CommonNew_img/wenhao-foot.png') no-repeat}
+.wenhao-tips{padding:10px;font-size:12px;line-height:22px;}
+.panel-box-padd{padding-left:10px;}
+.sm-panel{margin-left:137px;}
+.panel-wenhao-top-v{background:url('../../img/shengpay/CommonNew_img/wenhao-top-v.png') no-repeat;}
+.tip_padd{padding-top:20px;}
+.tip_step{padding-bottom:20px; width:582px; height:65px;background:url('../../img/shengpay/CommonNew_img/bg-step.png') -40px top no-repeat; margin-top:15px;}
+.tip_step li.step1{float:left; width:140px; padding-top:40px; text-align:center; color:#00a8df;}
+.tip_step li.step2{float:left; width:250px; padding-top:40px; text-align:center; color:#636363;}
+.tip_step li.step3{float:left; width:30%; padding-top:40px; text-align:center; color:#636363;}
+.tip_step_line{border-bottom:1px dashed #bcdef1;padding-bottom:15px;}
+.renzheng-con-check { width:680px; margin:30px auto }
+.renzheng-con-check-table { width:100%; border:1px solid #ccc; border-collapse:collapse }
+.renzheng-con-check-table-th { padding:5px; background:#ccc; text-align:left }
+.renzheng-con-check-table th { width:35%; padding:5px; text-align:right; border:1px solid #ccc; }
+.renzheng-con-check-table td { width:65%; padding:5px; border:1px solid #ccc; }
+.dom-line { height:2px; background-color:#333; overflow:hidden; }
+.dom-title { border-bottom:2px solid #f60; line-height:35px; font-size:16px; color:#f60; }
+.card-tip-box { background-color: #FFFFFF; border: 1px solid #CBCBCB; color: #343434; font-size: 16px; font-weight: 700; height: 30px; line-height: 30px; margin-left: 5px; margin-top: -10px; min-width: 170px; overflow: visible; padding: 0 6px; position: absolute; width: 200px; display:none; }
+
+/*add 20111206 手机功能*/
+.panel_wap_normal{width:960px;margin:auto;margin-bottom:10px;font-size:12px;color:#333333;text-align:left;}
+.panel_wap_normal .panel_box_title{ margin:0px;padding:0px;height:30px;line-height:30px;color:#313131;font-size:14px;font-weight:bold;text-indent:1em;background-image:url(../../img/shengpay/CommonNew_img/panel_wap_normal.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_wap_normal .panel_box_content{padding:20px 30px;border:1px solid #d4e2e9;border-top-width:0px;}
+.panel_wap_normal .panel_box_foot{display:none;}
+.panel_wap_normal table td{padding-left:20px;}
+
+.panel_wap_list{width:550px;margin-bottom:10px;}
+.panel_wap_list .wap_list_top{height:16px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/wap_list_top.png);background-position:0px 0px;background-repeat:no-repeat;}
+.panel_wap_list .wap_list_content{padding:0px 10px;background:url(../../img/shengpay/CommonNew_img/wap_list_line.png) repeat-y}
+.panel_wap_list .wap_list_foot{display:block;height:7px;overflow:hidden;background-image:url(../../img/shengpay/CommonNew_img/wap_list_foot.png);background-position:0px 0px;background-repeat:no-repeat;}
+.wap-into-table{width:100%;line-height:22px;}
+.wap-into-table th{ margin:0px;padding:0px;width:76px;background:url(../../img/shengpay/CommonNew_img/wap_list_td_line.png) no-repeat right center}
+.wap-into-table td{padding-left:10px;}
+.wap-into-table h3{margin:0px;padding:0px 0px 5px 0px;font-size:14px;}
+
+.wap-dl-skill{line-height:22px;}
+.wap-dl-skill ul{margin:0px;padding:0px;list-style:none;}
+.wap-dl-skill ul li{padding-left:10px;background:url('../../img/shengpay/CommonNew_img/icon-wap-do.png') no-repeat 0px 8px;}
+.wap-dl-skill{margin-bottom:10px;}
+.wap-dl-title{margin:0px;padding:5px 0px;font-size:14px;color:#eb6100;}
+.wap-methon-list{text-align:center}
+.wap-dl-methon{height:64px;line-height:22px;padding:5px 10px;font-size:14px;font-weight:700;border:1px dashed #ffa86b;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff9d5;}
+
+.btn_wap_link{display:inline-block;width:96px;height:31px;line-height:33px;font-size:14px;font-weight:700;color:#fff;background:url(../../img/shengpay/CommonNew_img/btn_merge.png) no-repeat 0px 0px;border:0px;cursor:pointer;text-align:center;vertical-align:middle; }
+.btn_biz_link{display:inline-block;line-height:31px;text-align:center;width:157px;height:31px;border:0px;color:white;font-size:14px;font-weight:bold;background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/btn_login.png);background-repeat: no-repeat;background-position:0px -40px;}
+
+.wap-biz-step{margin-bottom:10px;}
+.wap-biz{padding:0px 10px;}
+.wap-biz-skill{line-height:22px;}
+.wap-biz-skill ul{margin:0px;padding:0px;list-style:none;}
+.wap-biz-skill ul li{margin-bottom:10px;padding-left:10px;font-size:14px;font-weight:700;background:url('../../img/shengpay/CommonNew_img/icon-wap-do.png') no-repeat 0px 11px;}
+.wap-biz-tel{font-size:16px;color:#eb6100;font-family:"微软雅黑"}
+
+/*关联认证 12-02-29*/
+.gl-rz-box{border:1px solid #d5d5d5;padding:10px 50px;}
+.gl-rz-box h3{font-size:14px;color:#676767;border-bottom:1px solid #d5d5d5;padding-bottom:10px;padding-left:20px;}
+.gl-rz-box h3 a{font-size:12px;font-weight:normal;float:right;}
+.gl-rz-tips{border:1px solid #f1f7fb;padding:10px;background:#f7faff;}
+.gl-rz-tips ul{line-height:25px;}
+.gl-rz-tips ul li{padding-left:10px;color:#216784;background:url('../../img/shengpay/CommonNew_img/icon_gray_arrow.png') no-repeat left center}
+.gl-rz-tips ul li a{color:#216784}
+
+.gl-tab{float:left;width:168px;}
+.couple2_tab_item_selected{float:left;color:#fff;font-weight:700;cursor:pointer;text-align:center;line-height:22px;width:84px;height:27px;background:url('../../img/shengpay/CommonNew_img/gl_tab_item_selected.png') no-repeat}
+.couple2_tab_item{float:left;color:#000;text-align:center;line-height:22px;cursor:pointer;width:84px;height:27px;background:url('../../img/shengpay/CommonNew_img/gl_tab_item.png') no-repeat}
+.gl-tab-con{/*width:175px;*/float:left;}
+/**********************************
+*  表单模块 Start
+**********************************/
+.input-box-item-gl{margin:15px 0px;}
+.input-label-gl{font-size:14px; width:200px; text-align:right; line-height:25px;display:inline-block; vertical-align:middle; padding-right:5px;float:left}
+.input-text{vertical-align:middle;}
+.input-box-item-gl-text{font-size:14px;}
+
+.input-box-item-gll{margin:15px 0px;}
+.input-label-gll{font-size:14px; width:200px; text-align:right; line-height:25px;display:inline-block; vertical-align:middle; padding-right:5px;}
+
+/**********************************
+*  表单模块 End
+**********************************/
+.input-box-renzheng-tip{padding-left:205px;}
+.font-orang{color:#FEB459}
+
+
+.result_container_ok{border:solid 1px #D9D9D9;background-color:#e5f5ff;padding:20px;}
+.result_container_ok table{width:100%;}
+.result_container_ok td{padding:0 10px 0;}
+.result_container_ok .sub_title{font-size:14px;line-height:30px;font-weight:400;margin:10px 0;}
+.text-gray{color:#6f6f6f}
+
+
+
+.renzheng-tips-popup{border:2px solid #d6e7fa;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;}
+.renzheng-tips-popup-border{border:1px solid #bed8f7; background-color:#f5faff;}
+.renzheng-tips-popup-arrow-left{display:block;position:absolute;margin-left: -7px;margin-top: 10px;width:7px;height:9px;background:url('../../img/shengpay/CommonNew_img/renzheng-tips-popup-arrow.png') no-repeat}
+.renzheng-tips-popup-arrow-right{display:block;position:absolute;margin-left: 38px;margin-top: -6px;_margin-top: -10px;width:9px;height:7px;background:url('../../img/shengpay/CommonNew_img/renzheng-tips-popup-arrow.png') no-repeat right}
+.renzheng-tips-popup-con{padding:5px 10px;background:#f5faff;}
+.renzheng-tips-popup-wapper{position: absolute;left: 320px;_left: 193px;top: 0;}
+.renzheng-tips-popup-error{color:#627e95;line-height:20px;padding-left:20px;background:url('../../img/shengpay/CommonNew_img/msg_warn.png') no-repeat left top}
+
+.renzheng-tips-popup-wapper-add{position: absolute;left: -35px;top: 23px;*top: 20px;z-index:200}
+
+.renzheng-gl-popup-context{padding:1px 0px 15px 40px;border-bottom:1px dashed #ccc;margin-bottom:15px;background:url('../../img/shengpay/CommonNew_img/icon-renzheng-gl-popup-context.png') no-repeat left 10px}
+.renzheng-gl-popup-context h3{font-weight:normal;}
+
+.renzheng-gl-popup-btn{padding:30px 0px 30px 40px}
+.renzheng-gl-popup-btn a{}
+.add-gl-table{}
+.add-gl-table td{padding-right:10px;}
+
+.renzheng-tips-popup-con dl{margin:0px 0px 0px 20px;padding:0px;}
+.renzheng-tips-popup-con dl dt{font-size:12px;margin:0px;padding:0px;font-weight:700;}
+.renzheng-tips-popup-con dl dd{padding:0px 0px 0px 15px;margin:0px 0px 0px 10px;background:url('../../img/shengpay/CommonNew_img/icon_gray_arrow.png') no-repeat left center}
+.confirm{cursor:pointer;}
+
+.btn-normal-100,.btn-normal-100-disable{width:100px; display:inline-block; font-size:14px; font-weight:bold; color:#fff;background:url('../../img/shengpay/CommonNew_img/btn_merge_03.png') no-repeat; text-align:center; line-height:37px; height:37px; cursor:pointer; border:0;}
+.btn-normal-100:hover{color:#fff;}
+.btn-normal-100-disable{background:url('../../img/shengpay/CommonNew_img/btn_merge_03.png') no-repeat 0px -40px;color:#dcdcdc; cursor:default;}
+.btn-normal-100-disable:hover{color:#dcdcdc;}
+
+
+.tri {background: url("../../img/shengpay/CommonNew_img/flow_merge.png") no-repeat scroll left -50px transparent;height: 24px;margin-left: -17px;padding-left: 17px;position: relative;}
+.con {background: url("../../img/shengpay/CommonNew_img/flow_merge.png") repeat-x scroll 0 -25px transparent;    color: #8f8f8f;    height: 24px;    line-height: 24px;    padding-right: 17px;    text-align: center;}
+.step {border: 1px solid #dfdfdf; margin-left:-180px; margin-bottom:30px; margin-top:-10px; _zoom:1; _display:inline;
+}
+.step_table {width: 100%;}
+.step_table td {cursor: pointer;}
+.step_table .current .con {    background-position: 0 0;    color: #778a9c;    font-weight: bold;}
+.step_table .current .tri {    background-position: left -75px;}
+.find-password-tab{padding-top:15px;}
+.find-password-tab-a{background:url(../../img/shengpay/CommonNew_img/find_password.png) no-repeat; display:inline-block; width:186px; height:38px;}
+.find-password-tab-b{background:url(../../img/shengpay/CommonNew_img/find_password.png) no-repeat 0 -45px;display:inline-block; width:153px; height:37px; margin-left:3px;}
+
+/*手机项目弹出窗口*/
+.bubble-phone{position:absolute; top:70px; left:-60px; width:750px; height:400px; border:2px solid #59c0f1; background-color:#FFF; font-weight:normal; text-align:left; display:none;}
+.close-popup-phone{background:url(../../img/shengpay/CommonNew_img/icon_popup_close.png) no-repeat; width:20px; height:20px; display:inline-block; cursor:pointer; float:right; margin-right:2px; margin-top:2px;* margin-top:-18px;}
+.popup-phone-item{width:200px; float:left; margin-left:40px; _display:inline;}
+.popup-phone-item .wap-dl-title{text-align:center;}
+.popup-phone-item .item-01{background:url(../../img/shengpay/CommonNew_img/merge_phone_popup.png) no-repeat; width:196px; height:193px;}
+.popup-phone-item .item-02{background:url(../../img/shengpay/CommonNew_img/merge_phone_popup.png) no-repeat 0px -200px; width:196px; height:193px;}
+.popup-phone-item .item-03{background:url(../../img/shengpay/CommonNew_img/merge_phone_popup.png) no-repeat 0px -400px; width:196px; height:193px; display:inline-block;}
+.border-style-01{background: none repeat scroll 0 0 #FFF9D5;border: 1px dashed #FFA86B;border-radius: 5px 5px 5px 5px;line-height: 22px; padding:8px;}
+
+/*css箭头*/
+.border-up-blue { border-color: transparent transparent #59c0f1; border-style: dotted dotted solid; display: inline-block; width: 0; height: 0; border-width: 10px; overflow: hidden; position:relative; top:-22px; left:142px;}
+
+/****20120329*****/
+.shengpay-check-box{text-align:left;padding:10px 0px 10px 28px;line-height:22px;}
+.shengpay-check-box-lout{text-align:left;padding:10px 0px 10px 42px;line-height:22px;}
+.input-width-yanzheng{width:90px;height:24px;padding-left:5px;background:#fff;line-height:22px;border:1px solid #bbbbbb;}
+.reget-link-gray{color:#d7d7d7;}
+.reget-code-error{color:#e36815}
+.shengpay-check-box-lout-text{padding-bottom:5px;}
+.flow-body-01{ border:1px solid #E1E1E1; padding:20px 20px 20px 20px; margin-top:10px;  }
+.flow-body-01-input{padding-left:150px}
+.flow-body-01 h3{font-size:14px;padding:0px 0px 10px 15px ;border-bottom:1px solid #ccc;margin:0px 0px 10px 0px;}
+.flow-body-04{ border:1px solid #E1E1E1; margin-top:10px;  }
+.flow-body-04-input{padding:0px 150px 0px 150px}
+.wait-for-active{text-align:right;padding:0px 20px 0px 5px;}
+.result_container_ok_01{border-bottom:solid 1px #D9D9D9;background-color:#e5f5ff;padding:15px 0px 20px 50px;}
+.result_container_ok_01 table{width:100%;}
+.result_container_ok_01 td{padding:0 10px 0;}
+.result_container_ok_01 .sub_title{font-size:14px;line-height:30px;font-weight:400;margin:10px 0;}
+.button-style-05{border:none;background:transparent;font-size:12px;color:#07689F; cursor:pointer;}
+.section_login_new_mobile{/*height:125px;  overflow:hidden;*/}
+
+/****20120417*****/
+.add-contact-del{float:left;display:inline-block;}
+.add-contact-del-control{float:right;display:inline-block; widows:inherit;}
+
+/*协议*/
+.text-p{text-indent:2em; font-size:12px; color:#333; text-align:left; line-height:25px;}
+.text-b-u{font-weight:bold; text-decoration:underline;}
+
+/*安全控件提示*/
+.tip-anQuan{border: 1px solid #CDCDCD;  font-size: 12px;  height: 18px;  line-height: 18px;  padding: 5px 3px;  vertical-align: middle;  width: 175px; display:inline-block; text-align:center; *zoom:1; _margin-top:-1px; _position:relative; _top:3px;}
+.tip-anQuan-mini{border: 1px solid #CDCDCD;  font-size: 12px;  height: 24px;  line-height: 24px;  vertical-align: middle;  width: 146px; display:inline-block; text-align:center; *zoom:1; *margin-top:1px; _margin-top:0px;}
+.tip-anQuan a{text-decoration:underline;}
+.bubble-kongJian{background:url(../../img/shengpay/CommonNew_img/merge.png) no-repeat; width:138px; height:23px; display:inline-block; position:absolute; margin-left:-100px; margin-top:-22px; color:#a2840a;}
+.anQuan-btn-box{border-bottom:1px dashed #ccc; padding-bottom:10px; padding-top:20px; margin-bottom:15px;}
+.anQuan-p-box{background:url(../../img/shengpay/CommonNew_img/merge.png) no-repeat right -40px;}
+.anQuan-p-box p{line-height:2;}
+.anQuan-no-tip{border:1px solid #EECD12; color:#A2840A; background-color:#FFFFB6; position:absolute; margin-left:100px;*margin-left:-105px; margin-top:0px; *margin-top:20px; padding:3px;}
+.disable-bg{background-color:#eee;}
+.lable-no-style{text-align:left !important; width:auto !important}
+.anQuan-item{height:22px; overflow:hidden;}
+
+.update-pop {position: absolute;right: 0px;bottom: 0px;height: 0px;width: 235px;border-top: 2px solid #5095db;overflow:hidden;background:url(../../img/shengpay/CommonNew_img/update-pop-bg.png) repeat-x ;overflow:hidden;display:none;font-size:12px;z-index:10;}
+.tipmsg{text-align:left;background:url(../../img/shengpay/CommonNew_img/ICON_DUN.gif) no-repeat left top;height:35px;padding-left: 25px;padding-top: 12px;}
+.tipmsg span{padding:0px 10px;}
+.tipmsg span a{text-decoration:underline}
+.tipmsg b{color:#610d0d}
+
+/*一点充*/
+.yidianchong-info-right{width:260px; text-align:center; float:right;}
+.yidianchong-info-left{float:left; width:580px;}
+.yidianchong-info-left h4{margin:10px 0px; font-family:微软雅黑,Microsoft YaHei，\5b8b\4f53, Arial; font-size:14px; }
+.card-bank .banks_normal label{margin-right:5px; margin-top:10px; border:1px solid #fff;}
+.card-bank .banks_normal .cur{border:1px solid #F90;}
+.tableListBox-01{border:1px solid #e5e4e4; width:80%; margin:0 auto; margin-top:10px;}
+.table-list-01 th{color:#8d8d8d; font-weight:normal; background:url(../../img/shengpay/CommonNew_img/bg_merge.png) repeat-x; height:27px; border-bottom:1px solid #e5e4e4; padding-left:5px;}
+.table-list-01 td{line-height:25px; padding-left:5px;}
+.page-num{border-top:1px dashed #e5e4e4; line-height:35px; text-align:center;}
+
+.info-box-01{border:1px solid #e3e3e3;}
+.info-box-01 h3{background:url(../../img/shengpay/CommonNew_img/bg_merge.png) repeat-x 0px -30px; padding-top:6px; height:24px; padding-left:10px; margin:0px; font-size:14px;}
+.info-box-01 .info-content{padding:10px 20px; line-height:2;}
+
+.border-bgYellow{border:1px solid #f7efd8; background-color:#fffde3; padding:10px; margin-top:10px;}
+.btn-box-center{text-align:center; padding-top:5px;}
+.btn-pLeft-01{padding-left:90px;}
+/*单独手机二维码介绍页面*/
+/*  ios */
+.m_box_tab{}
+.m_tab_item_selected{width:119px;height:30px;float:left;cursor:pointer;text-align:center;background:url('../../img/shengpay/CommonNew_img/m-tab-bg.png') no-repeat}
+.m_tab_item{width:119px;height:30px;float:left;cursor:pointer;text-align:center}
+
+/*  首页手机二维码切换 */
+.mobile-zone-new{background:#e8f3f7;}
+.mIndex_box_tab{float:left}
+.mIndex_tab_item_selected{font-family:"微软雅黑";font-size:12px;width:55px;margin:0px 3px;height:18px;color:#25668a;float:left;cursor:pointer;text-align:center;background:url('../../img/shengpay/CommonNew_img/mindex-tab-bg.png') no-repeat}
+.mIndex_tab_item{font-family:"微软雅黑";font-size:12px;margin:0px 3px;height:18px;float:left;color:#666666;cursor:pointer;text-align:center}
+
+.mobile-zone{padding:10px;background:#e8f3f7 url('../../img/shengpay/CommonNew_img/icon-robot.png') no-repeat right bottom;color:#666}
+.mobile-zone-con{}
+.mobile-zone-new h3{margin:0px;padding:5px 3px;font-size:14px;height:10px;}
+.mobile-zone-new .show-qr {position:relative;width:63px;height:63px;padding-right:10px;}
+.mobile-android-index{padding:10px;background:url('../../img/shengpay/CommonNew_img/icon-robot.png') no-repeat right bottom;}
+.mobile-ios-index{padding:10px;background:url('../../img/shengpay/CommonNew_img/icon-ios.png') no-repeat right bottom;}
+
+.footer-iframe{width:970px; height:160px;}
+
+#goToNewPay{background:url('../../img/shengpay/CommonNew_img/new_pay.png') no-repeat; width:70px; height:22px; display:inline-block;}
+
+/*温馨提示*/
+.dot_hr{height:1px; overflow:hidden; background:url(../../img/shengpay/img/dot_hr_bg.gif) repeat-x left top; margin:10px 0;}
+.pay_reminder{padding:10px 30px; background:url(../../img/shengpay/img/icon_ye_remind.gif) no-repeat 5px 12px; line-height:24px; font-size:12px; color:#686868;}
+.pay_reminder strong{color:#000;}
+
+
+/*新版增加*/
+.login-tab .couple_tab_item_selected-new{width:294px; text-align: left; padding-left: 24px;}
+.panel-login-body-new{padding-left: 22px;}
+.input-width-normal-new{width:265px; color:#b3b3b3; font-size: 14px; position:relative; background: 0;ime-mode: disabled;}
+.ico_question {width:14px; height:14px; display: inline-block;outline:none; text-indent: -999em; background-color:transparent;background-image:url(../../img/shengpay/CommonNew_img/ico-q.gif);background-repeat: no-repeat;background-position:0px 0px; cursor:pointer; margin-left: 5px;}
+.btn_login-new{background-position: 0 -40px; width: 157px;}
+.panel-login-bottom{padding-left: 22px;}
+.mgl{margin-left: 10px; color: #8b8b8b;}
+.sp-enter-sdo-new{color: #656565; font-size: 14px; cursor:pointer; margin-left: 30px;}
+.couple_tab_item_selected-new .reg-now{margin-left:113px; _margin-left:100px; display: inline; text-decoration: underline; font-weight: normal; color: #07689F;}
+.pos-relative{position: relative; z-index: 10;}
+.pos-relative .tip-label{position: absolute; width:auto; left: 15px; top:8px; _top:11px; font-size: 14px; color: #b3b3b3; cursor: text;}
+.lus-bglabel{background: url("https://css.shengpay.com/img/sp/icon-us.jpg") 0 5px no-repeat;*background: url("https://css.shengpay.com/img/sp/icon-us.jpg") 0px 7px no-repeat; padding-left:30px; height:40px; overflow:hidden;}
+.lus-bglabel .input-width-normal-new, .lps-bglabel .input-width-normal-new{width:232px; height:20px; line-height:20px; padding-top:3px;}
+.lus-bglabel label.tip-label,
+.lps-bglabel label.tip-label{left:40px; line-height:25px;}
+.lps-bglabel{background: url("https://css.shengpay.com/img/sp/icon-lock.jpg") 0 5px no-repeat; *background: url("https://css.shengpay.com/img/sp/icon-lock.jpg") 0px 7px no-repeat; padding-left:30px;height:40px; overflow:hidden;}
+
+
+/*防刷*/
+.refresh-msg{ background: #effafe url(../../img/shengpay/CommonNew_img/bg-pc.jpg) 125px top no-repeat; height:125px; padding:40px 0 0 356px;}
+.refresh-msg h2{font-size:16px;}
+.refresh-msg h3{font-size:14px; font-weight:normal;}
+.refresh-form,
+.refresh-form-finish{width:500px; margin:0 auto; height:290px; padding-top:10px; text-align:center;}
+.refresh-form li{float:left; display:inline; margin:20px 0 0; width:100%;}
+.refresh-form-l{float:left; width:85px; font-size:14px; text-align:right; padding-right:20px; line-height:32px;}
+.refresh-form-i{width:95px; height:27px; float:left; display:inline; margin-top:5px;}
+.refresh-form-a{ float:left; margin:0px 0 0 20px; display:inline; line-height:32px;}
+.refresh-form-input{text-indent:8px; float:left; display:inline; width:205px; height:32px; border:1px solid #c7c7c7; font-size:16px; color:#343434; line-height:32px; ime-mode:disabled;}
+.refresh-form-input-focus{border-color:#7cb1d1;}
+.refresh-form-input-error{border-color:#ff9600;}
+.refresh-form-input-right{background: url(../../img/shengpay/CommonNew_img/ico-right.jpg) 183px center no-repeat;}
+.refresh-form-s{line-height:32px; padding-left:10px; color:#9a9a9a;}
+.refresh-form-sigh{margin-left:105px; float:left; display:inline;width:20px; height:20px; background: url(../../img/shengpay/CommonNew_img/ico-error.png) left center no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=https://css.shengpay.com/img/shengpay/CommonNew_img/ico-error.png); _background:none;}
+.refresh-form-msg{float:left; display:inline; height:20px; line-height:20px; padding-left:5px; color:#ff0100;}
+.refresh-form li.dsp-none,
+.dsp-none{display:none;}
+.refresh-form-button{float:left; display:inline; margin-left:105px; width:120px; height:37px; background-color:#0599d9; color:#fff; text-align:center; font-size:14px; line-height:37px;}
+.refresh-form-button:hover{color:#fff;}
+.refresh-form-finish .refresh-form-button{ display:inline-block;float:none; margin:50px 0 0 0; *display:inline; zoom:1;}
+
+
+/*短信验证 heliang  20140820*/
+.tip_loginMessage{border-bottom: 1px dashed #ccc; text-align: left; margin: 0px 10px 30px 10px; padding-left: 20px; padding-bottom: 10px; padding-top: 10px;}
+.tip_loginMessage .font-gray{padding-top: 20px;}
+.tip_loginMessage .font-red{visibility: hidden; line-height: 20px;}
+.font-blue{color: #39B6F6;}

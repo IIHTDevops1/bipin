@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>{$arr.news_title}</title>
+		<link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/home/css/css.css"/>
+
+		<script src="__ADMIN_RESOURCE__/home/js/global.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div class="music-wrap">
+			<div class="music-top">
+				<div class="music-img">
+					<div class="logo clear">
+						<img src="__ADMIN_RESOURCE__/home/img/logo.png" class="fl"/>
+						<span class="fl">戏宝音乐</span>
+					</div>
+					<!--<div class="music-bg-img">-->
+						<!--<img src="{$arr.thumb}" class="music-bg" style="height:250px;width:250px;"/>-->
+						<!--<img src="__ADMIN_RESOURCE__/home/img/qqqq.png" class="w-play"/>-->
+						<!--<audio src="{$arr.workss}" controls></audio>-->
+					<!--</div>-->
+					<div class="music-bg-img">
+						<img src="{$arr.thumb}" class="music-bg"/>
+						<div class="btn-audio">
+							<audio id="mp3Btn" src="{$arr.workss}" autoplay></audio>
+						</div>
+					</div>
+				</div>
+				<div class="music-lyrics">
+					{$arr.content}
+
+				</div>
+			</div>
+			<div class="music-comment">
+				<div class="comment-title">
+					<span>精彩评论</span>
+				</div>
+				<div class="comment-con">
+					<empty  name="ping">
+						<span class="empty">暂无评论</span>
+					</empty>
+					<ul>
+
+						<volist name="ping" id="p">
+							<li>
+								<div class="header-box">
+									<img src="{$p.thumb}"/>
+								</div>
+								<div class="comment-msg">
+									<div class="user-name">
+										<span>{$p.user_id|get_username}</span>
+										<em>{$p.addtime|dateformat}</em>
+									</div>
+									<div class="user-comment">
+										<p>{$p.content}</p>
+									</div>
+								</div>
+							</li>
+						</volist>
+
+
+					</ul>
+				</div>
+			</div>
+			<div class="music-load">
+				<a href="#">下载</a>
+			</div>
+			<script src="__ADMIN_RESOURCE__/home/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+            $(function(){
+                //播放完毕
+                $('#mp3Btn').on('ended', function() {
+                    console.log("音频已播放完成");
+//                    $('.btn-audio').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                })
+                //播放器控制
+                var audio = document.getElementById('mp3Btn');
+                audio.volume = .6;
+                $('.btn-audio').click(function() {
+
+                    if(audio.paused){ //如果当前是暂停状态
+                        $('.btn-audio').css({'background':'url(__ADMIN_RESOURCE__/home/img/pppp.png) center center no-repeat'});
+                        audio.play(); //播放
+
+                    }else{
+                        //当前是播放状态
+                        $('.btn-audio').css({'background':'url(__ADMIN_RESOURCE__/home/img/qqqq.png) center center no-repeat'});
+                       audio.pause(); //暂停
+                    }
+                });
+            })
+		</script>
+	</body>
+</html>

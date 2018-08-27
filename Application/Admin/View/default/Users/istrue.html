@@ -1,0 +1,161 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>实名认证</h3>
+        <ul class="tab-base">
+            <!--<li><a href="JavaScript:void(0);" ><span>全部成员</span></a></li>-->
+
+            <!--<li><a href="{:U('agent')}"><span>代理商</span></a></li>-->
+            <!--<li><a href="{:U('merchant')}"><span>商户</span></a></li>-->
+            <!--<li><a href="{:U('broker')}"><span>经纪人</span></a></li>-->
+            <!--<li><a href="{:U('member')}" class="current"><span>普通用户</span></a></li>-->
+
+        </ul>
+    </div>
+</div>
+<div class="fixed-empty"></div>
+    <form method="post" name="formSearch" action="{:U('istrue')}" id="formSearch">
+
+        <table class="tb-type1 noborder search">
+            <tbody>
+            <tr>
+                <th><label for="user_id"> 用户ID</label></th>
+                <td><input type="text" value="{$user_id}" name="user_id" id="user_id" class="txt"></td>
+                <th><label for="idcards"> 身份证号</label></th>
+                <td><input type="text" value="{$idcards}" name="idcards" id="idcards" class="txt"></td>
+                <th><label for="truename">会员姓名</label></th>
+                <td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" /></td>
+
+                <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </form>
+
+
+<form method='post' id="form_goods" action="">
+    <input type="hidden" name="form_submit" value="ok" />
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w24 align-center"></th>
+
+            <th class="w60">用户id</th>
+            <th class="w60">真实姓名</th>
+            <th class="w60">身份证号</th>
+            <th class="w60">性别</th>
+            <th class="w60">身份证正面</th>
+            <th class="w60">身份证反面</th>
+
+            <th class="w108 align-center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="user">
+        <tr>
+            <td><input type="checkbox" name="id[]" value="{$user.id}" class="checkitem"></td>
+            <td>{$user.user_id}</td>
+            <td>{$user.truename}</td>
+            <td>{$user.idcards}</td>
+            <td>{$user.sex}</td>
+            <td><img src="{$user.zheng}" style="height: 150px;width: 250px;"/></td>
+            <td><img src="{$user.fan}" style="height: 150px;width: 250px;"/></td>
+
+
+            <td>
+<equal name="user.is_true" value="2"><a  href="{:U('shenhe',array('user_id'=>$user['user_id'],'is_true'=>3))}">驳回</a>&nbsp;&nbsp;</equal>
+<equal name="user.is_true" value="2">|&nbsp;<a  href="{:U('shenhe',array('user_id'=>$user['user_id'],'is_true'=>4))}">通过</a>&nbsp;&nbsp;</equal>
+<equal name="user.is_true" value="3"><a  href="#">已驳回</a>&nbsp;&nbsp;</equal>
+<equal name="user.is_true" value="4"><a  href="#">已通过认证</a>&nbsp;&nbsp;</equal>
+
+            </td>
+        </tr>
+
+
+            </volist>
+        </tr>
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16"><label for="checkallBottom">全选</label>
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    function quota_style(e){
+
+        var tj_id=$("#tj_id"+ e ).val();
+        var pwd=$("#pwd"+ e ).val();
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Users/order_style')}",
+            data:{id:e,tj_id:tj_id,pwd16:pwd},
+            success:function(msg){
+
+                if(msg.status==200){
+                    layer.msg(msg.info,{icon:6,time:2000});
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);
+                }else{
+                    layer.msg(msg.info,{icon:2,time:2000});return false;
+
+                }
+            }
+        });
+    };
+    var SITEURL = "/";
+    $(function(){
+
+        $('#ncsubmit').click(function(){
+            $('input[name="op"]').val('goods');$('#formSearch').submit();
+        });
+
+    });
+
+    // 获得选中ID
+    function getId() {
+        var str = '';
+        $('#form_goods').find('input[name="id[]"]:checked').each(function(){
+            id = parseInt($(this).val());
+            if (!isNaN(id)) {
+                str += id + ',';
+            }
+        });
+        if (str == '') {
+            return false;
+        }
+        str = str.substr(0, (str.length - 1));
+        return str;
+    }
+
+</script>
+
+
+</block>

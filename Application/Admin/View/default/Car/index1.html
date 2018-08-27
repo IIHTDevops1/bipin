@@ -1,0 +1,387 @@
+<extend name="Base/layout_list"/>
+
+<block name="body">
+
+
+
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<!--[if IE 7]>
+
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+
+<![endif]-->
+
+<div class="page">
+
+<div class="fixed-bar">
+
+    <div class="item-title">
+
+        <h3>临时用车</h3>
+
+        <ul class="tab-base">
+
+            <li><a href="{:U('index1')}" <empty name="type">class="current"</empty>><span>全部申请</span></a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="fixed-empty"></div>
+
+<form method="get" name="formSearch" action="{:U('index1')}" id="formSearch">
+
+
+
+    <table class="tb-type1 noborder search">
+        <tbody>
+        <tr>
+
+            <th><label for="user_id"> 用户id</label></th>
+
+            <td><input type="text" value="{$user_id}" name="user_id" id="user_id" class="txt"></td>
+            <th><label for="names"> 联系人</label></th>
+
+            <td><input type="text" value="{$names}" name="names" id="names" class="txt"></td>
+            <th><label for="mobile"> 电话</label></th>
+
+            <td><input type="text" value="{$mobile}" name="mobile" id="mobile" class="txt"></td>
+
+            <th><label for="brand"> 品牌</label></th>
+            <td>
+                <select id="brand" name="brand" class="txt">
+                    <if condition="$brand neq ''">
+                        <option value="{$brand}">{$brand|get_types}</option>
+
+                        <else/>
+                        <option value="">选择分类</option>
+                    </if>
+                    <volist name="brands" id="b">
+                        <option value="{$b.id}">{$b.type_name}</option>
+                    </volist>
+                </select>
+            </td>
+            <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!--<td><a href="javascript:void(0);"  id="toexcel">导出表格</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+
+</form>
+<script>
+    $('#toexcel').click(function () {
+        if(confirm('是否导出表格？')){
+            //可以在后期添加一个东西，比如一个form表单层，然后里边选择条件，最后提交到后台就行
+            window.location.href="{:U('Execel/get_info')}";
+        }
+    })
+</script>
+
+
+<form method='post' id="form_goods" action="">
+
+
+
+    <table class="table tb-type3">
+
+        <thead>
+
+        <tr class="thead">
+
+            <th class="w60">ID</th>
+            <th class="w60">用户id</th>
+            <th class="w60">联系人</th>
+            <th class="w60">电话</th>
+            <th class="w60">取车时间</th>
+            <th class="w60">还车时间</th>
+            <th class="w60">车款</th>
+            <th class="w60">预约城市</th>
+            <th class="w60">起始地</th>
+            
+            <!--<th class="w60">实际还车时间</th>-->
+            <!--<th class="w60">状态</th>-->
+            <th class="w60">操作</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr class="" style="">
+
+            <volist name="list" id="order">
+
+                <tr>
+                    <td>{$order.id}</td>
+                    <td>{$order.user_id}</td>
+                    <td>{$order.names}</td>
+                    <td>{$order.mobile}</td>
+            <td>{$order.start_time}</td>
+            <td>{$order.end_time}</td>
+                    <td>{$order.car_type|get_types}</td>
+                    <td>{$order.code|get_cityname}</td>
+
+                    <td>{$order.start_where}</td>
+                    <!--<td>{$order.endtime}</td>-->
+                    <!--<td>{$order.status}</td>-->
+
+
+
+            <td>
+                <select  id="quota_style{$order.id}" style="width:140px" name="quota_style">
+                    <if condition="$order.status eq 1">
+                        <option value="1">待审核</option>
+                    </if>
+                    <if condition="$order.status eq 2">
+                        <option value="2">已联系</option>
+                    </if>
+                    <if condition="$order.status eq 3">
+                        <option value="3">已完成</option>
+                    </if>
+
+                    <option value="1">待审核</option>
+                    <option value="2">已联系</option>
+                    <option value="3">已完成</option>
+
+
+                </select>
+                &nbsp;<a class="btn" onclick="quota_style({$order['id']})"><span>修改申请状态</span></a>
+                <!--<a class="btn" href="#"><span>操作</span></a>-->
+                <!--<a class="btn" href="{:U('dele_edit1',array('id'=>$order['id']))}"><span>删除</span></a>-->
+                <!--|&nbsp; <a href="{:U('yongjinxq',array('order_no'=>$order['order_no']))}"><span>佣金分配详情</span></a>-->
+
+            </td>
+
+                </tr>
+
+            </volist>
+
+        </tr>
+
+        <tr style="display:none;">
+
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+
+        <tr class="tfoot">
+
+            <!--<td><input type="checkbox" class="checkall" id="checkallBottom"></td>-->
+
+            <td colspan="16">
+
+                &nbsp;&nbsp;
+
+                {$pages}
+
+
+
+            </td>
+
+        </tr>
+
+        </tfoot>
+
+    </table>
+
+</form>
+
+</div>
+
+
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+<script type="text/javascript">
+    function quota_style(e){
+
+        var status=$("#quota_style"+ e ).val();
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Car/quota_style')}",
+            data:{id:e,status:status},
+            success:function(msg){
+
+                if(msg.status==200){
+                    layer.msg(msg.info,{icon:6,time:2000});
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);
+                }else{
+                    layer.msg(msg.info,{icon:2,time:2000});return false;
+
+                }
+            }
+        });
+    };
+
+    var SITEURL = "/";
+
+    $(function(){
+
+        //商品分类
+
+        //init_gcselect('gc_choose_json','gc_json');
+
+        /* AJAX选择品牌 */
+
+        //$("#ajax_brand").brandinit();
+
+
+
+        $('#ncsubmit').click(function(){
+
+            $('input[name="op"]').val('goods');$('#formSearch').submit();
+
+        });
+
+
+
+        // 违规下架批量处理
+
+        $('a[nctype="lockup_batch"]').click(function(){
+
+            str = getId();
+
+            if (str) {
+
+                goods_lockup(str);
+
+            }
+
+        });
+
+
+
+        // ajax获取商品列表
+
+        $('i[nctype="ajaxGoodsList"]').toggle(
+
+                function(){
+
+                    $(this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
+
+                    var _parenttr = $(this).parents('tr');
+
+                    var _commonid = $(this).attr('data-comminid');
+
+                    var _div = _parenttr.next().find('.ncsc-goods-sku');
+
+                    if (_div.html() == '') {
+
+                        $.getJSON('index.php?act=goods&op=get_goods_list_ajax' , {commonid : _commonid}, function(date){
+
+                            if (date != 'false') {
+
+                                var _ul = $('<ul class="ncsc-goods-sku-list"></ul>');
+
+                                $.each(date, function(i, o){
+
+                                    $('<li><div class="goods-thumb" title="商家货号：' + o.goods_serial + '"><a href="' + o.url + '" target="_blank"><image src="' + o.goods_image + '" ></a></div>' + o.goods_spec + '<div class="goods-price">价格：<em title="￥' + o.goods_price + '">￥' + o.goods_price + '</em></div><div class="goods-storage">库存：<em title="' + o.goods_storage + '">' + o.goods_storage + '</em></div><a href="' + o.url + '" target="_blank" class="ncsc-btn-mini">查看商品详情</a></li>').appendTo(_ul);
+
+                                });
+
+                                _ul.appendTo(_div);
+
+                                _parenttr.next().show();
+
+                                // 计算div的宽度
+
+                                _div.css('width', document.body.clientWidth-54);
+
+                                _div.perfectScrollbar();
+
+                            }
+
+                        });
+
+                    } else {
+
+                        _parenttr.next().show()
+
+                    }
+
+                },
+
+                function(){
+
+                    $(this).removeClass('icon-minus-sign').addClass('icon-plus-sign');
+
+                    $(this).parents('tr').next().hide();
+
+                }
+
+        );
+
+    });
+
+
+
+    // 获得选中ID
+
+    function getId() {
+
+        var str = '';
+
+        $('#form_goods').find('input[name="id[]"]:checked').each(function(){
+
+            id = parseInt($(this).val());
+
+            if (!isNaN(id)) {
+
+                str += id + ',';
+
+            }
+
+        });
+
+        if (str == '') {
+
+            return false;
+
+        }
+
+        str = str.substr(0, (str.length - 1));
+
+        return str;
+
+    }
+
+
+
+    // 商品下架
+
+    function goods_lockup(ids) {
+
+        _uri = "/index.php?act=goods&op=goods_lockup&id=" + ids;
+
+        CUR_DIALOG = ajax_form('goods_lockup', '违规下架理由', _uri, 350);
+
+    }
+
+</script>
+
+
+
+
+
+</block>

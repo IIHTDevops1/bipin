@@ -1,0 +1,141 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+    <style>
+        .required{width:100px;}
+    </style>
+    <div class="page">
+        <div class="fixed-bar">
+            <div class="item-title">
+                <h3> &nbsp;&nbsp;翡翠恋人弹窗广告位</h3>
+            </div>
+        </div>
+        <div class="fixed-empty"></div>
+        <form id="edit_form" method="post" action="" enctype="multipart/form-data">
+            <table class="table tb-type2">
+                <tbody>
+
+                <tr class="noborder">
+                    <td class="required"><label for="news_title" class="validation">广告标题：</label></td>
+                    <td class="vatop rowform">
+                        <input id="news_title" name="news_title" type="text" class="txt valid" value="{$infos.news_title}">
+
+                    </td>
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label for="uploadbtn1" class="validation">背景图：</label></td>
+                    <td class="vatop rowform">
+                        <div id="thumb_preview" style="display: inline-block">
+                            <img src="{$infos.beijing}" width="150">
+                        </div>
+                        <input type="file" class="" id="uploadbtn1" name="uploadbtn1"/>
+                        <input type="hidden" name="beijing" id="beijing" value="{$infos.beijing}"/>
+                    </td>
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label for="thumb" class="validation">广告链接：</label></td>
+                    <td class="vatop rowform">
+                        <input id="thumb" name="thumb" type="text" class="txt valid" value="{$infos.thumb}">
+<br/>(不需要链接的话请默认填写1)
+                    </td>
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="addtime">选择跳转的产品详情：</label></td>
+                    <td class="vatop rowform">
+
+                        <select style="width:100px; " id="addtime" style="width:115px" name="addtime">
+                            <if condition="$infos.id neq 0">
+                                <option value="{$infos.addtime}">{$infos['addtime']|get_product_name}</option>
+                                <else/>
+                                <option value="0">暂不跳转产品</option>
+                            </if>
+                            <volist name="product" id="p">
+                                <option value="{$p.id}">{$p.pro_name}</option>
+                            </volist>
+                        </select>
+
+                    <td class="vatop tips"></td>
+                </tr>
+
+
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="content">详情介绍：</label></td>
+                    <td class="vatop rowform">
+                        <textarea id="content" name="content" style="width:700px;height:300px;">{$infos.content}</textarea>
+                        <script src="__STATIC__/kindeditor/kindeditor.js" charset="utf-8"></script>
+                        <script src="__STATIC__/kindeditor/lang/zh_CN.js" charset="utf-8"></script>
+                        <script>
+                            KindEditor.ready(function(K) {
+                                var editor1 = K.create('textarea[name="content"]', {
+                                    uploadJson : '__STATIC__/kindeditor/php/upload_json.php',
+                                    fileManagerJson : '__STATIC__/kindeditor/php/file_manager_json.php',
+                                    allowFileManager : true,
+                                    filterMode:false,
+                                    syncType:"form",
+                                    urlType:'domain',
+                                    afterCreate : function() {
+                                        var self = this;
+                                        self.sync();
+                                    },
+                                    afterChange : function() {
+                                        var self = this;
+                                        self.sync();
+                                    },
+                                    afterBlur : function() {
+                                        var self = this;
+                                        self.sync();
+                                    }
+
+                                });
+                            });
+                        </script>
+                    <td class="vatop tips"></td>
+                </tr>
+
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+                        <a id="submit" href="javascript:void(0)" class="btn"><span>提交</span></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+    <script type="text/javascript">
+        $(function(){
+
+            $("#submit").click(function(){
+
+
+                $('#edit_form').submit();
+            });
+            $("#back").click(function(){
+                history.go(-1);
+            });
+        });
+    </script>
+</block>
+<block name="js">
+    <link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</block>
+<block name="style">
+    <style>
+        .imgPreview img{width:300px;height:150px;}
+    </style>
+</block>
+

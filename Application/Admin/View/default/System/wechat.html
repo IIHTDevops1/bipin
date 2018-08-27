@@ -1,0 +1,92 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+    <style>
+        .required{width:100px;}
+    </style>
+    <div class="page">
+        <div class="fixed-bar">
+            <div class="item-title">
+                <h3> &nbsp;&nbsp;客服QQ号</h3>
+            </div>
+        </div>
+        <div class="fixed-empty"></div>
+        <form id="edit_form" method="post" action="">
+            <table class="table tb-type2">
+                <tbody>
+                <!--<tr class="noborder">-->
+                    <!--<td class="required"><label class="validation" for="news_title">客服微信号：</label></td>-->
+                    <!--<td class="vatop rowform">-->
+                        <!--<input id="news_title" name="news_title" type="text" class="txt valid" value="{$news.news_title}">-->
+                    <!--<td class="vatop tips"></td>-->
+                <!--</tr>-->
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="content">客服QQ号：</label></td>
+                    <td class="vatop rowform">
+                        <input id="content" name="content" type="text" class="txt valid" value="{$news.content}">
+                    <td class="vatop tips"></td>
+                </tr>
+                <!--<tr class="noborder">-->
+                    <!--<td class="required"><label class="validation" for="thumb">客服微信号：</label></td>-->
+                    <!--<td class="vatop rowform">-->
+                        <!--<input id="thumb" name="thumb" type="text" class="txt valid" value="{$news.thumb}">-->
+                    <!--<td class="vatop tips"></td>-->
+                <!--</tr>-->
+                <!--<tr class="noborder">-->
+                    <!--<td class="required"><label class="validation" for="beijing">客服QQ号：</label></td>-->
+                    <!--<td class="vatop rowform">-->
+                        <!--<input id="beijing" name="beijing" type="text" class="txt valid" value="{$news.beijing}">-->
+                    <!--<td class="vatop tips"></td>-->
+                <!--</tr>-->
+
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+                        <a id="submit" href="javascript:void(0)" class="btn"><span>提交</span></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+    <script type="text/javascript">
+        $(function(){
+
+
+
+            $("#submit").click(function(){
+//                var title = $('#title').val();
+//
+//                if(title==''){
+//                    alert('标题不能为空');
+//                    return;
+//                }
+
+                $('#edit_form').submit();
+            });
+            $("#back").click(function(){
+                history.go(-1);
+            });
+        });
+    </script>
+</block>
+<block name="js">
+    <link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</block>
+<block name="style">
+    <style>
+        .imgPreview img{width:300px;height:150px;}
+    </style>
+</block>
+

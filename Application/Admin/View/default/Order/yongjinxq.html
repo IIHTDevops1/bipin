@@ -1,0 +1,100 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>戏币收益详情</h3>
+        <ul class="tab-base">
+          
+        </ul>
+    </div>
+</div>
+<div class="fixed-empty"></div>
+<form method="post" name="formSearch" action="{:U('yongjinxq')}" id="formSearch">
+
+  
+</form>
+
+<form method='post' id="form_goods" action="">
+
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w60">序号</th>
+            <th class="w60">打赏者</th>
+            <th class="w60">受赏作品</th>
+            <th class="w60">戏币获得者</th>
+            <th class="w60">礼物</th>
+            <th class="w60">礼物单价</th>
+            <th class="w60">赠送个数</th>
+            <th class="w60">礼物总价</th>
+            <th class="w60">状态</th>
+
+            <th class="w120">打赏时间</th>
+        
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="order">
+                <tr>
+                    <td>{$order.id}</td>
+                    <td>{$order.user_id|get_username}</td>
+                    <td>{$order.worker_id|get_title}</td>
+                    <td>{$order.benefit_id|get_username}</td>
+                    <td><img src="{$order.gifts_title|getgifts}"/></td>
+                    <td>{$order.gold}戏币</td>
+                    <td>{$order.nums}</td>
+                    <td>{$order.allgold}戏币</td>
+
+
+<td>
+    已入账
+</td>
+                    <td>{$order.addtime|dateformat}</td>
+                
+
+         
+                </tr>
+            </volist>
+        </tr>
+
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+    <script type="text/javascript">
+        var SITEURL = "/";
+        $(function(){
+
+            $('#ncsubmit').click(function(){
+                $('input[name="op"]').val('goods');$('#formSearch').submit();
+            });
+
+        });
+
+
+    </script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+</block>

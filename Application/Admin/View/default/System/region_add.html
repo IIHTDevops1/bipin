@@ -1,0 +1,243 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+	<style>
+		.required{width:100px;}
+	</style>
+	<div class="page">
+		<div class="fixed-bar">
+			<div class="item-title">
+				<h3> &nbsp;&nbsp;市区添加</h3>
+
+			</div>
+		</div>
+		<div class="fixed-empty"></div>
+		<form id="edit_form" method="post" action="">
+			<table class="table tb-type2">
+				<tbody>
+				<tr class="noborder">
+					<td class="required"><label class="validation" >所在省：</label></td>
+					<td class="vatop rowform">
+
+						<select style="width:100px; " id="province_city">
+							<if condition="$news.province eq ''">
+								<option value="">请选择省份</option>
+								<else/>
+								<option value="{$news['province']}">{$news['province']|get_cityname}</option>
+							</if>
+							<volist name="provinces" id="pro">
+								<option value="{$pro['code']}">{$pro['name']}</option>
+							</volist>
+						</select>
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">市区编码：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="市区编码" id="code_city" name="code_city" >
+
+					</td>
+				</tr>
+<tr class="noborder">
+					<td class="required"><label class="validation">市区名称：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="市区名称" id="name_city" name="name_city" >
+					</td>
+				</tr>
+
+
+
+
+				</tbody>
+				<tfoot>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+                        <!--<input type="submit" value="点击开通" class="group_btn" id="tj"/>-->
+						<a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+						<a id="but1" href="javascript:void(0)" class="btn"><span>添加市</span></a>
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+
+	<div class="page">
+		<div class="fixed-bar">
+			<div class="item-title">
+				<h3> &nbsp;&nbsp;县区添加</h3>
+
+			</div>
+		</div>
+		<div class="fixed-empty"></div>
+		<form onsubmit="return false;" id="edit_form11" method="post" action="">
+			<table class="table tb-type2">
+				<tbody>
+				<tr class="noborder">
+					<td class="required"><label class="validation" >所在省-市：</label></td>
+					<td class="vatop rowform">
+
+						<select style="width:100px; " id="province">
+							<if condition="$news.province eq ''">
+								<option value="">请选择省份</option>
+								<else/>
+								<option value="{$news['province']}">{$news['province']|get_cityname}</option>
+							</if>
+							<volist name="provinces" id="pro">
+								<option value="{$pro['code']}">{$pro['name']}</option>
+							</volist>
+						</select>
+						<select  id="city">
+							<if condition="$news.city eq ''">
+								<option value="">请选择市..</option>
+								<else/>
+								<option value="{$news['city']}">{$news['city']|get_cityname}</option>
+							</if>
+						</select>
+						<script>
+                            $("#province").change(function(){
+
+                                var code=$(this).val();
+                                $.post("{:U('System/get_city')}",{p_code:code}, function(data){
+                                    var str = "<option value=0 >请选择市..</option>";
+                                    for(var i=0; i< data.length; i++){
+                                        str = str + '<option value="' + data[i].code + '">' + data[i].name + '</option>';
+                                    }
+
+                                    document.getElementById("city").innerHTML = str;
+                                })
+                            })
+						</script>
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">县区编码：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="县区编码" id="code" name="code" >
+
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">县区名称：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="县区名称" id="name" name="name" >
+					</td>
+				</tr>
+
+
+
+
+				</tbody>
+				<tfoot>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<!--<input type="submit" value="点击开通" class="group_btn" id="tj"/>-->
+						<a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+						<a id="but" href="javascript:void(0)" class="btn"><span>添加县区</span></a>
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/ajaxfileupload.js"></script>
+	<script>
+        $(function(){
+            $("#back").click(function(){
+                history.go(-1);
+            });
+            $("#but1").click(function(){
+                var p_code=$("#province_city").val();
+                var code=$("#code_city").val();
+                var name=$("#name_city").val();
+                var level=2;
+
+                if(p_code==""){
+                    toastr.error("选择所在省",'操作失败',toastr.options);
+                    return false;
+                }else if(code==""){
+                    toastr.error("城市编码不能为空",'操作失败',toastr.options);
+                    return false;
+                }else if(name==""){
+                    toastr.error("城市名不能为空",'操作失败',toastr.options);
+                    return false;
+                }
+
+                $.post("{:U('System/region_add')}",{p_code:p_code,code:code,name:name,level:level},function(sb){
+                    if (sb.status==200) {
+                        layer.msg('操作成功',{icon:6});
+                        setTimeout(function () {
+                            location.reload();
+                        }, 1500);
+                    }else{
+                        layer.msg(sb.info,{icon:2,time:2000});return false;
+                    }
+                });
+            });
+        });
+        $(function(){
+            $("#but").click(function(){
+                var p_code=$("#city").val();
+                var code=$("#code").val();
+                var name=$("#name").val();
+                var level=3;
+
+                if(p_code==""){
+                    toastr.error("选择所在省-市",'操作失败',toastr.options);
+                    return false;
+                }else if(code==""){
+                    toastr.error("城市编码不能为空",'操作失败',toastr.options);
+                    return false;
+                }else if(name==""){
+                    toastr.error("城市名不能为空",'操作失败',toastr.options);
+                    return false;
+                }
+
+                $.post("{:U('System/region_add')}",{p_code:p_code,code:code,name:name,level:level},function(sb){
+                    if (sb.status==200) {
+                        layer.msg('操作成功',{icon:6});
+                        setTimeout(function () {
+                            location.reload();
+                        }, 1500);
+                    }else{
+                        layer.msg("操作失败",{icon:2,time:2000});return false;
+                    }
+                });
+            });
+        })
+	</script>
+</block>
+<block name="js">
+	<link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+	<script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+	<script>
+        $(function(){
+            $("#id_photos").change(function() {
+                var $this = this.files[0];
+                $("#img").attr("src", getObjectURL($this));
+
+            })
+            // file 创建url()
+            function getObjectURL(file) {
+                var url = null;
+                if (window.createObjectURL != undefined) {
+                    url = window.createObjectURL(file)
+                } else if (window.URL != undefined) {
+                    url = window.URL.createObjectURL(file)
+                } else if (window.webkitURL != undefined) {
+                    url = window.webkitURL.createObjectURL(file)
+                }
+                return url
+            }
+        });
+	</script>
+</block>
+<block name="style">
+	<style>
+		.imgPreview img{width:300px;height:150px;}
+	</style>
+</block>
+

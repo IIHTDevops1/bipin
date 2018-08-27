@@ -1,0 +1,156 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>提现记录</h3>
+        <ul class="tab-base">
+            <li><a href="{:U('tixian')}" <empty name="status">class="current"</empty>><span>全部提款记录</span></a></li>
+            <li><a href="{:U('tixian',array('status'=>'1'))}" <equal name="status" value="1">class="current"</equal>><span>待处理</span></a></li>
+            <li><a href="{:U('tixian',array('status'=>'2'))}" <equal name="status" value="2">class="current"</equal>><span>打款成功</span></a></li>
+            <!--<li><a href="{:U('tixian',array('status'=>'3'))}" <equal name="status" value="3">class="current"</equal>><span>被驳回</span></a></li>-->
+            <li><a href="#" ><span>总交易数量&nbsp;&nbsp;{$zongjie}</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="fixed-empty"></div>
+<form method="post" name="formSearch" action="{:U('tixian')}" id="formSearch">
+
+    <table class="tb-type1 noborder search">
+        <tbody>
+        <!--<tr>-->
+            <!--<th><label for="mobile"> 手机号码</label></th>-->
+            <!--<td><input type="text" value="{$mobile}" name="mobile" id="mobile" class="txt"></td>-->
+            <!--<th><label for="truename">会员姓名</label></th>-->
+            <!--<td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" /></td>-->
+
+            <!--<td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>-->
+        <!--</tr>-->
+
+        </tbody>
+    </table>
+</form>
+
+<form method='post' id="form_goods" action="">
+
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w60">序号</th>
+            <th class="w60">客户姓名</th>
+            <th class="w60">头像</th>
+            <th class="w60">手机号</th>
+            <th class="w150">收款卡号</th>
+            <th class="w60">账户名称</th>
+            <th class="w60">提现戏币</th>
+            <th class="w60">手续费</th>
+            <th class="w160">申请时间</th>
+            <th class="w60">状态</th>
+            <th class="w60">打款时间</th>
+            <th class="w60">实际入账金额</th>
+            <th class="w60">备注</th>
+            <th class="w108 align-center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="order">
+                <tr>
+                              <!--{:U('Index/bank_information_details')}?id={$rr.id}-->
+            <td>{$order.id}</td>
+                    <td><a href="{:U('Member/edit')}?id={$order.user_id}"></a>{$order.user_id|get_truename}</td>
+            <td><img src="{$order.user_id|get_thumb}" style="height:50px;width: 50px;"></td>
+                    <td>{$order.user_id|get_mobile}</td>
+                    <td>{$order.card_number}</td>
+                    <td>{$order.card_type}</td>
+                    <td>{$order.xibi}</td>
+                    <td>
+                        {$order.proportion}
+
+                    </td>
+
+                    <td>{$order.addtime|dateformat}</td>
+                    <td><equal name="order.status" value="1">待处理</equal><equal name="order.status" value="2">打款成功</equal><equal name="order.status" value="3">申请被驳回</equal></td>
+                    <td>{$order.endtime|dateformat}</td>
+                    <td>{$order.jine1}元</td>
+            <td>
+                <equal name="order.type" value="1">戏币提现</equal>
+                <!--<equal name="order.type" value="2">碳积分提现</equal>-->
+
+            </td>
+
+
+                    <td>
+                        <!--<input id="pwd{$order.id}" value="" placeholder="请先输入操作密码"/>-->
+                        <!--<equal name="order.status" value="1"><a class="btn" onclick="quota_style({$order['id']})" href="{:U('dakuan',array('id'=>$order['id']))}"><span>确定打款</span></a></equal>-->
+                        <equal name="order.status" value="1"><a class="btn" onclick="quota_style({$order['id']})"><span>确定打款</span></a></equal>
+                        <equal name="order.status" value="2"><a class="btn" onclick="alert('不能重复打款')"><span>已完成打款</span></a></equal>
+                       | <a href="{:U('yongjinxq',array('benefit_id'=>$order['user_id']))}"><span>戏币收益记录</span></a>
+                    </td>
+                </tr>
+            </volist>
+        </tr>
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+    <script type="text/javascript">
+        function quota_style(e){
+//            var pwd=$("#pwd"+ e ).val();
+            $.ajax({
+                type:'post',
+                url:"{:U('Order/dakuan')}",
+                data:{id:e},
+                success:function(msg){
+
+                    if(msg.status==200){
+                        layer.msg(msg.info,{icon:6,time:2000});
+                        setTimeout(function () {
+                            location.reload();
+                        }, 1500);
+                    }else{
+                        layer.msg(msg.info,{icon:2,time:2000});return false;
+
+                    }
+                }
+            });
+        };
+        var SITEURL = "/";
+        $(function(){
+
+            $('#ncsubmit').click(function(){
+                $('input[name="op"]').val('goods');$('#formSearch').submit();
+            });
+
+        });
+
+
+    </script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+</block>

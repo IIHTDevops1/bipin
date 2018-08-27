@@ -1,0 +1,62 @@
+/* reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
+body{line-height:1;}
+section,article,aside,header,footer,nav,dialog,figure{display:block;}
+figure{margin:0;}
+hr,button,input,textarea{margin:0;padding:0;}
+button,input,select,textarea{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+a:hover, a:focus{text-decoration:underline;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+
+/* ie6 background img*/
+*html{zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+/* font */
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+
+/* generic */
+input[type=submit]{cursor:pointer;}
+button{cursor:pointer;}
+strong, b{font-weight:bold;}
+
+/* common */
+body {color:#242424; background-color:#fff; width:100%; }
+a{color:#242424; text-decoration:none;}
+a:hover{color:#ed5400; text-decoration:underline; cursor:pointer;}
+h1 { font-size:22px;}
+h2 { font-size:20px;}
+h3 { font-size:18px;}
+h4 { font-size:16px;}
+h5 { font-size:14px;}
+h6 { font-size:12px;}
+.hidden{ display:none;}
+.placeholder{ color:#666;}
+.readonly{ background-color:#ededed;}
+.clear{clear:both; width:100%; height:1px; overflow:hidden;}
+.clear:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+
+/* dialog */
+.dialog{ width:100%; height:100%; z-index:10000; position:absolute; left:0; top:0; display:none; }
+.dialog-bg{ width:100%; height:100%; z-index:10001; position:fixed; _position:absolute; left:0; top:0; background-color:#000; opacity:0.4; filter:alpha(opacity=40); _position:absolute; _height:expression(documentElement.scrollTop + documentElement.clientHeight);}
+.dialog-box{z-index:10002; position:fixed; overflow:hidden; height:auto; border:solid 1px #efaf70; background-color:#fff; padding:1px; _position:absolute;}
+.dialog-iframe{position:absolute;width:100%;height:100%;z-index:-1; border:0; zoom:1;}
+.dialog-content{ border:solid 3px #fec;}
+.dialog-close, .dialog-hd, .dialog-title, .dialog-bd{ background:url(../../img/dialog.png) no-repeat 0 0;}
+.dialog-close{ width:18px; height:18px; display:block; cursor:pointer; position:absolute; right:8px; top:8px; background-position:right 0;}
+.dialog-hd{ padding:16px 16px 0 16px; background-position:0 -40px;}
+.dialog-title{ padding:0 0 4px 10px; font-size:14px; font-weight:700; background-position:0 4px; border-bottom:dotted 1px #999; _width:95%; }
+.dialog-bd{ padding:32px 10px; background-position:left bottom;}
+/*sign*/
+.sign .dialog-content{ width:446px; }
+.sign .dialog-bd{ padding-top:20px;}
+.sign .dialog-sign-iframe{ width:420px; height:240px;}

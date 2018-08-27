@@ -1,0 +1,33 @@
+/*主要内容开始*/
+.main{width: 100%;}
+.main .main-wrap{width: 100%;}
+.main .main-wrap .parcel{width: 100%; padding:1em 2%;}
+.main .parcel .main_box{display:block;width:33%; padding: 0px 3%;}
+.main .parcel .main_box img{width: 100%; height:7em;}
+.main .parcel .main_box p{text-align: center; margin-bottom: 1em; overflow: hidden;
+	text-overflow: ellipsis; white-space:nowrap;}
+/*主要内容结束*/
+
+/*列表页--------------*/
+.tie_list .list{ background: #fff; margin-top:2em; border-top: 1px solid #e6e6e6;}
+.tie_list .font{height:3em;line-height:3em; border-bottom: 1px solid #e6e6e6;
+	display: block; padding: 0px 5%;}
+.tie_list .font .fh_img{height:1.5em; display:block; margin-top: 0.5em;}
+.tie_list .font .fh_img img{height: 100%;}
+/*列表页---------------*/
+
+/*详情页----------------*/
+.tie_details{background: #fff;}
+.tie_details .details_title{ border-bottom: 1px solid #ccc; }
+.details_title .details_tab{display:block; width: 50%; text-align: center;
+	border-bottom: 3px solid #fff;height:3em; line-height: 3em; background: #fff;}
+.details_title .blue{background: #f2f2f2; border-color: #0062CC;}
+.tie_details .details_nr{padding:1em 10%;}
+.tie_details .details_nr p{line-height:2em;}
+.tie_details .details_nr p img{max-width: 100%;}
+.tie_details .details_nr p span{display: inline-block; background: #F1C40F;
+	 padding:1%; color: #f00; font-size: 2em; margin-left: 2%;}
+.tie_details .details_nr .red{font-size: 1.1em; color: #f00;}
+.tie_details .nr_two{display: none;}
+/*详情页----------------*/
+

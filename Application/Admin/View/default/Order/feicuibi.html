@@ -1,0 +1,206 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+
+
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>碳积分提现记录</h3>
+        <ul class="tab-base">
+
+            <li><a href="{:U('feicuibi',array('status'=>'1'))}" <equal name="status" value="1">class="current"</equal>><span>待处理</span></a></li>
+            <li><a href="{:U('feicuibi',array('status'=>'3'))}" <equal name="status" value="3">class="current"</equal>><span>被驳回</span></a></li>
+            <li><a href="{:U('feicuibi',array('status'=>'2'))}" <equal name="status" value="2">class="current"</equal>><span>打款成功</span></a></li>
+            <li><a href="{:U('feicuibi',array('status'=>'5'))}" <equal name="status" value="5">class="current"</equal>><span>全部提款记录</span></a></li>
+            <li><a href="#" ><span>总交易数量&nbsp;&nbsp;{$zongjie}元</span></a></li>
+        </ul>
+    </div>
+</div>
+    <script src="__ADMIN_RESOURCE__/resource/js/laydate/laydate.js"></script>
+<div class="fixed-empty"></div>
+<form method="post" name="formSearch" action="{:U('feicuibi')}" id="formSearch">
+
+    <table class="tb-type1 noborder search">
+        <tbody>
+        <tr>
+            <th><label for="user_id"> 用户id</label></th>
+
+            <td><input type="text" value="{$user_id}" name="user_id" id="user_id" class="txt"></td>
+            <th><label for="truename">客户姓名</label></th>
+            <td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" /></td>
+            <th><label for="mobile"> 电话</label></th>
+            <td><input type="text" value="{$mobile}" name="mobile" id="mobile" class="txt"></td>
+            <th><label for="account_id"> 卡号</label></th>
+            <td><input type="text" value="{$account_id}" name="account_id" id="account_id" class="txt"></td>
+
+            <input type="hidden" value="{$status}" name="status" id="status" class="txt" />
+            <th><label for="addtime"> 选择日历</label></th>
+            <td> <input id="addtime" name="addtime" type="text" class="txt valid" value="{$addtime}"></td>
+
+
+            <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><a href="javascript:void(0);"  id="toexcel">导出表格</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+    <script>
+        $('#toexcel').click(function () {
+            if(confirm('是否导出表格？')){
+                //可以在后期添加一个东西，比如一个form表单层，然后里边选择条件，最后提交到后台就行
+                window.location.href="{:U('Execel/get_feicuibi')}?status={$status}&truename={$truename}&addtime={$addtime}";
+            }
+        })
+
+
+    </script>
+    <script>
+        //执行一个laydate实例
+        laydate.render({
+
+            elem: '#addtime'
+            ,range: true
+
+
+        });
+    </script>
+<form method='post' id="form_goods" action="">
+
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w60">序号</th>
+            <th class="w60">用户id</th>
+            <th class="w60">客户姓名</th>
+            <th class="w60">手机号</th>
+            <th class="w150">收款卡号</th>
+            <th class="w60">分类</th>
+            <th class="w60">提现金额</th>
+            <th class="w60">手续费</th>
+            <th class="w160">申请时间</th>
+            <th class="w60">状态</th>
+            <th class="w60">打款时间</th>
+            <th class="w60">实际入账金额</th>
+            <th class="w60">备注</th>
+            <th class="w108 align-center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="order">
+                <tr>
+                              <!--{:U('Index/bank_information_details')}?id={$rr.id}-->
+            <td>{$order.id}</td>
+                    <!--<td><a href="{:U('Member/edit')}?id={$order.user_id}">{$order.user_id|get_truename}</a></td>-->
+                    <td>{$order.user_id}</td>
+                    <td>{$order.user_id|get_truename}</td>
+                    <td>{$order.user_id|get_mobile}</td>
+                    <td>{$order.card_number}</td>
+                    <td>{$order.card_type}</td>
+                    <td>{$order.jine}元</td>
+                    <td>
+                        <if condition="$order.proportion eq 0"> {$propor}%</if>
+                        <if condition="$order.proportion neq 0"> {$order.proportion}%</if>
+
+                    </td>
+
+                    <td>{$order.addtime|dateformat}</td>
+                    <td><equal name="order.status" value="1">待处理</equal><equal name="order.status" value="2">打款成功</equal><equal name="order.status" value="3">申请被驳回</equal></td>
+                    <td>{$order.endtime|dateformat}</td>
+                    <td>{$order.balance1}元</td>
+                    <td>
+                        <equal name="order.type" value="1">佣金提现</equal>
+                        <equal name="order.type" value="2">碳积分提现</equal>
+
+                    </td>
+
+
+                    <td>
+
+                        <if condition="$session_dksp eq 1">
+                            <input id="pwd{$order.id}" value="" placeholder="请先输入授权/打款密码"/>
+                            <equal name="order.status" value="1"><a class="btn" onclick="quota_style({$order['id']})"><span>授权</span></a></equal>
+                            <equal name="order.status" value="4"><a class="btn" onclick="alert('不能重复授权')"><span>已授权</span></a></equal>
+                            <equal name="order.status" value="3"><a class="btn" onclick="alert('不能打款')"><span>申请已驳回</span></a></equal>
+                            <equal name="order.status" value="2"><a class="btn" onclick="alert('不能重复打款')"><span>已完成打款</span></a></equal>|
+                        </if>
+
+                        <equal name="session_cwgl" value="1">
+                            <input id="pwd{$order.id}" value="" placeholder="请先输入授权/打款密码"/>
+                            <equal name="order.status" value="1"><a class="btn"  onclick="alert('等待授权')"><span>等待授权</span></a></equal>
+                            <equal name="order.status" value="4"><a class="btn" onclick="quota_style({$order['id']})"><span>确定打款</span></a></equal>
+                            <equal name="order.status" value="2"><a class="btn" onclick="alert('不能重复打款')"><span>已完成打款</span></a></equal>
+                            <equal name="order.status" value="3"><a class="btn" onclick="alert('不能打款')"><span>申请被驳回</span></a></equal>|
+                        </equal>
+
+                       <a href="{:U('transfer',array('user_id'=>$order['user_id']))}"><span>碳积分交易记录</span></a>
+                    </td>
+                </tr>
+            </volist>
+        </tr>
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+    <script type="text/javascript">
+        function quota_style(e){
+            var pwd=$("#pwd"+ e ).val();
+            $.ajax({
+                type:'post',
+                url:"{:U('Order/dakuan')}",
+                data:{id:e,pwd17:pwd},
+                success:function(msg){
+
+                    if(msg.status==200){
+                        layer.msg(msg.info,{icon:6,time:2000});
+                        setTimeout(function () {
+                            location.reload();
+                        }, 1500);
+                    }else{
+                        layer.msg(msg.info,{icon:2,time:2000});return false;
+
+                    }
+                }
+            });
+        };
+        var SITEURL = "/";
+        $(function(){
+
+            $('#ncsubmit').click(function(){
+                $('input[name="op"]').val('goods');$('#formSearch').submit();
+            });
+
+        });
+
+
+    </script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+</block>

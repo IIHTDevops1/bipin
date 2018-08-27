@@ -1,0 +1,182 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+	<style>
+		.required{width:100px;}
+	</style>
+	<div class="page">
+		<div class="fixed-bar">
+			<div class="item-title">
+				<h3> &nbsp;&nbsp;普通用户等级调整</h3>
+
+			</div>
+		</div>
+		<div class="fixed-empty"></div>
+		<form onsubmit="return false;"  id="edit_form" method="post" action="">
+			<table class="table tb-type2">
+				<tbody>
+				<tr class="noborder">
+					<td class="required"><label class="validation">用户id：</label></td>
+					<td class="vatop rowform" colspan="2">
+						{$info.user_id}
+						<!--<input disabled id="addr" name="addr" value="{$info.addr}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">手机号：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<!--{$info.mobile}-->
+						<input id="mobile" name="mobile" value="{$info.mobile}">
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">注册地：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<!--{$info.addr}-->
+						<input id="addr" name="addr" value="{$info.addr}">
+					</td>
+				</tr>
+
+
+
+				<tr class="noborder">
+					<td class="required"><label class="validation">昵称：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="昵称" id="username" name="username" value="{$info.username}">
+						<input type="hidden"  id="idd" name="idd" value="{$info.user_id}">
+
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">真实姓名：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="真实姓名" id="truename" name="truename" value="{$info.truename}">
+					</td>
+				</tr>
+
+				<tr class="noborder">
+					<td class="required"><label class="bobi">邮箱：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<input placeholder="邮箱" id="email" name="email" value="{$info.email}">
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">微信账户名：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<if condition="$info['wechat_name'] neq 1">{$info.wechat_name}</if>
+						<!--{$info.wechat_name}-->
+						<!--<input id="addr" name="addr" value="{$info.addr}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">微信账户：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<if condition="$info['wechat'] neq 1">{$info.wechat}</if>
+
+						<!--<input id="addr" name="addr" value="{$info.addr}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">支付宝账户名：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<if condition="$info['alipay_name'] neq 1">{$info.alipay_name}</if>
+						<!--{$info.alipay_name}-->
+						<!--<input id="addr" name="addr" value="{$info.addr}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="validation">支付宝账户：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<if condition="$info['alipay'] neq 1">{$info.alipay}</if>
+						<!--{$info.alipay}-->
+						<!--<input id="addr" name="addr" value="{$info.addr}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="bobi">性别：</label></td>
+					<td class="vatop rowform" colspan="2">
+
+						{$info.sex}
+						<!--<input placeholder="性别" id="sex" name="email" value="{$info.email}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="bobi">身份证号码：</label></td>
+					<td class="vatop rowform" colspan="2">
+						{$info.idcards}
+						<!--<input placeholder="邮箱" id="email" name="email" value="{$info.email}">-->
+					</td>
+				</tr>
+
+				<tr class="noborder">
+					<td class="required"><label class="bobi">身份证正：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<!--{$info.idcards}-->
+						<img src="{$info.zheng}" style="height: 150px;width: 250px;"/>
+						<!--<input placeholder="邮箱" id="email" name="email" value="{$info.email}">-->
+					</td>
+				</tr>
+				<tr class="noborder">
+					<td class="required"><label class="bobi">身份证号码：</label></td>
+					<td class="vatop rowform" colspan="2">
+						<img src="{$info.fan}" style="height: 150px;width: 250px;"/>
+						<!--{$info.idcards}-->
+						<!--<input placeholder="邮箱" id="email" name="email" value="{$info.email}">-->
+					</td>
+				</tr>
+
+
+
+
+				</tbody>
+				<tfoot>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+                        <!--<input type="submit" value="点击开通" class="group_btn" id="tj"/>-->
+						<a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+						<a id="but1" class="btn"><span>提交</span></a>
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+
+
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+	<!--<script type="text/javascript" src="__ADMIN_RESOURCE__/home/js/jquery.min.js"></script>-->
+	<script>
+        $(function(){
+            $("#back").click(function(){
+                history.go(-1);
+            });
+            $("#but1").click(function(){
+                var idd=$("#idd").val();
+//
+                var addr=$("#addr").val();
+                var mobile=$("#mobile").val();
+                var truename=$("#truename").val();
+                var username=$("#username").val();
+                var email=$("#email").val();
+
+                $.post("{:U('Admin/Users/member_add')}",{idd:idd,addr:addr,mobile:mobile,truename:truename,username:username,email:email},function(sb){
+
+                    if (sb.status==200) {
+                        layer.msg('操作成功',{icon:6});
+                        setTimeout(function () {
+                            window.location.href="{:U('Users/member')}";
+                        }, 2000);
+
+                    }else{
+                        layer.msg(sb.info,{icon:2,time:2000});return false;
+                    }
+                });
+            });
+        });
+
+	</script>
+</block>
+
+
+

@@ -1,0 +1,142 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>操作日志</h3>
+        <ul class="tab-base">
+
+        </ul>
+    </div>
+</div>
+<div class="fixed-empty"></div>
+    <!--<form method="post" name="formSearch" action="{:U('zhanghu')}" id="formSearch">-->
+
+        <!--<table class="tb-type1 noborder search">-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                               <!--<th><label for="mobile"> 手机号</label></th>-->
+                <!--<td><input type="text" value="{$mobile}" name="mobile" id="mobile" class="txt"></td>-->
+                <!--<th><label for="truename">代理姓名</label></th>-->
+                <!--<td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" /></td>-->
+                <!--<td>-->
+                    <!--<select id="level" name="level" class="txt">-->
+                        <!--<if condition="$level eq 2"><option value="2">省代理</option></if>-->
+                        <!--<if condition="$level eq 3"> <option value="3">市代理</option></if>-->
+                        <!--<if condition="$level eq 4"> <option value="4">县区代理</option></if>-->
+                        <!--<if condition="$level eq 0"> <option value="0">选择身份</option></if>-->
+
+                        <!--<option value="2">省代理</option>-->
+                        <!--<option value="3">市代理</option>-->
+                        <!--<option value="4">县区代理</option>-->
+                    <!--</select></td>-->
+
+                <!--<td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>-->
+            <!--</tr>-->
+
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</form>-->
+
+
+<form method='post' id="form_goods" action="">
+    <input type="hidden" name="form_submit" value="ok" />
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w24 align-center"></th>
+
+            <th class="w60">管理员账户</th>
+
+            <th class="w60">管理员id</th>
+
+            <!--<th class="w72">权限</th>-->
+
+            <th class="w72">操作时间</th>
+            <th class="w72">操作内容</th>
+
+            <!--<th class="w108 align-center">操作</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="user">
+                <tr>
+                    <td><input type="checkbox" name="id[]" value="{$user.id}" class="checkitem"></td>
+            <td>{$user.uid|get_username}</td>
+
+                    <td>{$user.uid}</td>
+
+                    <!--<td>{$user.level|get_level}</td>-->
+
+                    <td>{$user['addtime']|dateformat}</td>
+            <td>{$user.content}</td>
+
+            <!--<td>-->
+                        <!--<a  href="{:U('addzhanghu',array('user_id'=>$user['user_id']))}">编辑</a>&nbsp;&nbsp;-->
+
+                        <!--|&nbsp;-->
+                <!--<a class="" href="{:U('dellog',array('user_id'=>$user['user_id']))}">删除</a>-->
+                    <!--</td>-->
+                </tr>
+            </volist>
+        </tr>
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16"><label for="checkallBottom">全选</label>
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+
+<!--<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>-->
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    var SITEURL = "/";
+    $(function(){
+
+        $('#ncsubmit').click(function(){
+            $('input[name="op"]').val('goods');$('#formSearch').submit();
+        });
+
+    });
+
+    // 获得选中ID
+    function getId() {
+        var str = '';
+        $('#form_goods').find('input[name="id[]"]:checked').each(function(){
+            id = parseInt($(this).val());
+            if (!isNaN(id)) {
+                str += id + ',';
+            }
+        });
+        if (str == '') {
+            return false;
+        }
+        str = str.substr(0, (str.length - 1));
+        return str;
+    }
+
+</script>
+
+
+</block>

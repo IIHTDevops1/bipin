@@ -1,0 +1,214 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+	<style>
+		.required{width:100px;}
+	</style>
+	<div class="page">
+		<div class="fixed-bar">
+			<div class="item-title">
+				<h3> &nbsp;&nbsp;租车区域开通管理</h3>
+                <ul class="tab-base">
+                    <li><a href="{:U('region_add')}" class="current"><span>添加区域</span></a></li>
+
+                </ul>
+			</div>
+		</div>
+		<div class="fixed-empty"></div>
+		<form id="edit_form" method="post" action="">
+			<table class="table tb-type2">
+				<tbody>
+				<tr class="noborder">
+					<td class="required"><label class="validation" >省：</label></td>
+					<input id="iddd" name="iddd" type="hidden" class="txt valid" value="{$about.id}">
+					<td class="vatop rowform">
+
+						<select class="textbox" id="province" name="province">
+							<if condition="$province eq ''">
+								<option value="0">请选择省..</option>
+								<else/>
+								<option value="{$province}">{$province|get_cityname}</option>
+							</if>
+							<volist name="provinces" id="pro">
+								<option value="{$pro['code']}">{$pro['name']}</option>
+							</volist>
+						</select>
+					</td>
+				</tr>
+                <tr class="noborder">
+					<td class="required"><label class="validation" >市：</label></td>
+					<td class="vatop rowform">
+
+                        <select  id="city" class="textbox" name="city">
+                            <if condition="$city eq ''">
+                                <option value="city">请选择市..</option>
+                                <else/>
+                                <option value="{$city}">{$city|get_cityname}</option>
+                            </if>
+
+                        </select>
+					</td>
+				</tr>
+                <tr class="noborder">
+					<td class="required"><label class="validation" >县区：</label></td>
+					<td class="vatop rowform">
+
+                        <select  id="area" class="textbox" name="area">
+                            <if condition="$area eq ''">
+                                <option value="area">请选择市..</option>
+                                <else/>
+                                <option value="{$area}">{$area|get_cityname}</option>
+                            </if>
+
+                        </select>
+					</td>
+				</tr>
+
+
+                <script>
+                    $("#province").change(function(){
+                        var code=$(this).val();
+                        $.post("{:U('System/get_city')}",{p_code:code}, function(data){
+                            var str = "<option value=0 >请选择市..</option>";
+                            for(var i=0; i< data.length; i++){
+                                str = str + '<option value="' + data[i].code + '">' + data[i].name + '</option>';
+                            }
+                            //alert(str);
+                            document.getElementById("city").innerHTML = str;
+                        })
+                    });
+                    $("#city").change(function(){
+                        var code=$(this).val();
+                        $.post("{:U('System/get_city')}",{p_code:code}, function(data){
+                            var str = "<option value=0 >请选择县区..</option>";
+                            for(var i=0; i< data.length; i++){
+                                str = str + '<option value="' + data[i].code + '">' + data[i].name + '</option>';
+                            }
+                            //alert(str);
+                            document.getElementById("area").innerHTML = str;
+                        })
+                    });
+
+                </script>
+
+				</tbody>
+				<tfoot>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+                        <!--<input type="submit" value="点击开通" class="btn" id="tjjs"/>-->
+						<!--<a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>-->
+						<a id="tjjs" class="btn"><span>点击开通</span></a>&nbsp;&nbsp;
+						<!--<a id="tj" class="btn"><span>点击删除</span></a>-->
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+		</form>
+
+		<form method='post' id="form_goods" action="">
+			<input type="hidden" name="form_submit" value="ok" />
+			<table class="table tb-type3">
+				<thead>
+				<tr class="thead">
+					<th class="w24 align-center">城市编码</th>
+					<th class="w60">已开通的城市</th>
+
+					<th class="w108 align-center">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="" style="">
+					<volist name="list" id="user">
+				<tr>
+					<!--<td><input type="checkbox" name="id[]" value="{$user.id}" class="checkitem"></td>-->
+					<td>{$user.code}</td>
+					<td>{$user.name}</td>
+
+					<td>
+						<a  href="{:U('is_guan',array('code'=>$user['code']))}">关闭</a>&nbsp;&nbsp;
+
+					</td>
+				</tr>
+				</volist>
+				</tr>
+				<tr style="display:none;">
+					<td colspan="2"><div class="ncsc-goods-sku ps-container"></div></td>
+				</tr>
+				</tbody>
+				<tfoot>
+				<tr class="tfoot">
+					<td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+					<td colspan="3">
+						<!--<label for="checkallBottom">全选</label>-->
+						&nbsp;&nbsp;
+						{$pages}
+
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/ajaxfileupload.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            $("#tjjs").click(function(){
+//                layer.msg("暂未开放",{icon:2,time:2000});return false;
+                var province=$('#province').val();
+                var city=$('#city').val();
+                $.post("{:U('System/open_city')}",{province:province,city:city}, function(data){
+                    if(data.status==1){
+                        layer.msg('城市已开通',{icon:6});
+                        setTimeout(function () {
+                            window.location.href="{:U('System/region')}";
+                        }, 1500);
+                    }else{
+                        layer.msg("系统繁忙或该城市已开通",{icon:2,time:2000});return false;
+                    }
+                })
+            })
+
+            $("#submit").click(function(){
+                $('#edit_form').submit();
+            });
+            $("#back").click(function(){
+                history.go(-1);
+            });
+        });
+
+	</script>
+</block>
+<block name="js">
+	<link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+	<script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+	<script>
+        $(function(){
+            $("#id_photos").change(function() {
+                var $this = this.files[0];
+                $("#img").attr("src", getObjectURL($this));
+
+            })
+            // file 创建url()
+            function getObjectURL(file) {
+                var url = null;
+                if (window.createObjectURL != undefined) {
+                    url = window.createObjectURL(file)
+                } else if (window.URL != undefined) {
+                    url = window.URL.createObjectURL(file)
+                } else if (window.webkitURL != undefined) {
+                    url = window.webkitURL.createObjectURL(file)
+                }
+                return url
+            }
+        });
+	</script>
+</block>
+<block name="style">
+	<style>
+		.imgPreview img{width:300px;height:150px;}
+	</style>
+</block>
+

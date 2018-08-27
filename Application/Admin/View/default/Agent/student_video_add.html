@@ -1,0 +1,94 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+    <style>
+        .required{width:100px;}
+    </style>
+    <div class="page">
+        <div class="fixed-bar">
+            <div class="item-title">
+                <h3> &nbsp;&nbsp;学员视频</h3>
+            </div>
+        </div>
+        <div class="fixed-empty"></div>
+        <form id="edit_form" method="post" action="" enctype="multipart/form-data">
+            <table class="table tb-type2">
+                <tbody>
+                <tr class="noborder">
+                    <td class="required"><label for="uploadbtn1" class="validation">视频封面：</label></td>
+                    <td class="vatop rowform">
+                        <div id="thumb_preview" style="display: inline-block">
+                            <img src="{$news.thumb}" width="150">
+                        </div>
+                        <input type="file" class="" id="uploadbtn1" name="uploadbtn1"/>
+                        <input type="hidden" name="thumb" id="thumb" value="{$news.thumb}"/>
+                    </td>
+                    <td class="vatop tips"></td>
+                </tr>
+
+
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="video_title">视频名称：</label></td>
+                    <td class="vatop rowform">
+                        <input id="video_title" name="video_title" type="text" class="txt valid" value="{$news.video_title}">
+                        <input id="idd" name="idd" type="hidden" class="txt valid" value="{$news.id}">
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="link_url">视频链接：</label></td>
+                    <td class="vatop rowform">
+                        <input id="link_url" name="link_url" type="text" class="txt valid" value="{$news.link_url}">
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="toop">排序：</label></td>
+                    <td class="vatop rowform">
+                        <input id="toop" name="toop" type="text" class="txt valid" value="{$news.toop}">
+                        <br/>(越大越靠前)
+                    <td class="vatop tips"></td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+                        <a id="submit" href="javascript:void(0)" class="btn"><span>提交</span></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+    <script type="text/javascript">
+        $(function(){
+            //上传图片
+
+
+            $("#submit").click(function(){
+
+                $('#edit_form').submit();
+            });
+            $("#back").click(function(){
+                history.go(-1);
+            });
+        });
+    </script>
+</block>
+<block name="js">
+    <link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</block>
+<block name="style">
+    <style>
+        .imgPreview img{width:300px;height:150px;}
+    </style>
+</block>
+

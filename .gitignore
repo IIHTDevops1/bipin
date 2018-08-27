@@ -1,0 +1,7 @@
+.idea/
+.settings/
+.buildpath
+.DS_Store
+.project
+.bipin.sql
+xbb.sql

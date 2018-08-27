@@ -1,0 +1,90 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+    <style>
+        .required{width:100px;}
+    </style>
+    <div class="page">
+        <div class="fixed-bar">
+            <div class="item-title">
+                <h3> &nbsp;&nbsp;vip等级管理</h3>
+            </div>
+        </div>
+        <div class="fixed-empty"></div>
+        <form id="edit_form" method="post" action="">
+            <table class="table tb-type2">
+                <tbody>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="grade_name">等级名称：</label></td>
+                    <td class="vatop rowform">
+                        <input id="idd" name="idd" type="hidden" class="txt valid" value="{$news.id}">
+                        <input id="grade_name" name="grade_name" type="text" class="txt valid" value="{$news.grade_name}">
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="lover">爱人拨比：</label></td>
+                    <td class="vatop rowform">
+                        <input id="lover" name="lover" type="text" class="txt valid" value="{$news.lover}">%
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="loverer">恋人拨比：</label></td>
+                    <td class="vatop rowform">
+                        <input id="loverer" name="loverer" type="text" class="txt valid" value="{$news.loverer}">%
+                    <td class="vatop tips"></td>
+                </tr>
+                <!--<tr class="noborder">-->
+                    <!--<td class="required"><label class="validation" for="oneci">二级分销晋升点(每推荐十人)：</label></td>-->
+                    <!--<td class="vatop rowform">-->
+                        <!--<input id="oneci" name="oneci" type="text" class="txt valid" value="{$news.oneci}">%-->
+                    <!--<td class="vatop tips"></td>-->
+                <!--</tr>-->
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="toop">排序：</label></td>
+                    <td class="vatop rowform">
+                        <input id="toop" name="toop" type="text" class="txt valid" value="{$news.toop}">
+                    <td class="vatop tips"></td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a id="back" href="javascript:void(0)" class="btn"><span>返回</span></a>
+                        <a id="submit" href="javascript:void(0)" class="btn"><span>提交</span></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+    <script type="text/javascript">
+        $(function(){
+
+            $("#submit").click(function(){
+
+                $('#edit_form').submit();
+            });
+            $("#back").click(function(){
+                history.go(-1);
+            });
+        });
+    </script>
+</block>
+<block name="js">
+    <link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</block>
+<block name="style">
+    <style>
+        .imgPreview img{width:300px;height:150px;}
+    </style>
+</block>
+

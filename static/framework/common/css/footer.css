@@ -1,0 +1,17 @@
+#foot ul, #foot a, #foot p, #foot div{margin:0; padding:0;}
+#foot {color:#333; font-size:12px; line-height:18px;}
+#foot a:link, #foot a:visited{color:#2864B4; text-decoration:none;}
+#foot a:hover{color:#ff6600;}
+#foot .box970{width:970px; margin:0 auto;}
+#foot{height:150px; text-align:center; line-height:24px; color:#666; padding-bottom:10px; margin-top:20px;}
+#foot ul.foot_tab{width:520px; height:14px; padding:7px 0; overflow:hidden; float:left; margin-bottom:5px; }
+#foot ul.foot_tab li{display:inline-block; padding:0 25px 0 15px; float:left; height:12px; line-height:12px; border-left:1px solid #CCCCCC; padding-top:1px; overflow:hidden; margin-left:-10px;}
+#foot ul.foot_tab li a:link,#foot ul.foot_tab li a:visited{color:#666;}
+#foot ul.foot_tab li.high a:link,#foot ul.foot_tab li.high a:visited{color:#2864B4;}
+#foot ul.foot_tab li.high a:hover{color:#ff6600;}
+#foot ul.foot_tab li a:hover{color:#ff6600;}
+#foot div.copyright{ line-height:28px; height:28px; margin-bottom:5px;}
+#foot .foot_sepline{ border-top:1px solid #EEEEEE; height:1px; overflow:hidden; clear:both;}
+#foot p.license{margin-top:5px;}
+#foot .safety_logo{margin-top:5px; text-align:center;}
+#foot .tel{float:right;width:450px;color:#ff6600;}

@@ -1,0 +1,589 @@
+<extend name="Base/layout_list"/>
+
+<block name="body">
+
+
+
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<!--[if IE 7]>
+
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+
+<![endif]-->
+
+<div class="page">
+
+<div class="fixed-bar">
+
+    <div class="item-title">
+
+        <h3>产品销售明细表</h3>
+
+        <ul class="tab-base">
+
+            <if condition="$tuihuo eq ''">
+                <li><a href="{:U('index')}?status=03" <equal name="status" value="03">class="current"</equal>><span>待发货</span></a></li>
+                <else/>
+                <li><a href="{:U('index')}?status=03"><span>待发货</span></a></li>
+            </if>
+            <!--<li><a href="{:U('index')}" <empty name="type">class="current"</empty>><span>全部明细</span></a></li>-->
+
+            <li><a href="{:U('index')}?status=00" <equal name="status" value="00">class="current"</equal>><span>待付款</span></a></li>
+
+            <li><a href="{:U('index')}?status=04" <equal name="status" value="04">class="current"</equal>><span>待收货</span></a></li>
+            <li><a href="{:U('index')}?status=05" <equal name="status" value="05">class="current"</equal>><span>待评价</span></a></li>
+            <li><a href="{:U('index')}?status=06" <equal name="status" value="06">class="current"</equal>><span>已结束</span></a></li>
+            <li><a href="{:U('index')}?tuihuo=1" <equal name="tuihuo" value="1">class="current"</equal>><span>退货</span></a></li>
+
+
+            <li><a href="{:U('Healthyshop/jintie')}" <equal name="type" value="8">class="current"</equal>><span>团队业绩</span></a></li>
+
+            <li><a href="#" ><span>总交易额&nbsp;&nbsp;{$zongjie}元</span></a></li>
+
+            <!--<li><a href="{:U('index',array('type'=>'2'))}" <equal name="type" value="2">class="current"</equal>><span>二级佣金</span></a></li>-->
+
+        </ul>
+
+    </div>
+
+</div>
+    <script src="__ADMIN_RESOURCE__/resource/js/laydate/laydate.js"></script>
+<div class="fixed-empty"></div>
+
+<form method="get" name="formSearch" action="{:U('index')}" id="formSearch">
+
+
+
+    <table class="tb-type1 noborder search">
+        <tbody>
+        <tr>
+
+            <!--<th><label for="order_no"> 订单号</label></th>-->
+            <td><input type="text" value="{$order_no}" name="order_no" id="order_no" class="txt" placeholder="订单号"></td>
+            <!--<th><label for="user_id"> 消费者id</label></th>-->
+
+            <td><input type="text" value="{$user_id}" name="user_id" id="user_id" class="txt" placeholder="消费者id"></td>
+            <!--<th><label for="truename"> 消费者姓名</label></th>-->
+            <input type="hidden" value="{$status}" name="status" id="status" class="txt" >
+            <td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" placeholder="消费者姓名"></td>
+            <!--<th><label for="mobile"> 消费者电话</label></th>-->
+            <td><input type="text" value="{$mobile}" name="mobile" id="mobile" class="txt" placeholder="消费者电话"></td>
+            <!--<th><label for="mobile"> 交易明细(产品)</label></th>-->
+            <td><input type="text" value="{$pro_id}" name="pro_id" id="pro_id" class="txt" placeholder=" 交易明细(产品)"></td>
+            <!--<th><label for="addtime"> 选择日历</label></th>-->
+            <td>
+            <td> <input id="addtime" name="addtime" type="text" class="txt valid" value="{$addtime}" placeholder="选择日历"></td>
+            <td>
+                <select id="level" name="level" class="txt">
+                    <if condition="$level eq 2"><option value="2">省代理</option></if>
+                    <if condition="$level eq 3"> <option value="3">市代理</option></if>
+                    <if condition="$level eq 4"> <option value="4">县区代理</option></if>
+                    <if condition="$level eq 0"> <option value="0">选择身份</option></if>
+
+                    <option value="2">省代理</option>
+                    <option value="3">市代理</option>
+                    <option value="4">县区代理</option>
+                </select>
+            </td>
+
+            <td>
+                <select style="width:100px; " id="province" name="province">
+                    <if condition="$province eq ''">
+                        <option value="">请选择省份</option>
+                        <else/>
+                        <option value="{$province}">{$province|get_cityname}</option>
+                    </if>
+                    <volist name="provinces" id="pro">
+                        <option value="{$pro['code']}">{$pro['name']}</option>
+                    </volist>
+                </select>
+                <select  id="city" name="city">
+                    <if condition="$city eq ''">
+                        <option value="0">请选择市..</option>
+                        <else/>
+                        <option value="{$city}">{$city|get_cityname}</option>
+                    </if>
+                </select>
+                <select  id="area" name="area">
+                    <if condition="$area eq ''">
+                        <option value="0">请选择县区..</option>
+                        <else/>
+                        <option value="{$area}">{$area|get_cityname}</option>
+                    </if>
+                </select>
+                <script>
+                    $("#province").change(function(){
+
+                        var code=$(this).val();
+                        $.post("{:U('Admin/System/get_city')}",{p_code:code}, function(data){
+                            var str = "<option value=0 >请选择市..</option>";
+                            for(var i=0; i< data.length; i++){
+                                str = str + '<option value="' + data[i].code + '">' + data[i].name + '</option>';
+                            }
+                            //alert(str);
+                            document.getElementById("city").innerHTML = str;
+                        })
+                    });
+                    $("#city").change(function(){
+
+                        var code=$(this).val();
+                        $.post("{:U('Admin/System/get_city')}",{p_code:code}, function(data){
+                            var str = "<option value=0 >请选择县区..</option>";
+                            for(var i=0; i< data.length; i++){
+                                str = str + '<option value="' + data[i].code + '">' + data[i].name + '</option>';
+                            }
+                            //alert(str);
+                            document.getElementById("area").innerHTML = str;
+                        })
+                    })
+                </script>
+            </td>
+
+
+            <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><a href="javascript:void(0);"  id="toexcel">导出表格</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</form>
+<script>
+    $('#toexcel').click(function () {
+        if(confirm('是否导出表格？')){
+            //可以在后期添加一个东西，比如一个form表单层，然后里边选择条件，最后提交到后台就行
+            window.location.href="{:U('Execel/get_info')}?status={$status}&order_no={$order_no}&mobile={$mobile}&truename={$truename}&addtime={$addtime}";
+        }
+    })
+</script>
+    <script>
+        //执行一个laydate实例
+        laydate.render({
+
+            elem: '#addtime'
+            ,range: true
+
+
+        });
+    </script>
+
+<form method='post' id="form_goods" action="">
+
+
+
+    <table class="table tb-type3">
+
+        <thead>
+
+        <tr class="thead">
+
+            <th class="w60">序号</th>
+            <th class="w60">收款单号</th>
+            <th class="w60">交易数量</th>
+            <th class="w60">交易明细</th>
+            <if condition="$tuihuo eq ''">
+            <th class="w60">交易时间</th>
+            </if>
+            <th class="w60">消费者ID</th>
+            <th class="w60">消费者信息</th>
+            <th class="w60">交易金额</th>
+            <th class="w60">收货地址</th>
+            <th class="w60">交易通道</th>
+            <th class="w60">订单状态</th>
+            <if condition="$tuihuo neq ''">
+            <th class="w60">退货状态</th>
+            </if>
+            <if condition="$tuihuo eq ''">
+            <if condition="$status eq 03 || $status eq 04">
+            <th class="w60">修改订单状态</th>
+            </if>
+            </if>
+            <!--<if condition="$status eq 06">-->
+            <!--<th class="w60">结算</th>-->
+            <!--</if>-->
+            <th class="w60">操作</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr class="" style="">
+
+            <volist name="list" id="order">
+
+                <tr>
+                    <td>{$order.id}</td>
+                    <td>{$order.order_no}</td>
+                    <td>{$order.num}&nbsp;个&nbsp;</td>
+            <td>【{$order.product_id|get_product_name}】</td>
+            <if condition="$tuihuo eq ''">
+                    <td>{$order.add_time|dateformat}</td>
+            </if>
+                    <td> {$order.user_id}  </td>
+                    <td>姓名:&nbsp;{$order['user_info']['truename']} <br/>手机号:&nbsp;{$order['user_info']['mobile']} <br/>注册地址:&nbsp; （{$order['user_info']['province']|get_cityname}-{$order['user_info']['city']|get_cityname}-{$order['user_info']['area']|get_cityname}）</td>
+                    <td>{$order.order_price}（元）</td>
+                    <td>收货人:&nbsp;{$order['addr_info']['consignee']}<br/>手机号:&nbsp;{$order['addr_info']['mobile']}<br/>注册地址:&nbsp; （{$order['addr_info']['province']|get_cityname}-{$order['addr_info']['city']|get_cityname}-{$order['addr_info']['area']|get_cityname}-{$order['addr_info']['addr']}）</td>
+
+            <td>
+
+                <!--<equal name="order.type eq 1">微信</equal>-->
+                <!--<equal name="order.type eq 2">支付宝</equal>-->
+                <!--<empty name="order.type">其他</empty>-->
+                <!--<equal name="order.type eq 4">碳积分</equal>-->
+
+                <if condition="$order.type eq 1">
+                    微信
+                </if><if condition="$order.type eq 2">
+                支付宝
+                </if>
+                <if condition="$order.type eq ''">
+                其他
+                </if>
+ <if condition="$order.type eq 4">
+     碳积分
+                </if>
+
+            </td>
+                    <td>{$order['status']|get_status}</td>
+            <if condition="$tuihuo neq ''">
+                    <td>
+                        <!--退货状态-->
+                        {$order['tuihuo']|get_tuihuo}
+                        <select  id="tuihuo{$order.id}" style="width:140px" name="tuihuo">
+                            <if condition="$order.tuihuo eq 1">
+                                <option value="1">未提交申请</option>
+                            </if>
+                            <if condition="$order.tuihuo eq 2">
+                                <option value="2">待发货</option>
+                            </if>
+                            <if condition="$order.tuihuo eq 3">
+                                <option value="3">正在处理中</option>
+                            </if>
+                            <if condition="$order.tuihuo eq 4">
+                                <option value="4">已退款</option>
+                            </if>
+                            <if condition="$order.tuihuo eq 5">
+                                <option value="5">退款申请驳回</option>
+                            </if>
+
+                            <option value="3">正在处理中</option>
+                            <option value="4">已退款成功</option>
+                            <option value="5">退款申请驳回</option>
+                        </select>
+                        <input id="beizhu{$order.id}" value="{$order.beizhu}" placeholder="备注"/>
+
+                        &nbsp;<a class="btn" onclick="tuihuo({$order['id']})"><span>修改退货/退款状态</span></a>
+
+                    </td>
+            </if>
+            <if condition="$tuihuo eq ''">
+            <if condition="$status eq 03 || $status eq 04">
+                <td>
+                    <select  id="quota_style{$order.id}" style="width:140px" name="quota_style">
+                        <if condition="$order.status eq '00'">
+                            <option value="00">待付款</option>
+                        </if>
+                        <if condition="$order.status eq '03'">
+                            <option value="03">待发货</option>
+                        </if>
+                        <if condition="$order.status eq '04'">
+                            <option value="04">已发货</option>
+                        </if>
+                        <if condition="$order.status eq '05'">
+                            <option value="05">待评价</option>
+                        </if>
+                        <if condition="$order.status eq '06'">
+                            <option value="06">结束</option>
+                        </if>
+
+                        <option value="04">发货</option>
+                        <option value="06">结束</option>
+                    </select>
+                    <input id="logistics_sheet{$order.id}" value="{$order.logistics_sheet}" placeholder="快递单号"/>
+                    <select  id="logistics{$order.id}" style="width:140px" name="logistics">
+                        <if condition="$order.logistics eq ''">
+                            <option value="">选择快递点</option>
+                            <else/>
+                            <option value="{$order.logistics}">{$order.logistics|get_kuaidiming}</option>
+                        </if>
+
+                        <volist name="kuaidi" id="k">
+                            <option value="{$k.name}">{$k.key}--{$k.express}</option>
+                        </volist>
+
+                    </select>
+
+                    &nbsp;<a class="btn" onclick="quota_style({$order['id']})"><span>修改订单状态</span></a>
+                </td>
+            </if>
+            </if>
+
+            <td>
+                <a href="{:U('yongjinxq',array('order_no'=>$order['order_no']))}"><span>碳积分配详情</span></a>
+                <if condition="$status eq 00 || $status eq 03 || $status eq 04 || $status eq 05">
+            </if>
+            </td>
+
+                </tr>
+
+            </volist>
+
+        </tr>
+
+        <tr style="display:none;">
+
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+
+        <tr class="tfoot">
+
+            <!--<td><input type="checkbox" class="checkall" id="checkallBottom"></td>-->
+
+            <td colspan="16">
+
+                &nbsp;&nbsp;
+
+                {$pages}
+
+
+
+            </td>
+
+        </tr>
+
+        </tfoot>
+
+    </table>
+
+</form>
+
+</div>
+
+
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+<script type="text/javascript">
+
+    function quota_style(e){
+
+//        var status=$("#quota_style"+ e ).val();
+        var status='04';
+        var logistics_sheet=$("#logistics_sheet"+ e ).val();
+        var logistics=$("#logistics"+ e ).val();
+
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Order/order_style')}",
+            data:{id:e,status:status,logistics_sheet:logistics_sheet,logistics:logistics},
+            success:function(msg){
+
+                if(msg.status==200){
+                    layer.msg(msg.info,{icon:6,time:2000});
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);
+                }else{
+                    layer.msg(msg.info,{icon:2,time:2000});return false;
+
+                }
+            }
+        });
+    };
+    function tuihuo(e){
+
+        var tuihuo=$("#tuihuo"+ e ).val();
+
+        var beizhu=$("#beizhu"+ e ).val();
+
+        $.ajax({
+            type:'post',
+            url:"{:U('Admin/Order/tuihuo')}",
+            data:{id:e,tuihuo:tuihuo,content:beizhu},
+            success:function(msg){
+
+                if(msg.status==200){
+                    layer.msg(msg.info,{icon:6,time:2000});
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);
+                }else{
+                    layer.msg(msg.info,{icon:2,time:2000});
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);return false;
+
+                }
+            }
+        });
+    };
+
+    var SITEURL = "/";
+
+    $(function(){
+
+        //商品分类
+
+        //init_gcselect('gc_choose_json','gc_json');
+
+        /* AJAX选择品牌 */
+
+        //$("#ajax_brand").brandinit();
+
+
+
+        $('#ncsubmit').click(function(){
+
+            $('input[name="op"]').val('goods');$('#formSearch').submit();
+
+        });
+
+
+
+        // 违规下架批量处理
+
+        $('a[nctype="lockup_batch"]').click(function(){
+
+            str = getId();
+
+            if (str) {
+
+                goods_lockup(str);
+
+            }
+
+        });
+
+
+
+        // ajax获取商品列表
+
+        $('i[nctype="ajaxGoodsList"]').toggle(
+
+                function(){
+
+                    $(this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
+
+                    var _parenttr = $(this).parents('tr');
+
+                    var _commonid = $(this).attr('data-comminid');
+
+                    var _div = _parenttr.next().find('.ncsc-goods-sku');
+
+                    if (_div.html() == '') {
+
+                        $.getJSON('index.php?act=goods&op=get_goods_list_ajax' , {commonid : _commonid}, function(date){
+
+                            if (date != 'false') {
+
+                                var _ul = $('<ul class="ncsc-goods-sku-list"></ul>');
+
+                                $.each(date, function(i, o){
+
+                                    $('<li><div class="goods-thumb" title="商家货号：' + o.goods_serial + '"><a href="' + o.url + '" target="_blank"><image src="' + o.goods_image + '" ></a></div>' + o.goods_spec + '<div class="goods-price">价格：<em title="￥' + o.goods_price + '">￥' + o.goods_price + '</em></div><div class="goods-storage">库存：<em title="' + o.goods_storage + '">' + o.goods_storage + '</em></div><a href="' + o.url + '" target="_blank" class="ncsc-btn-mini">查看商品详情</a></li>').appendTo(_ul);
+
+                                });
+
+                                _ul.appendTo(_div);
+
+                                _parenttr.next().show();
+
+                                // 计算div的宽度
+
+                                _div.css('width', document.body.clientWidth-54);
+
+                                _div.perfectScrollbar();
+
+                            }
+
+                        });
+
+                    } else {
+
+                        _parenttr.next().show()
+
+                    }
+
+                },
+
+                function(){
+
+                    $(this).removeClass('icon-minus-sign').addClass('icon-plus-sign');
+
+                    $(this).parents('tr').next().hide();
+
+                }
+
+        );
+
+    });
+
+
+
+    // 获得选中ID
+
+    function getId() {
+
+        var str = '';
+
+        $('#form_goods').find('input[name="id[]"]:checked').each(function(){
+
+            id = parseInt($(this).val());
+
+            if (!isNaN(id)) {
+
+                str += id + ',';
+
+            }
+
+        });
+
+        if (str == '') {
+
+            return false;
+
+        }
+
+        str = str.substr(0, (str.length - 1));
+
+        return str;
+
+    }
+
+
+
+    // 商品下架
+
+    function goods_lockup(ids) {
+
+        _uri = "/index.php?act=goods&op=goods_lockup&id=" + ids;
+
+        CUR_DIALOG = ajax_form('goods_lockup', '违规下架理由', _uri, 350);
+
+    }
+
+</script>
+
+
+
+
+
+</block>

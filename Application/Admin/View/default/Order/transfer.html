@@ -1,0 +1,169 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>碳积分交易记录</h3>
+        <ul class="tab-base">
+            <li><a href="{:U('transfer')}" <empty name="status">class="current"</empty>><span>全部交易记录</span></a></li>
+            <!--<li><a href="{:U('transfer',array('status'=>'1'))}" <equal name="status" value="1">class="current"</equal>><span>待处理</span></a></li>-->
+            <li><a href="{:U('transfer',array('status'=>'2'))}" <equal name="status" value="2">class="current"</equal>><span>交易成功</span></a></li>
+            <li><a href="#" ><span>总交易数量&nbsp;&nbsp;{$zongjie}</span></a></li>
+        </ul>
+    </div>
+</div><script src="__ADMIN_RESOURCE__/resource/js/laydate/laydate.js"></script>
+<div class="fixed-empty"></div>
+<form method="post" name="formSearch" action="{:U('transfer')}" id="formSearch">
+
+    <table class="tb-type1 noborder search">
+        <tbody>
+        <tr>
+            <!--<th><label for="expend_id"> 支出方ID</label></th>-->
+            <td><input type="text" value="{$expend_id}" name="expend_id" id="expend_id" class="txt" placeholder="支出方ID"></td>
+            <!--<th><label for="expenditure_id"> 支出方姓名</label></th>-->
+            <td><input type="text" value="{$expenditure_id}" name="expenditure_id" id="expenditure_id" class="txt" placeholder="支出方姓名"></td>
+             <!--<th><label for="expenditure_mobile"> 支出方手机号</label></th>-->
+            <td><input type="text" value="{$expenditure_mobile}" name="expenditure_mobile" id="expenditure_mobile" class="txt" placeholder="支出方手机号"></td>
+
+
+
+            <!--<th><label for="truename_id">收入方ID</label></th>-->
+            <td><input type="text" value="{$truename_id}" name="truename_id" id="truename_id" class="txt" placeholder="收入方ID"/></td>
+            <!--<th><label for="truename">收入方姓名</label></th>-->
+            <td><input type="text" value="{$truename}" name="truename" id="truename" class="txt" placeholder="收入方姓名"/></td>
+            <!--<th><label for="incom_mobile"> 收入方手机号</label></th>-->
+            <td><input type="text" value="{$incom_mobile}" name="incom_mobile" id="incom_mobile" class="txt" placeholder="收入方手机号"></td>
+
+            <!--<th><label for="addtime"> 选择日历</label></th>-->
+            <td><input type="hidden" value="{$status}" name="status" id="status" class="txt" /></td>
+            <td>
+            <td> <input id="addtime" name="addtime" type="text" class="txt valid" value="{$addtime}" placeholder="选择日历"></td>
+
+            </td>
+            <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td><a href="javascript:void(0);"  id="toexcel">导出表格</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+    <script>
+        $('#toexcel').click(function () {
+            if(confirm('是否导出表格？')){
+                //可以在后期添加一个东西，比如一个form表单层，然后里边选择条件，最后提交到后台就行
+                window.location.href="{:U('Execel/get_transfer')}?expenditure_id={$expenditure_id}&status={$status}&truename={$truename}&addtime={$addtime}";
+            }
+        })
+    </script>
+    <script>
+        //执行一个laydate实例
+        laydate.render({
+
+            elem: '#addtime'
+            ,range: true
+
+
+        });
+    </script>
+<form method='post' id="form_goods" action="">
+
+    <table class="table tb-type3">
+        <thead>
+        <tr class="thead">
+            <th class="w60">序号</th>
+            <th class="w60">支出方ID</th>
+            <th class="w60">支出方</th>
+            <th class="w60">支出方手机号</th>
+            <th class="w60">收入方ID</th>
+            <th class="w60">收入方真实姓名</th>
+            <!--<th class="w60">收入方真实姓名</th>-->
+            <th class="w60">收入方手机号</th>
+            <th class="w150">时间</th>
+            <th class="w60">状态</th>
+            <th class="w60">交易碳积分数量</th>
+            <!--<th class="w60">交易手续费</th>-->
+            <!--<th class="w160">申请时间</th>-->
+            <!--<th class="w60">状态</th>-->
+            <!--<th class="w60">打款时间</th>-->
+            <!--<th class="w60">实际入账金额</th>-->
+            <!--<th class="w60">备注</th>-->
+            <!--<th class="w108 align-center">操作</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="" style="">
+            <volist name="list" id="order">
+                <tr>
+                              <!--{:U('Index/bank_information_details')}?id={$rr.id}-->
+            <td>{$order.id}</td>
+                    <td>{$order.expenditure_id}</td>
+                    <td>{$order.expenditure_id|get_truename}</td>
+                    <td>{$order.expenditure_id|get_mobile}</td>
+                    <td>{$order.income_id}
+                    <td>{$order.income_id|get_truename}
+                        <!--（{$order.income_name}）-->
+                    </td>
+                    <td>{$order.income_mobile}</td>
+            <td>{$order.addtime|dateformat}</td>
+            <td>
+                <equal name="order.status" value="1">待处理</equal>
+                <equal name="order.status" value="2">交易完成</equal>
+
+            </td>
+
+            <!--<td></td>-->
+                    <td>{$order.accounts}</td>
+
+                    <!--<td>-->
+                        <!--<equal name="order.status" value="1"><a class="btn" href="{:U('dakuan',array('id'=>$order['id']))}"><span>确定打款</span></a></equal>-->
+                        <!--<equal name="order.status" value="2"><a class="btn" onclick="alert('不能重复打款')"><span>已完成打款</span></a></equal>-->
+                       <!--| <a href="{:U('money_order',array('user_id'=>$order['user_id']))}"><span>碳积分交易记录</span></a>-->
+                    <!--</td>-->
+                </tr>
+            </volist>
+        </tr>
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td><input type="checkbox" class="checkall" id="checkallBottom"></td>
+            <td colspan="16">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+    <script type="text/javascript">
+        var SITEURL = "/";
+        $(function(){
+
+            $('#ncsubmit').click(function(){
+                $('input[name="op"]').val('goods');$('#formSearch').submit();
+            });
+
+        });
+
+
+    </script>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+
+
+</block>

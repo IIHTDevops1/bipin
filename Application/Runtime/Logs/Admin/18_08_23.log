@@ -1,0 +1,416 @@
+[ 2018-08-23T13:36:57+08:00 ] 127.0.0.1 /bipin/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+
+[ 2018-08-23T13:36:57+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000049s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2018-08-23T13:36:57+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000058s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2018-08-23T13:37:03+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0078s ]
+SQL: SELECT `user_id`,`level`,`loginpwds`,`username` FROM `fc_user` WHERE `username` = 'admin' OR `mobile` = 'admin' LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `fc_login_log` [ RunTime:0.0062s ]
+SQL: INSERT INTO `fc_login_log` (`uid`,`addtime`,`ip`,`truename`) VALUES ('12112','1535002622','127.0.0.1','admin') [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: zheng E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\PublicController.class.php 第 142 行.
+
+[ 2018-08-23T13:37:03+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2018-08-23T13:37:03+08:00 ] 127.0.0.1 /bipin/index.php/Admin/images/sky/search.svg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+ERR: 无法加载控制器:Images
+
+[ 2018-08-23T13:37:03+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000362s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000452s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2018-08-23T13:37:04+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `addtime` > '1534694400' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `is_true` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 5 行.
+NOTIC: [8] Undefined variable: ytg E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 80 行.
+NOTIC: [8] Undefined variable: ybh E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 81 行.
+NOTIC: [8] Undefined variable: bankcount E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 89 行.
+NOTIC: [8] Undefined variable: bankcount_week E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 95 行.
+NOTIC: [8] Undefined variable: bankcount_audit E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 96 行.
+NOTIC: [8] Undefined variable: lang E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2018-08-23T13:37:05+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `addtime` > '1534694400' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `is_true` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 5 行.
+NOTIC: [8] Undefined variable: ytg E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 80 行.
+NOTIC: [8] Undefined variable: ybh E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 81 行.
+NOTIC: [8] Undefined variable: bankcount E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 89 行.
+NOTIC: [8] Undefined variable: bankcount_week E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 95 行.
+NOTIC: [8] Undefined variable: bankcount_audit E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 96 行.
+NOTIC: [8] Undefined variable: lang E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2018-08-23T13:51:21+08:00 ] 127.0.0.1 /bipin/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2018-08-23T13:51:21+08:00 ] 127.0.0.1 /bipin/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2018-08-23T13:51:22+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `addtime` > '1534694400' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `is_true` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 5 行.
+NOTIC: [8] Undefined variable: ytg E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 80 行.
+NOTIC: [8] Undefined variable: ybh E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 81 行.
+NOTIC: [8] Undefined variable: bankcount E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 89 行.
+NOTIC: [8] Undefined variable: bankcount_week E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 95 行.
+NOTIC: [8] Undefined variable: bankcount_audit E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 96 行.
+NOTIC: [8] Undefined variable: lang E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000432s ]
+
+[ 2018-08-23T13:51:23+08:00 ] 127.0.0.1 /bipin/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `addtime` > '1534694400' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `fc_user` WHERE `is_true` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Use of undefined constant CHARSET - assumed 'CHARSET' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 5 行.
+NOTIC: [8] Undefined variable: ytg E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 80 行.
+NOTIC: [8] Undefined variable: ybh E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 81 行.
+NOTIC: [8] Undefined variable: bankcount E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 89 行.
+NOTIC: [8] Undefined variable: bankcount_week E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 95 行.
+NOTIC: [8] Undefined variable: bankcount_audit E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 96 行.
+NOTIC: [8] Undefined variable: lang E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\7ad2542084969c3fe4042ac6ed4df19f.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2018-08-23T14:01:35+08:00 ] 127.0.0.1 /bipin/index.php?m=admin&c=news&a=yinpin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `fc_types` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `fc_types` WHERE `type` = 1  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: news_title E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\NewsController.class.php 第 299 行.
+NOTIC: [8] Undefined index: yonghu E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\NewsController.class.php 第 304 行.
+NOTIC: [8] Undefined index: type1 E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\NewsController.class.php 第 310 行.
+NOTIC: [8] Undefined index: type2 E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\NewsController.class.php 第 315 行.
+SQL: SHOW COLUMNS FROM `fc_workss` [ RunTime:0.0069s ]
+NOTIC: [8] Undefined index: limit E:\phpstudy\PHPTutorial\WWW\bipin\ThinkPHP\Library\Think\Db\Driver.class.php 第 950 行.
+SQL: SELECT * FROM `fc_workss` WHERE `fenlei` = 3 ORDER BY toop desc LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fc_workss` WHERE `fenlei` = 3 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: news_title E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 73 行.
+NOTIC: [8] Undefined variable: level E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 76 行.
+NOTIC: [8] Undefined variable: level2 E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 83 行.
+NOTIC: [8] Undefined variable: yonghu E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 107 行.
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='18' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='36' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='37' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='6' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SHOW COLUMNS FROM `fc_user` [ RunTime:0.0036s ]
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='N85g' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='N85g' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='I9NS' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='I9NS' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='16' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='4anh' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='4anh' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='17' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='27' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='4anh' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='4anh' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='16' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='20' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='6hAZ' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='6hAZ' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='36' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='37' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='BNkp' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='BNkp' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='16' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='23' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `type_name` FROM `fc_types` WHERE ( id='3' ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: user E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\be408769f1c11a9614d6409c8107d3c8.php 第 172 行.
+SQL: SELECT `username` FROM `fc_user` WHERE ( user_id='pNlU' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `thumb` FROM `fc_user` WHERE ( user_id='pNlU' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-08-23T14:01:40+08:00 ] 127.0.0.1 /bipin/index.php?m=admin&c=system&a=gonggao
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `fc_notice` [ RunTime:0.0053s ]
+NOTIC: [8] Undefined index: stem E:\phpstudy\PHPTutorial\WWW\bipin\Application\Admin\Controller\SystemController.class.php 第 547 行.
+NOTIC: [8] Undefined index: limit E:\phpstudy\PHPTutorial\WWW\bipin\ThinkPHP\Library\Think\Db\Driver.class.php 第 950 行.
+SQL: SELECT `id`,`news_title`,`content`,`content1` FROM `fc_notice` WHERE `type` = 2 ORDER BY addtime desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fc_notice` WHERE `type` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: stem E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\40671e9b54f3e5f2d85eae4e32b3ec0f.php 第 74 行.
+NOTIC: [8] Undefined index: addtime E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\40671e9b54f3e5f2d85eae4e32b3ec0f.php 第 113 行.
+NOTIC: [8] Undefined index: addtime E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\40671e9b54f3e5f2d85eae4e32b3ec0f.php 第 113 行.
+NOTIC: [8] Undefined index: addtime E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\40671e9b54f3e5f2d85eae4e32b3ec0f.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2018-08-23T14:01:41+08:00 ] 127.0.0.1 /bipin/index.php?m=admin&c=system&a=edition
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `fc_notice` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `fc_notice` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined variable: userinfo E:\phpstudy\PHPTutorial\WWW\bipin\Application\Runtime\Cache\Admin\a663a7f5896f97325ca8babf6755c65d.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+

@@ -1,0 +1,262 @@
+.page_bg {display:none}
+.page_bg01 {background-image:url('../img/shengpay/page_bg01.png');background-repeat:repeat-x;background-position:center top; }
+.page_bg01 {background-image:url('../img/shengpay/page_bg01.png');background-repeat:repeat-x;background-position:center top; }
+.page_bg02 {background-image:url('../img/shengpay/page_bg02.png');background-repeat:no-repeat;background-position:center top;}
+.page_bg02 {background-image:url('../img/shengpay/page_bg02.png');background-repeat:no-repeat;background-position:center top;}
+.page_main{background-image:url('../img/shengpay/page_main.png');background-repeat:repeat-x;background-position:center top; }
+.page_main {background-image:url('../img/shengpay/page_main.png');background-repeat:repeat-x;background-position:center top; }
+.page_head{text-align:left;	}
+.page_head_content { height:84px;}
+.page_head_content_logo {float:left; padding-left:30px;margin-right:-200px;}
+.page_head_content_bar {float:right; padding-top:5px;}
+.page_head_content_bar_bg_left  { height:29px; _width:100px; padding-left:20px;background-image:url('../img/shengpay/page_head_content_bar_bg.png');background-repeat:no-repeat;background-position:left top;}
+.page_head_content_bar_bg_right { height:26px; _width:100px;  padding-top:0px; line-height:26px;padding-right:20px;white-space:nowrap;word-break:normal; font-family:"宋体"; background-image:url('../img/shengpay/page_head_content_bar_bg.png');background-repeat:no-repeat;background-position:right top;}
+.page_head_content_bar_bg_right i{ padding:0px 10px;font-style:normal;}
+.page_head_content_bar_bg_right a{ color:#07679C;}
+.page_head_content_bar_bg_right a:hover{ color:#f60;}
+.icon12_arrowdown {width:12px;height:12px;background-image:url('../img/shengpay/icon12_arrow.png'); background-repeat:no-repeat; background-position: center top;}
+
+.child_list {position:absolute; border:1px #A6D9F1 solid; _width:140px;min-width:90px; padding:1px; background-color:white;}
+.child_list a{ display:block; zoom:1; padding-left:10px; line-height:28px; text-decoration:none; color:#07679C; font-size:12px; }
+
+
+.page_head_tabs { padding-left:30px; margin-bottom:8px; }
+.page_head_tabs ul { margin:0px;padding:0px;list-style:none;}
+.head_tab_item 			{float:left;width:100px;height:36px;line-height:36px;text-align:center;}
+.head_tab_item a 			{color:#fff;font-size:14px;font-weight:bold;}
+.head_tab_item_selected {float:left;width:100px;height:36px;line-height:36px;text-align:center;background-image:url('../img/shengpay/page_head_selected.png');background-repeat:no-repeat;background-position:center bottom;}
+.head_tab_item_selected a	{color:#333;font-size:14px;font-weight:bold;}
+
+
+
+/*life_assist start */
+.life_assist{ height:570px; width:203px; padding-top:80px; background-image:url('../img/shengpay/life_assist_left.png');background-repeat:no-repeat;background-position:-0px 0px;}
+.life_assist ul{ margin:0px;list-style:none; padding:0px;}
+.life_assist .selected{ background-image:url('../img/shengpay/life_assist_selected.png');}
+/*.life_assist li{ height:30px; padding-top:16px; padding-left:90px; }*/
+.life_assist li{ height:30px; padding-top:16px; padding-left:85px; }
+.life_assist a{font-size:14px;font-weight:bold;color:#777; text-decoration:none; display:block;}
+.life_assist a:hover{color:#f60;}
+.life_assist a img { border:0px;margin-right:14px; display:none; }
+.life_assist .selected a{color:#00ccff;}
+.life_assist .selected a:hover{color:#f60;}
+
+/* modify life_assist 2011-11-23 by jw */
+.nav_credit	{background-image:url('../img/shop/life_assist_icon.png');background-position:0px    0px;width:30px;height:30px;vertical-align:middle;}
+.nav_phone	{background-image:url('../img/shop/life_assist_icon.png');background-position:0px  -50px;width:30px;height:30px;vertical-align:middle;}
+.nav_cinema	{background-image:url('../img/shop/life_assist_icon.png');background-position:0px -100px;width:30px;height:30px;vertical-align:middle;}
+.nav_exchange{background-image:url('../img/shop/life_assist_icon.png');background-position:0px -150px;width:30px;height:30px;vertical-align:middle;}
+.nav_lifefee{background-image:url('../img/shop/life_assist_icon.png');background-position:0px -200px;width:30px;height:30px;vertical-align:middle;}
+.nav_heart	{background-image:url('../img/shop/life_assist_icon.png');background-position:0px -250px;width:30px;height:30px;vertical-align:middle;}
+.nav_water {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -400px;width:30px;height:30px;vertical-align:middle;}
+.nav_electric {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -450px;width:30px;height:30px;vertical-align:middle;}
+.nav_gas {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -500px;width:30px;height:30px;vertical-align:middle;}
+.nav_network {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -550px;width:30px;height:30px;vertical-align:middle;}
+.nav_warm {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -600px;width:30px;height:30px;vertical-align:middle;}
+.nav_tv {background-image:url('../img/shop/life_assist_icon.png');background-position:0px -650px;width:30px;height:30px;vertical-align:middle;}
+/* modify life_assist end */
+
+.loading32 { width:32px; height:32px;background-image:url('../img/shengpay/loading32.gif');}
+/*life_assist end */
+
+/*首页改版 Start*/
+.head_links { word-break:normal;white-space:nowrap;}
+
+.head_link_item			{ 													   display:block; height:26px;line-height:26px;border-left:0px #abdbf1 solid;padding:0px 20px 0px 10px;margin-left: 0px; color:#07679c; background-image:url('../img/head_link.png');background-repeat:no-repeat;background-position:right 0px;cursor:pointer;}
+.head_link_item_selected 	{ position:relative;z-index:1001;left:-1px;top:0px;display:block; height:26px;line-height:26px;border-left:1px #abdbf1 solid;padding:0px 20px 0px 10px;margin-right: -1px; color:#f60; background-image:url('../img/head_link.png');background-repeat:no-repeat;background-position:right -30px;cursor:pointer;}
+
+.head_link_child { position:relative;z-index:1;left:-1px;top:-1px;border:1px #a7d9f1 solid; background-color:#effaff;}
+.head_link_child ul{padding:0px;margin:0px;list-style:none;width:110px;white-space:nowrap;}
+.head_link_child ul li{ line-height:26px;height:26px; padding:0px 19px 0px 10px;}
+
+/*首页改版 End*/
+
+/* 20110816 */
+body{background-color:#fff;}
+.page_bg{position:absolute;width:100%;height:122px;z-index:-1;background-image:url(../img/page_bg.png);background-repeat:no-repeat;background-position:center 0;}
+.page_bg_x{position:absolute;width:100%;height:122px;z-index:-1;background-image:url(../img/page_bg_x.png);background-repeat:repeat-x;background-position:center 0;}
+/* override */
+.page_bg02{background-image:url(../img/page_bg.png);background-repeat:no-repeat;background-position:center 0;background-color:#fff;}
+.page_bg01{background-image:url(../img/page_bg_x.png);background-repeat:repeat-x;background-position:center 0;background-color:#fff;}
+.page_main{background-image:none;}
+
+.footer {
+	width:100%;
+	height:140px;
+	clear:both;
+}
+.footer iframe {
+	width:100%;
+	height:140px;
+}
+
+.page_container_huge{text-align:left; line-height:22px; color:#333;font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+/**********************************
+* 布局样式 End
+**********************************/
+
+/**********************************
+* 弹出DIV层样式 Start
+**********************************/
+
+.page_container {
+	width: 960px;
+	margin: auto;
+	text-align: left;
+}
+.page_head {
+	height: 140px;
+}
+.page_head_top{height:84px;}
+.menu_item {
+	float: left;
+	line-height:16px;
+	margin-left:-1px;
+	padding-top:6px;
+	background:url(../img/head_menu_sep.png) no-repeat left 7px;
+}
+.menu_item a {
+	display: block;
+	width:84px;
+	height:22px;
+	text-align:center;
+	color:#333333;
+	text-decoration:none;
+	padding:0 10px;
+}
+.menu_item_selected {
+	float: left;
+	line-height:24px;
+	margin-left:-1px;
+	background:url(../img/head_menu_sep.png) no-repeat left 7px;
+}
+.menu_item_selected a {
+	display: block;
+	width:90px;
+	height:24px;
+	text-align:center;
+	color:#EB6100;
+	text-decoration:none;
+	padding:0 10px;
+	background-image:url('../img/head_menu_selected.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.child_menu_container {
+	position: absolute; 
+	display: block;
+	width:500px;
+}
+
+.nosubmenu {
+	background-image:url('../img/head_bg_nosubmenu.png');
+	height:38px;
+}
+.page_head_tabs {
+	height:33px;
+	overflow:hidden;
+	margin-left:45px;
+	padding-top: 8px;
+	font-size: 14px;
+	padding-left:0;
+}
+
+.page_head_tabs ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	float:left;
+	margin-left:-2px;
+	background:url(../img/menu_sep.png) repeat-x 2px 5px;
+}
+.head_tab_first {
+	float: left;
+	width: 110px;
+
+	padding-left:1px;
+	text-align: center;
+	line-height: 24px;
+}
+.head_tab_item {
+	float: left;
+	width: 110px;
+
+	text-align: center;
+	line-height: 24px;
+}
+.head_tab_last {
+	float: left;
+	width: 110px;
+	text-align: center;
+	line-height: 24px;
+}
+.head_tab_item_selected {
+	background-image: url('../img/head_tab_selected.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	float: left;
+	width: 110px;
+	height: 37px;
+	border: 0px;
+	position: relative;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+}
+.head_tab_item_selected a {
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+}
+.head_tab_last a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.head_tab_first a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.head_tab_item a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.page_head_menu {
+	font-size:12px;
+	padding-left:25px;
+	height:30px;
+	background:url(../img/page_head_menu.png) no-repeat 0 bottom;
+}
+.page_head_menu ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	float:left;
+	margin-right:20px;
+	overflow:hidden;
+}
+img {border:0px; vertical-align:middle;}
+.page_head_ad{float:right;font-family:宋全;line-height:30px;padding-top:5px;width:234px;}
+.page_head_top_left{float:left;padding-top:20px;width:350px;}
+.page_head_top_right{float:right;text-align:right;font-size:12px;color:#666;line-height:32px;font-family:宋体;}
+.page_head_top_right a{color:#666;zoom:1;}
+.page_head_top_right a:hover{color:#f60;}
+.page_head_top_right a.key_txt{color:#f60;}
+.page_head_top_right span{margin-left:3px;zoom:1;}
+
+.page_head_flap{float:right;font-size:14px;font-weight:700;color:#fff;line-height:32px;background:url(../img/head_flap.png) no-repeat center 0;height:32px;width:117px;text-align:center;margin-top:-2px;_display:inline;}
+.page_head_flap a{color:#fff;}
+
+.btn_right_link{display:inline-block;border-style:none;width:73px;height:22px;line-height:22px;background:url(../img/btn_right_link.png) no-repeat center center;text-align:center;margin:0 0 0 8px;}
+.icon_more_list{width:14px;height:12px;background:url(../img/icon_head_down_arrow2.gif) no-repeat center center;}
+
+.bubble_container{display:inline;position:absolute;z-index:10;}
+.shzs_list{position:absolute;width:70px;border:solid 1px #BED5E0;background-color:#EFFAFF;padding:2px 8px;text-align:left;line-height:24px;margin-left:-70px;margin-top:-21px;*margin-top:-31px;_margin-top:-17px;}
+.txt_yellow{color:#FFE900;}
+.icon_discount{background:url(../img/icon_discount.png) no-repeat 0 0;height:17px;margin-top:-10px;position:absolute;vertical-align:baseline;width:27px;}
+
+.shzs_list a{}
+.shzs_list a:hover{color:#f60;}

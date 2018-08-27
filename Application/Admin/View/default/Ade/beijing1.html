@@ -1,0 +1,42 @@
+<extend name="Base/layout_list"/>
+
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/resource/lib/css/style.css">
+
+<script src="__ADMIN_RESOURCE__/resource/lib/js/jquery-1.8.3.min.js"></script>
+<script src="__ADMIN_RESOURCE__/resource/lib/js/jquery.iDialog.js" dialog-theme="default"></script>
+
+
+<script src="__ADMIN_RESOURCE__/resource/js/syntaxhighlighter/scripts/shCore.js"></script>
+<script src="__ADMIN_RESOURCE__/resource/js/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/resource/js/syntaxhighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript">
+    SyntaxHighlighter.config.toolbar = true;
+    SyntaxHighlighter.all();</script>
+<style>
+    .parent-wrapper{width:688px;height:200px;border:1px solid #ccc;background:#fff;position:relative;color:red;}
+    #drag-demo{cursor:move;width:30px;height:30px;background:#66D9EF;top:20px;left:20px;position:absolute;}
+</style>
+<div class="parent-wrapper">
+    <div id="drag-demo-log"></div>
+    <div id="drag-demo">
+    </div>
+</div>
+<script>
+    (function(){
+        var log = $('#drag-demo-log');
+        iDrag({
+            target:'#drag-demo',
+            min:{x:0, y:0},
+            max:{x:658, y:170},
+            start: function (pos) {
+                log.html('start:x='+pos.x+', y='+pos.y);
+            },
+            move: function(pos){
+                log.html('move:left='+pos.x+', top='+pos.y);
+            },
+            end: function(pos){
+                log.html('end:left='+pos.x+', top='+pos.y);
+            }
+        });
+    })();
+</script>

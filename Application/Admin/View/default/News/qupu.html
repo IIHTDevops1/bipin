@@ -1,0 +1,273 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+
+
+<link href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="__ADMIN_RESOURCE__/default/css/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<div class="page">
+<div class="fixed-bar">
+    <div class="item-title">
+        <h3>曲谱管理</h3>
+        <ul class="tab-base">
+            <li><a href="{:U('qupu_add')}"><span>添加</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="fixed-empty"></div>
+    <form method="post" name="formSearch" action="{:U('qupu')}" id="formSearch">
+
+        <table class="tb-type1 noborder search">
+            <tbody>
+            <tr>
+                <td><input type="text" value="{$news_title}" name="news_title" id="news_title" class="txt" placeholder="填写关键词"></td>
+
+                <td>
+                    <select id="type1" name="type1" class="txt">
+                        <if condition="$level eq ''">
+                            <option value="">请选择大剧种分类</option>
+                            <else/>
+                            <option value="{$level}">{$level|get_types}</option>
+                        </if>
+                        <volist name="type1" id="b">
+                            <option value="{$b.id}">{$b.type_name}</option>
+                        </volist>
+
+                    </select>
+                    <select  id="type2" name="type2">
+                        <if condition="$level2 eq ''">
+                            <option value="">请选择小剧种</option>
+                            <else/>
+                            <option value="{$level2}">{$level2|get_types}</option>
+                        </if>
+                    </select>
+                    <script>
+                        $("#type1").change(function(){
+
+                            var code=$(this).val();
+//                                console.log(code);
+//                                return;
+                            $.post("{:U('News/get_type')}",{pid:code}, function(data){
+                                var str = "<option value=0 >请选择小剧种..</option>";
+                                for(var i=0; i< data.length; i++){
+                                    str = str + '<option value="' + data[i].id + '">' + data[i].type_name + '</option>';
+                                }
+
+                                document.getElementById("type2").innerHTML = str;
+                            })
+                        })
+                    </script>
+
+                </td>
+
+                <!--<td>-->
+                    <!--<select id="types" name="types" class="txt">-->
+                        <!--<if condition="$types eq ''">-->
+                            <!--<option value="">请选择上传分类</option>-->
+                            <!--<else/>-->
+                            <!--<option value="{$types}">{$types|get_types}</option>-->
+                        <!--</if>-->
+                        <!--<volist name="typess" id="v">-->
+                            <!--<option value="{$v['id']}">{$v['type_name']}</option>-->
+                        <!--</volist>-->
+
+
+                    <!--</select>-->
+                <!--</td>-->
+                <td>
+                    <select id="yonghu" name="yonghu" class="txt">
+                        <if condition="$yonghu eq ''">
+                            <option value="">请选择上传途径</option>
+                            <else/>
+                            <equal name="yonghu" value="2"><option value="2">平台上传</option></equal>
+                            <equal name="yonghu" value="1"><option value="1">个人上传</option></equal>
+                        </if>
+                        <option value="2">平台上传</option>
+                        <option value="1">个人上传</option>
+                    </select>
+                </td>
+
+
+                <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </form>
+
+<form method='post' id="form_apply" action="">
+    <style>
+
+        #newslist img{
+            width:80px;
+            height:60px;
+        }
+    </style>
+    <table class="table tb-type3" id="newslist">
+        <thead>
+        <tr class="thead">
+            <th class="w12">ID</th>
+
+            <th class="w60">剧种类目</th>
+            <th class="w60">曲谱封面图</th>
+            <th class="w60">曲谱标题</th>
+            <th class="w60">作者</th>
+            <th class="w60">曲谱简介</th>
+            <!--<th class="w60">上传分类</th>-->
+            <th class="w60">曲谱文件</th>
+            <th class="w60">添加时间</th>
+            <!--<th class="w60">排序</th>-->
+            <th class="w60">来源/个人</th>
+            <th class="w108 align-center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <empty name="list">
+                <tr>
+                    <td colspan="14" style="text-align: center;">
+                        无记录
+                    </td>
+                </tr>
+            </empty>
+            <volist name="list" id="news">
+                <tr>
+                    <td>{$news.id}</td>
+                    <td>{$news.type1|get_types}-{$news.type2|get_types}</td>
+                    <!--<td>{$news.types|get_types}</td>-->
+                    <td><img src="{$news.thumb}"></td>
+                    <td>{$news.news_title}</td>
+                    <td>{$news.authors}</td>
+                    <td>{$news.describes}</td>
+                    <td>
+                        <volist name="news.workss" id="n">
+                            <if condition="$n neq ''">
+                                <img src="{$n}" style="height: 50px;width:50px;"/>&nbsp;
+                            </if>
+                        </volist>
+
+                      </td>
+                    <td>{$news.times|dateformat}</td>
+
+                    <!--<td>{$news.toop}</td>-->
+                    <td>
+                        <if condition="$news.yonghu eq 1">
+                            个人上传:<br/>
+                            <a class="" href="{:U('Users/member_add',array('user_id'=>$user['user_id']))}">
+                                {$news.user_id|get_username}<br/>
+                                <img src="{$news.user_id|get_thumb}" style="height:30px;width:30px;">
+                            </a>
+
+
+                            <else/>
+                            平台上传
+                        </if>
+                    </td>
+                    <td>
+                        <a class="btn" href="{:U('qupu_add',array('id'=>$news['id']))}"><span>编辑</span></a>
+                        <a class="btn del" href="{:U('qupu_delete',array('id'=>$news['id']))}"><span>删除</span></a>
+                        &nbsp;| &nbsp; <a href="{:U('Order/pinglun')}?product_id={$news.id}">评论列表</a>
+                    </td>
+                </tr>
+            </volist>
+
+        <tr style="display:none;">
+            <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+
+            <td colspan="15">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</div>
+
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/common_select.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    var SITEURL = "/";
+    $(function(){
+        //商品分类
+        //init_gcselect('gc_choose_json','gc_json');
+        /* AJAX选择品牌 */
+        //$("#ajax_brand").brandinit();
+
+        $('#ncsubmit').click(function(){
+            $('input[name="op"]').val('goods');$('#formSearch').submit();
+        });
+
+        // 违规下架批量处理
+        $('a[nctype="lockup_batch"]').click(function(){
+            str = getId();
+            if (str) {
+                goods_lockup(str);
+            }
+        });
+
+        // ajax获取商品列表
+        $('i[nctype="ajaxGoodsList"]').toggle(
+                function(){
+                    $(this).removeClass('icon-plus-sign').addClass('icon-minus-sign');
+                    var _parenttr = $(this).parents('tr');
+                    var _commonid = $(this).attr('data-comminid');
+                    var _div = _parenttr.next().find('.ncsc-goods-sku');
+                    if (_div.html() == '') {
+                        $.getJSON('index.php?act=goods&op=get_goods_list_ajax' , {commonid : _commonid}, function(date){
+                            if (date != 'false') {
+                                var _ul = $('<ul class="ncsc-goods-sku-list"></ul>');
+                                $.each(date, function(i, o){
+                                    $('<li><div class="goods-thumb" title="商家货号：' + o.goods_serial + '"><a href="' + o.url + '" target="_blank"><image src="' + o.goods_image + '" ></a></div>' + o.goods_spec + '<div class="goods-price">价格：<em title="￥' + o.goods_price + '">￥' + o.goods_price + '</em></div><div class="goods-storage">库存：<em title="' + o.goods_storage + '">' + o.goods_storage + '</em></div><a href="' + o.url + '" target="_blank" class="ncsc-btn-mini">查看商品详情</a></li>').appendTo(_ul);
+                                });
+                                _ul.appendTo(_div);
+                                _parenttr.next().show();
+                                // 计算div的宽度
+                                _div.css('width', document.body.clientWidth-54);
+                                _div.perfectScrollbar();
+                            }
+                        });
+                    } else {
+                        _parenttr.next().show()
+                    }
+                },
+                function(){
+                    $(this).removeClass('icon-minus-sign').addClass('icon-plus-sign');
+                    $(this).parents('tr').next().hide();
+                }
+        );
+    });
+
+    // 获得选中ID
+    function getId() {
+        var str = '';
+        $('#form_goods').find('input[name="id[]"]:checked').each(function(){
+            id = parseInt($(this).val());
+            if (!isNaN(id)) {
+                str += id + ',';
+            }
+        });
+        if (str == '') {
+            return false;
+        }
+        str = str.substr(0, (str.length - 1));
+        return str;
+    }
+
+    // 商品下架
+    function goods_lockup(ids) {
+        _uri = "/index.php?act=goods&op=goods_lockup&id=" + ids;
+        CUR_DIALOG = ajax_form('goods_lockup', '违规下架理由', _uri, 350);
+    }
+</script>
+
+
+</block>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>{$arr.news_title}</title>
+		<link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/home/css/css.css"/>
+	</head>
+
+	<body>
+		<div class="sing-wrap">
+			<div class="top-video">
+				<video controls="controls">
+					<source src="{$arr.workss}" type="video/mp4"></source>
+				</video>
+			</div>
+			<div class="sing-msg">
+				<div class="head">
+					<div class="head-box clear">
+						<img src="{$arr.user_id|get_thumb}" class="fl"/>
+						<span class="fl">{$arr.news_title}</span>
+					</div>
+				</div>
+				<div class="sing-name">
+					<span>{$arr.authors}{$arr.describes}</span>
+				</div>
+				<div class="publish-time clear">
+					<span class="fl">发布时间：{$arr.addtime}</span>
+					<em class="fl">播放：{$arr.plays}</em>
+				</div>
+			</div>
+			<div class="load">
+				<a href="#">下载</a>
+			</div>
+		</div>
+		<script src="__ADMIN_RESOURCE__/home/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__ADMIN_RESOURCE__/home/js/global.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
