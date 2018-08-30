@@ -9,16 +9,39 @@
 <div class="page">
 <div class="fixed-bar">
     <div class="item-title">
-        <h3>店铺管理</h3>
+       
         <ul class="tab-base">
-            <li><a href="{:U('Store/store_manage')}" <empty name="classification">class="current"</empty>><span>店铺基本信息</span></a></li>
+            <li><a href="{:U('mer_list')}" <empty name="classification">class="current"</empty>><span>商品管理</span></a></li>
 
-            <li><a href="{:U('Store/store_edit')}"><span>编辑店铺信息</span></a></li>
+            <li><a href="{:U('mer_add')}"><span>添加商品</span></a></li>
+            
+             <li><a href="{:U('mer_add')}"><span>预览</span></a></li>
         </ul>
     </div>
 </div>
 <div class="fixed-empty"></div>
+    <form method="post" name="formSearch" action="" id="formSearch">
 
+        <table class="tb-type1 noborder search">
+            <tbody>
+            <tr>
+                
+                <td><input type="text" value="" name="pro_id" id="" class="txt" placeholder="请输入商品ID"></td>
+				<td>
+				<select name="cate_id">
+				<option>请选择分类</option>
+				</select>
+				
+				</td>
+
+                <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            </tr>
+
+            </tbody>
+            
+       
+        </table>
+    </form>
 
 <form method='post' id="form_apply" action="">
     <style>
@@ -31,62 +54,59 @@
     <table class="table tb-type3" id="newslist">
         <thead>
         <tr class="thead">
-            <th class="w12" style="text-align:left;">店铺基本信息</th>
-         
+            <th class="w12">商品ID</th>
+            <th class="w80">商品名称</th>
+
+            <th class="w60">所属分类</th>
+
+            <!--<th class="w60">添加时间</th>-->
+            <th class="w40">价格</th>
+            <th class="w40">重量</th>
+            <th class="w40">运费</th>
+            <th class="w40">图片</th>
+	
+            <th class="w108 align-center">操作</th>
         </tr>
         </thead>
         <tbody>
-        
-        <tr>
-        <td width="700px">店铺名称：{$store_info.shop_name}</td>
-        <td>联系人姓名：{$store_info.contacts}</td>
-        </tr>
-        
-        <tr>
-        <td>联系人电话：{$store_info.contacts_mobile}</td>
-        <td>门店分类：</td>
-        </tr>
-        
-        <tr>
-        <td>详细地址：{$store_info.addr}</td>
-       <td>淘宝店铺地址：{$store_info.taobao_addr}</td>
-        </tr>
-        
-        <tr class="thead">
-            <th class="w12" style="text-align:left;">店铺资质信息</th>
-         </tr>
-        
-        
-          <tr>
-        <td width="700px">门脸照片：查看</td>
-        <td>身份证照片：查看</td>
-        </tr>
-        
-        <tr>
-        <td>店内照片：查看</td>
-        <td>营业执照：查看</td>
-        </tr>
-        
-        <tr>
-        <td>商户logo：查看</td>
-       <td>商业许可证：查看</td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            <empty name="product">
+                <tr>
+                    <td colspan="10" style="text-align: center;">
+                        无记录
+                    </td>
+                </tr>
+            </empty>
+            <volist name="product" id="v">
+                <tr>
+                    <td style="text-align:center">{$v.id}</td>
+                    <td style="text-align:center">{$v.pro_name}</td>
+                    <td style="text-align:center">{$v.type2}</td>
+                    <td style="text-align:center">{$v.price}</td>                   
+                    <td style="text-align:center">{$v.weight}kg</td>
+                    <td style="text-align:center">{$v.express_fee}</td>
+                    <td style="text-align:center">查看</td>
+
+                    <td style="text-align:center">
+                        <a class="btn" href="{:U('mer_add',array('id'=>$v['id']))}"><span>编辑</span></a>
+                        <a class="btn del" href="{:U('mer_delete',array('id'=>$v['id']))}"><span>删除</span></a>
+                    </td>
+                </tr>
+            </volist>
 
         <tr style="display:none;">
             <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
         </tr>
         </tbody>
-     
+        <tfoot>
+        <tr class="tfoot">
+
+            <td colspan="15">
+                &nbsp;&nbsp;
+                {$pages}
+
+            </td>
+        </tr>
+        </tfoot>
     </table>
 </form>
 </div>

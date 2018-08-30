@@ -58,16 +58,39 @@
 <div class="page">
 <div class="fixed-bar">
     <div class="item-title">
-        <h3>下载需戏币数</h3>
+       
         <ul class="tab-base">
-            <li><a href="<?php echo U('needs');?>" <?php if(empty($classification)): ?>class="current"<?php endif; ?>><span>全部数量</span></a></li>
+            <li><a href="<?php echo U('mer_list');?>" <?php if(empty($classification)): ?>class="current"<?php endif; ?>><span>商品管理</span></a></li>
 
-            <li><a href="<?php echo U('needs_edit');?>"><span>添加</span></a></li>
+            <li><a href="<?php echo U('mer_add');?>"><span>添加商品</span></a></li>
+            
+             <li><a href="<?php echo U('mer_add');?>"><span>预览</span></a></li>
         </ul>
     </div>
 </div>
 <div class="fixed-empty"></div>
+    <form method="post" name="formSearch" action="" id="formSearch">
 
+        <table class="tb-type1 noborder search">
+            <tbody>
+            <tr>
+                
+                <td><input type="text" value="" name="pro_id" id="" class="txt" placeholder="请输入商品ID"></td>
+				<td>
+				<select name="cate_id">
+				<option>请选择分类</option>
+				</select>
+				
+				</td>
+
+                <td ><a href="javascript:void(0);" id="ncsubmit" class="btn-search " title="查询">&nbsp;</a></td>
+            </tr>
+
+            </tbody>
+            
+       
+        </table>
+    </form>
 
 <form method='post' id="form_apply" action="">
     <style>
@@ -80,33 +103,38 @@
     <table class="table tb-type3" id="newslist">
         <thead>
         <tr class="thead">
-            <th class="w12">ID</th>
+            <th class="w12">商品ID</th>
+            <th class="w80">商品名称</th>
 
-            <th class="w60">下载需戏币数示例</th>
-            <!--<th class="w60">首字母</th>-->
+            <th class="w60">所属分类</th>
 
-            <th class="w60">排序</th>
-
+            <!--<th class="w60">添加时间</th>-->
+            <th class="w40">价格</th>
+            <th class="w40">重量</th>
+            <th class="w40">运费</th>
+            <th class="w40">图片</th>
+	
             <th class="w108 align-center">操作</th>
         </tr>
         </thead>
         <tbody>
-            <?php if(empty($list)): ?><tr>
+            <?php if(empty($product)): ?><tr>
                     <td colspan="10" style="text-align: center;">
                         无记录
                     </td>
                 </tr><?php endif; ?>
-            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><tr>
-                    <td><?php echo ($news["id"]); ?></td>
+            <?php if(is_array($product)): $i = 0; $__LIST__ = $product;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                    <td style="text-align:center"><?php echo ($v["id"]); ?></td>
+                    <td style="text-align:center"><?php echo ($v["pro_name"]); ?></td>
+                    <td style="text-align:center"><?php echo ($v["type2"]); ?></td>
+                    <td style="text-align:center"><?php echo ($v["price"]); ?></td>                   
+                    <td style="text-align:center"><?php echo ($v["weight"]); ?>kg</td>
+                    <td style="text-align:center"><?php echo ($v["express_fee"]); ?></td>
+                    <td style="text-align:center">查看</td>
 
-                    <td><?php echo ($news["type_name"]); ?></td>
-                    <!--<td><?php echo ($news["initials"]); ?></td>-->
-
-                    <td><?php echo ($news["toop"]); ?></td>
-
-                    <td>
-                        <a class="btn" href="<?php echo U('needs_edit',array('id'=>$news['id']));?>"><span>编辑</span></a>
-                        <a class="btn del" href="<?php echo U('needs_delete',array('id'=>$news['id']));?>"><span>删除</span></a>
+                    <td style="text-align:center">
+                        <a class="btn" href="<?php echo U('mer_add',array('id'=>$v['id']));?>"><span>编辑</span></a>
+                        <a class="btn del" href="<?php echo U('mer_delete',array('id'=>$v['id']));?>"><span>删除</span></a>
                     </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 

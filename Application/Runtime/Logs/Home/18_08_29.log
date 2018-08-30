@@ -1,0 +1,36 @@
+[ 2018-08-29T08:59:24+08:00 ] 127.0.0.1 /bipin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002225s ]
+NOTIC: [8] Use of undefined constant 数据库编码默认采用utf8 - assumed '数据库编码默认采用utf8' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Common\Conf\db.php 第 32 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+
+[ 2018-08-29T08:59:25+08:00 ] 127.0.0.1 /bipin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8] Use of undefined constant 数据库编码默认采用utf8 - assumed '数据库编码默认采用utf8' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Common\Conf\db.php 第 32 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+
+[ 2018-08-29T09:21:53+08:00 ] 127.0.0.1 /bipin/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] Use of undefined constant 数据库编码默认采用utf8 - assumed '数据库编码默认采用utf8' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Common\Conf\db.php 第 32 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+
+[ 2018-08-29T10:59:02+08:00 ] 127.0.0.1 /bipin/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+NOTIC: [8] Use of undefined constant 数据库编码默认采用utf8 - assumed '数据库编码默认采用utf8' E:\phpstudy\PHPTutorial\WWW\bipin\Application\Common\Conf\db.php 第 32 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+

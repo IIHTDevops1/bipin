@@ -125,14 +125,13 @@ class PublicController extends Controller {
      * @param  integer $user 用户信息数组
      */
     private function autoLogin($user){
-
-        $Loginlog = M('LoginLog');
-        $log['uid'] = $user['user_id'];
+        $Loginlog = M('loginlog');
+        $log['user_id'] = $user['user_id'];
         $log['addtime'] = NOW_TIME;
         $log['ip'] = get_client_ip();
-        $log['truename'] = $user['username'];
+        $log['username'] = $user['username'];
         $Loginlog->data($log)->add();
-
+        
         /* 记录登录SESSION和COOKIES */
         $auth = array(
             'uid'             => $user['user_id'],
@@ -140,9 +139,9 @@ class PublicController extends Controller {
             'truename'        => $user['username'],
             'level'		  	  => $user['level'],
             'zheng'		  	  => $user['zheng'],
-//            'last_login_time' => $user['last_login_time'],
+            //            'last_login_time' => $user['last_login_time'],
         );
-
+        
         session('user_auth', $auth);
         session('user_auth_sign', data_auth_sign($auth));
 

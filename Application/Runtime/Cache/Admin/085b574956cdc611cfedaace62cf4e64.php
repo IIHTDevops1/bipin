@@ -278,61 +278,27 @@
                         <dd>
                             <ol>
                                 <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_apply" id="item_apply"
-                                                  onclick="openItem('store_apply,store,store');">商家入驻</a></li>
+                                    <a href="JavaScript:void(0);" name="item_store_applystore" id="item_store_applystore"
+                                                  onclick="openItem('store_apply,store,stores');">商家入驻</a></li>
+                               <li nc_type="">
+                                    <a href="JavaScript:void(0);" name="item_store_managestore" id="item_store_managestore"
+                                                  onclick="openItem('store_manage,store,stores');">店铺管理</a></li>
+                               <li nc_type="">
+                                    <a href="JavaScript:void(0);" name="item_mer_listmerchandise" id="item_mer_listmerchandise"
+                                                  onclick="openItem('mer_list,merchandise,stores');">商品管理</a></li> 
+                                 <li nc_type="">
+                                    <a href="JavaScript:void(0);" name="item_store_tempstore" id="item_store_tempstore"
+                                                  onclick="openItem('store_temp,store,stores');">店铺模板</a></li> 
+                              <li nc_type="">
+                                    <a href="JavaScript:void(0);" name="item_after_salestore" id="item_after_salestore"
+                                                  onclick="openItem('after_sale,store,stores');">售后管理</a></li>                                                                               
 
                             </ol>
                         </dd>
                     </dl>
                 </li>
-                 <li>
-                    <dl>
-                        <dd>
-                            <ol>
-                                <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_manage" id="item_manage"
-                                                  onclick="openItem('merchandise_manage,store,store');">商品管理</a></li>
-
-                            </ol>
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dd>
-                            <ol>
-                                <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_manage" id="item_manage"
-                                                  onclick="openItem('store_temp,store,store');">店铺模板</a></li>
-
-                            </ol>
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dd>
-                            <ol>
-                                <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_manage" id="item_manage"
-                                                  onclick="openItem('after_sale,store,store');">售后管理</a></li>
-
-                            </ol>
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dd>
-                            <ol>
-                                <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_manage" id="item_manage"
-                                                  onclick="openItem('store_manage,store,store');">店铺管理</a></li>
-
-                            </ol>
-                        </dd>
-                    </dl>
-                </li>
+                
+               
             </ul>
 
 
@@ -345,37 +311,20 @@
                         <dd>
                             <ol>
                                 <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_order" id="item_order"
+                                    <a href="JavaScript:void(0);" name="item_order_statstatistics" id="item_order_statstatistics"
                                                   onclick="openItem('order_stat,statistics,statistics');">订单统计</a></li>
+                                                  
+                                 <li nc_type="">
+                                    <a href="JavaScript:void(0);" name="item_money_managestatistics" id="item_money_managestatistics"
+                                                  onclick="openItem('money_manage,statistics,statistics');">资金管理</a>
+                                                </li>                 
 
                             </ol>
                         </dd>
                     </dl>
                 </li>
-                   <li>
-                    <dl>
-                        <dd>
-                            <ol>
-                                <li nc_type="">
-                                    <a href="JavaScript:void(0);" name="item_money" id="item_money"
-                                                  onclick="openItem('money_manage,statistics,statistics');">资金管理</a></li>
-
-                            </ol>
-                        </dd>
-                    </dl>
-                </li>
+                                    
             </ul>
-
-
-
-
-
-
-
-
-
-
-
 
 
             <ul id="sort_index" style="display: block;">
@@ -615,7 +564,7 @@
                                 <li nc_type="">
                                     <a href="JavaScript:void(0);" name="item_giftshealthyshop" id="item_giftshealthyshop" onclick="openItem('gifts,healthyshop,healthyshop');">入驻商申请列表</a>
                                 </li>
-                               <!--  <li nc_type="">
+                                <li nc_type="">
                                     <a href="JavaScript:void(0);" name="item_vipshealthyshop" id="item_vipshealthyshop" onclick="openItem('vips,healthyshop,healthyshop');">vip管理</a>
                                 </li>
                                 <li nc_type="">
@@ -625,13 +574,13 @@
                                     <a href="JavaScript:void(0);" name="item_needshealthyshop" id="item_needshealthyshop" onclick="openItem('needs,healthyshop,healthyshop');">下载需戏币数</a>
                                 </li> <li nc_type="">
                                     <a href="JavaScript:void(0);" name="item_tousuhealthyshop" id="item_tousuhealthyshop" onclick="openItem('tousu,healthyshop,healthyshop');">投诉理由示例</a>
-                                </li> -->
-                                <!--<li nc_type="">-->
-                                    <!--<a href="JavaScript:void(0);" name="item_indexorder" id="item_indexorder"-->
-                                       <!--onclick="openItem('index,order,healthyshop');">dd</a></li>-->
-                                <!-- <li nc_type="">
+                                </li> 
+                                <li nc_type="">
+                                  <a href="JavaScript:void(0);" name="item_indexorder" id="item_indexorder"
+                                      onclick="openItem('index,order,healthyshop');">dd</a></li>
+                                <li nc_type="">
                                     <a href="JavaScript:void(0);" name="item_pinglunorder" id="item_pinglunorder" onclick="openItem('pinglun,order,healthyshop');">评论列表</a>
-                                </li> -->
+                                </li>
                             </ol>
                         </dd>
                     </dl>

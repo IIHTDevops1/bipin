@@ -245,7 +245,7 @@ h6 { font-size:12px;}
 /* tb3 */
 .tb-type3{}
 .tb-type3 tr.hover:hover .tips2{ color:#333; }
-.tb-type3 td, .tb-type3 th.td{ padding:5px 5px 3px 0; border: 1px dotted #F1F1F1;text-align: center; }
+.tb-type3 td, .tb-type3 th.td{ padding:5px 5px 3px 0; border: 1px dotted #F1F1F1; }
 .tb-type3 .tfoot td {padding:5px 5px 3px 0; border-top: 1px solid #CBE9F3;}
 .tb-type3 th{ padding:5px 5px 3px 0; line-height:21px; font-size: 12px; }
 .tb-type3 .txt, .tb-type3 .txtnobd{ width:100px; margin-right:10px; }

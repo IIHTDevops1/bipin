@@ -60,9 +60,9 @@
     <div class="item-title">
         <h3>店铺管理</h3>
         <ul class="tab-base">
-            <li><a href="<?php echo U('brand');?>" <?php if(empty($classification)): ?>class="current"<?php endif; ?>><span>全部店铺</span></a></li>
+            <li><a href="<?php echo U('Store/store_manage');?>" <?php if(empty($classification)): ?>class="current"<?php endif; ?>><span>店铺基本信息</span></a></li>
 
-            <li><a href="<?php echo U('brand_add');?>"><span>添加</span></a></li>
+            <li><a href="<?php echo U('Store/store_edit');?>"><span>编辑店铺信息</span></a></li>
         </ul>
     </div>
 </div>
@@ -80,55 +80,62 @@
     <table class="table tb-type3" id="newslist">
         <thead>
         <tr class="thead">
-            <th class="w12">ID</th>
-            <th class="w60">店铺内分类</th>
-
-            <th class="w60">分类图</th>
-            <th class="w60">店铺分类</th>
-
-            <th class="w60">首字母</th>
-            <th class="w60">排序</th>
-
-            <th class="w108 align-center">操作</th>
+            <th class="w12" style="text-align:left;">店铺基本信息</th>
+         
         </tr>
         </thead>
         <tbody>
-            <?php if(empty($list)): ?><tr>
-                    <td colspan="10" style="text-align: center;">
-                        无记录
-                    </td>
-                </tr><?php endif; ?>
-            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><tr>
-                    <td><?php echo ($news["id"]); ?></td>
-                    <td><?php echo (get_types($news["pid"])); ?></td>
-
-                    <td><img src="<?php echo ($news["thumb"]); ?>"></td>
-
-                    <td><?php echo ($news["type_name"]); ?></td>
-                    <td><?php echo ($news["initials"]); ?></td>
-
-                    <td><?php echo ($news["toop"]); ?></td>
-
-                    <td>
-                        <a class="btn" href="<?php echo U('brand_edit',array('id'=>$news['id']));?>"><span>编辑</span></a>
-                        <a class="btn del" href="<?php echo U('brand_delete',array('id'=>$news['id']));?>"><span>删除</span></a>
-                    </td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+        
+        <tr>
+        <td width="700px">店铺名称：<?php echo ($store_info["shop_name"]); ?></td>
+        <td>联系人姓名：<?php echo ($store_info["contacts"]); ?></td>
+        </tr>
+        
+        <tr>
+        <td>联系人电话：<?php echo ($store_info["contacts_mobile"]); ?></td>
+        <td>门店分类：</td>
+        </tr>
+        
+        <tr>
+        <td>详细地址：<?php echo ($store_info["addr"]); ?></td>
+       <td>淘宝店铺地址：<?php echo ($store_info["taobao_addr"]); ?></td>
+        </tr>
+        
+        <tr class="thead">
+            <th class="w12" style="text-align:left;">店铺资质信息</th>
+         </tr>
+        
+        
+          <tr>
+        <td width="700px">门脸照片：查看</td>
+        <td>身份证照片：查看</td>
+        </tr>
+        
+        <tr>
+        <td>店内照片：查看</td>
+        <td>营业执照：查看</td>
+        </tr>
+        
+        <tr>
+        <td>商户logo：查看</td>
+       <td>商业许可证：查看</td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         <tr style="display:none;">
             <td colspan="20"><div class="ncsc-goods-sku ps-container"></div></td>
         </tr>
         </tbody>
-        <tfoot>
-        <tr class="tfoot">
-
-            <td colspan="15">
-                &nbsp;&nbsp;
-                <?php echo ($pages); ?>
-
-            </td>
-        </tr>
-        </tfoot>
+     
     </table>
 </form>
 </div>

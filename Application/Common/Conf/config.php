@@ -49,6 +49,7 @@ return array(
         '__ZUI__'     => __ROOT__ . '/static/dist',
         '__ADMIN_RESOURCE__'=>__ROOT__ . '/static/a',
 		'__MOBILE__'     => __ROOT__ . '/static/mobile',
+        '__SAVEIMG__'=> __ROOT__ .'/static/saveimages'
     ),
 
     'PICTURE_UPLOAD_DRIVER'=>'local',

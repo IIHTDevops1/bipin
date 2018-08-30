@@ -1,0 +1,91 @@
+<extend name="Base/layout_list"/>
+<block name="body">
+    <style>
+        .required{width:100px;}
+    </style>
+    <div class="page">
+        <div class="fixed-bar">
+            <div class="item-title">
+                <h3> &nbsp;&nbsp;添加银行卡</h3>
+            </div>
+        </div>
+        <div class="fixed-empty"></div>
+        <form id="edit_form" method="post" action="{:U('Statistics/card_add')}">
+            <table class="table tb-type2">
+                <tbody>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="news_title">真实姓名</label></td>
+                    <td class="vatop rowform">
+                        <!--<input id="idd" name="idd" type="hidden" class="txt valid" value="{$userinfo.id}">-->
+                        <input id="news_title" name="true_name" type="text" class="txt valid" placeholder="请输入银行卡预留姓名">
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="content">身份证号：</label></td>
+                    <td class="vatop rowform">
+                        <input id="content" name="id_card" type="text" class="txt valid" placeholder="请输入身份证号码">
+                    <td class="vatop tips"></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="required"><label class="validation" for="addtime">银行卡号：</label></td>
+                    <td class="vatop rowform">
+                        <input id="addtime" name="card_number" type="text" class="txt valid" placeholder="请输入银行卡号">
+                    <td class="vatop tips"></td>
+                </tr>
+                
+                 <tr class="noborder">
+                    <td class="required"><label class="validation" for="addtime">开户行：</label></td>
+                    <td class="vatop rowform">
+                        <input id="addtime" name="bank_name" type="text" class="txt valid" placeholder="请输入开户行">
+                    <td class="vatop tips"></td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                       
+                        <a id="submit" href="javascript:void(0)" class="btn"><span>添加银行卡</span></a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="__ADMIN_RESOURCE__/resource/js/jquery-ui/i18n/zh-CN.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="__ADMIN_RESOURCE__/resource/js/jquery-ui/themes/ui-lightness/jquery.ui.css"  />
+    <script type="text/javascript">
+        $(function(){
+
+
+
+            $("#submit").click(function(){
+               var title = $('#news_title').val();
+
+                if(title==''){
+                   alert('姓名不能为空');
+                   return;
+                }
+
+                $('#edit_form').submit();
+            });
+           
+        });
+    </script>
+</block>
+<block name="js">
+    <link href="__STATIC__/main/uploadify/uploadify.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/main/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</block>
+<block name="style">
+    <style>
+        .imgPreview img{width:300px;height:150px;}
+    </style>
+</block>
+
